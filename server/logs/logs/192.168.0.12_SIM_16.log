@@ -1,0 +1,552 @@
+24/11 12:24:00 FINE sim.Admin|Log for simulation 16 started
+************************************************************
+* Log for simulation 16 started
+************************************************************
+
+
+24/11 12:24:00 INFO sim.TACSCMSimulation|TACSCM Simulation 16 is setting up...
+24/11 12:24:00 INFO sim.TACSCMSimulation|Created 8 suppliers
+24/11 12:24:00 INFO sim.TACSCMSimulation|Created 1 customers
+24/11 12:24:00 FINEST sim.Supplier|pintel produces components: 100, 101
+24/11 12:24:00 FINE DefaultSupplier.pintel|Number of competing suppliers: 1
+24/11 12:24:00 FINEST sim.Supplier|imd produces components: 110, 111
+24/11 12:24:00 FINE DefaultSupplier.imd|Number of competing suppliers: 1
+24/11 12:24:00 FINEST sim.Supplier|basus produces components: 200, 210
+24/11 12:24:00 FINE DefaultSupplier.basus|Number of competing suppliers: 2
+24/11 12:24:00 FINEST sim.Supplier|macrostar produces components: 200, 210
+24/11 12:24:00 FINE DefaultSupplier.macrostar|Number of competing suppliers: 2
+24/11 12:24:00 FINEST sim.Supplier|mec produces components: 300, 301
+24/11 12:24:00 FINE DefaultSupplier.mec|Number of competing suppliers: 2
+24/11 12:24:00 FINEST sim.Supplier|queenmax produces components: 300, 301
+24/11 12:24:00 FINE DefaultSupplier.queenmax|Number of competing suppliers: 2
+24/11 12:24:00 FINEST sim.Supplier|watergate produces components: 400, 401
+24/11 12:24:00 FINE DefaultSupplier.watergate|Number of competing suppliers: 2
+24/11 12:24:00 FINEST sim.Supplier|mintor produces components: 400, 401
+24/11 12:24:00 FINE DefaultSupplier.mintor|Number of competing suppliers: 2
+24/11 12:24:00 FINE sim.AbstractCustomer|customer setup
+24/11 12:24:00 FINE sim.ExternalAgent|tester	 setup with address man1
+24/11 12:24:00 FINE DummyManufacturer.Dummy|dummy Dummy simulationSetup
+24/11 12:24:00 FINE DummyManufacturer.Dummy-2|dummy Dummy-2 simulationSetup
+24/11 12:24:00 FINE DummyManufacturer.Dummy-3|dummy Dummy-3 simulationSetup
+24/11 12:24:00 FINE DummyManufacturer.Dummy-4|dummy Dummy-4 simulationSetup
+24/11 12:24:00 FINE DummyManufacturer.Dummy-5|dummy Dummy-5 simulationSetup
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to role 1: startInfo[16,1574598240000,3300000,15,[customer.daysBeforeVoid=5]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to pintel
+24/11 12:24:00 FINEST sim.Simulation|***** START OF TIME 0 REQUESTED *****
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to pintel
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to imd
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to imd
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to basus
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to basus
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to macrostar
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to macrostar
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to mec
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to mec
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to queenmax
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to queenmax
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to watergate
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to watergate
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to mintor
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to mintor
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to role 2: startInfo[16,1574598240000,3300000,15,[customer.daysBeforeVoid=5]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to customer
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,man1,startInfo[16,1574598240000,3300000,15,[customer.daysBeforeVoid=5,factory.address=factory1,factory.capacity=2000,factory.storageCost=31,bank.interestRate=12,bank.depositInterestRate=6,manufacturer.count=6,manufacturer.1=tester	,manufacturer.2=Dummy,manufacturer.3=Dummy-2,manufacturer.4=Dummy-3,manufacturer.5=Dummy-4,manufacturer.6=Dummy-5]]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy,startInfo[16,1574598240000,3300000,15,[customer.daysBeforeVoid=5,factory.address=factory2,factory.capacity=2000,factory.storageCost=31,bank.interestRate=12,bank.depositInterestRate=6,manufacturer.count=6,manufacturer.1=tester	,manufacturer.2=Dummy,manufacturer.3=Dummy-2,manufacturer.4=Dummy-3,manufacturer.5=Dummy-4,manufacturer.6=Dummy-5]]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-2,startInfo[16,1574598240000,3300000,15,[customer.daysBeforeVoid=5,factory.address=factory3,factory.capacity=2000,factory.storageCost=31,bank.interestRate=12,bank.depositInterestRate=6,manufacturer.count=6,manufacturer.1=tester	,manufacturer.2=Dummy,manufacturer.3=Dummy-2,manufacturer.4=Dummy-3,manufacturer.5=Dummy-4,manufacturer.6=Dummy-5]]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-3,startInfo[16,1574598240000,3300000,15,[customer.daysBeforeVoid=5,factory.address=factory4,factory.capacity=2000,factory.storageCost=31,bank.interestRate=12,bank.depositInterestRate=6,manufacturer.count=6,manufacturer.1=tester	,manufacturer.2=Dummy,manufacturer.3=Dummy-2,manufacturer.4=Dummy-3,manufacturer.5=Dummy-4,manufacturer.6=Dummy-5]]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-4,startInfo[16,1574598240000,3300000,15,[customer.daysBeforeVoid=5,factory.address=factory5,factory.capacity=2000,factory.storageCost=31,bank.interestRate=12,bank.depositInterestRate=6,manufacturer.count=6,manufacturer.1=tester	,manufacturer.2=Dummy,manufacturer.3=Dummy-2,manufacturer.4=Dummy-3,manufacturer.5=Dummy-4,manufacturer.6=Dummy-5]]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-5,startInfo[16,1574598240000,3300000,15,[customer.daysBeforeVoid=5,factory.address=factory6,factory.capacity=2000,factory.storageCost=31,bank.interestRate=12,bank.depositInterestRate=6,manufacturer.count=6,manufacturer.1=tester	,manufacturer.2=Dummy,manufacturer.3=Dummy-2,manufacturer.4=Dummy-3,manufacturer.5=Dummy-4,manufacturer.6=Dummy-5]]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to role 0: bomBundle[Pintel 2GHz 1/300GB(1)={100,200,300,400},Pintel 2GHz 1/500GB(2)={100,200,300,401},Pintel 2GHz 2/300GB(3)={100,200,301,400},Pintel 2GHz 2/500GB(4)={100,200,301,401},Pintel 5GHz 1/300GB(5)={101,200,300,400},Pintel 5GHz 1/500GB(6)={101,200,300,401},Pintel 5GHz 2/300GB(7)={101,200,301,400},Pintel 5GHz 2/500GB(8)={101,200,301,401},IMD 2GHz 1/300GB(9)={110,210,300,400},IMD 2GHz 1/500GB(10)={110,210,300,401},IMD 2GHz 2/300GB(11)={110,210,301,400},IMD 2GHz 2/500GB(12)={110,210,301,401},IMD 5GHz 1/300GB(13)={111,210,300,400},IMD 5GHz 1/500GB(14)={111,210,300,401},IMD 5GHz 2/300GB(15)={111,210,301,400},IMD 5GHz 2/500GB(16)={111,210,301,401}][high=[6,7,8,15,16],mid=[3,4,5,12,13,14],low=[1,2,9,10,11]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to man1
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-2
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-3
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-4
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-5
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to role 2: bomBundle[Pintel 2GHz 1/300GB(1)={100,200,300,400},Pintel 2GHz 1/500GB(2)={100,200,300,401},Pintel 2GHz 2/300GB(3)={100,200,301,400},Pintel 2GHz 2/500GB(4)={100,200,301,401},Pintel 5GHz 1/300GB(5)={101,200,300,400},Pintel 5GHz 1/500GB(6)={101,200,300,401},Pintel 5GHz 2/300GB(7)={101,200,301,400},Pintel 5GHz 2/500GB(8)={101,200,301,401},IMD 2GHz 1/300GB(9)={110,210,300,400},IMD 2GHz 1/500GB(10)={110,210,300,401},IMD 2GHz 2/300GB(11)={110,210,301,400},IMD 2GHz 2/500GB(12)={110,210,301,401},IMD 5GHz 1/300GB(13)={111,210,300,400},IMD 5GHz 1/500GB(14)={111,210,300,401},IMD 5GHz 2/300GB(15)={111,210,301,400},IMD 5GHz 2/500GB(16)={111,210,301,401}][high=[6,7,8,15,16],mid=[3,4,5,12,13,14],low=[1,2,9,10,11]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to customer
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to role 0: componentCatalog[[100=Pintel CPU 2.0 GHz,1000,pintel],[101=Pintel CPU 5.0 GHz,1500,pintel],[110=IMD CPU 2.0 GHz,1000,imd],[111=IMD CPU 5.0 GHz,1500,imd],[200=Pintel motherboard,250,basus,macrostar],[210=IMD motherboard,250,basus,macrostar],[300=Memory 1 GB,100,mec,queenmax],[301=Memory 2 GB,200,mec,queenmax],[400=Hard disk 300 GB,300,watergate,mintor],[401=Hard disk 500 GB,400,watergate,mintor]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to man1
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-2
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-3
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-4
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-5
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to role 2: componentCatalog[[100=Pintel CPU 2.0 GHz,1000,pintel],[101=Pintel CPU 5.0 GHz,1500,pintel],[110=IMD CPU 2.0 GHz,1000,imd],[111=IMD CPU 5.0 GHz,1500,imd],[200=Pintel motherboard,250,basus,macrostar],[210=IMD motherboard,250,basus,macrostar],[300=Memory 1 GB,100,mec,queenmax],[301=Memory 2 GB,200,mec,queenmax],[400=Hard disk 300 GB,300,watergate,mintor],[401=Hard disk 500 GB,400,watergate,mintor]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to customer
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to role 1: componentCatalog[[100=Pintel CPU 2.0 GHz,1000,pintel],[101=Pintel CPU 5.0 GHz,1500,pintel],[110=IMD CPU 2.0 GHz,1000,imd],[111=IMD CPU 5.0 GHz,1500,imd],[200=Pintel motherboard,250,basus,macrostar],[210=IMD motherboard,250,basus,macrostar],[300=Memory 1 GB,100,mec,queenmax],[301=Memory 2 GB,200,mec,queenmax],[400=Hard disk 300 GB,300,watergate,mintor],[401=Hard disk 500 GB,400,watergate,mintor]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to pintel
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to pintel
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to imd
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to imd
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to basus
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to basus
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to macrostar
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to macrostar
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to mec
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to mec
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to queenmax
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to queenmax
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to watergate
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to watergate
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to mintor
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to mintor
+24/11 12:24:00 INFO sim.Simulation|***** START OF TIME 0 *****
+24/11 12:24:00 FINEST ProductionLine.pintel#100|Current capacity=486 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.pintel#101|Current capacity=610 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.imd#110|Current capacity=446 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.imd#111|Current capacity=545 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.basus#200|Current capacity=590 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.basus#210|Current capacity=653 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.macrostar#200|Current capacity=694 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.macrostar#210|Current capacity=347 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.mec#300|Current capacity=700 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.mec#301|Current capacity=721 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.queenmax#300|Current capacity=609 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.queenmax#301|Current capacity=610 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.watergate#400|Current capacity=578 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.watergate#401|Current capacity=513 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.mintor#400|Current capacity=683 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST ProductionLine.mintor#401|Current capacity=437 production=0 inventory=0 futureDemand=0
+24/11 12:24:00 FINEST Factory.factory1|Factory for tester	 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:00 FINEST Factory.factory2|Factory for Dummy claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:00 FINEST Factory.factory3|Factory for Dummy-2 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:00 FINEST Factory.factory4|Factory for Dummy-3 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:00 FINEST Factory.factory5|Factory for Dummy-4 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:00 FINEST Factory.factory6|Factory for Dummy-5 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:00 INFO sim.Simulation|***** START OF TIME 0 COMPLETE *****
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,man1,bankStatus[0,0,0]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy,bankStatus[0,0,0]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-2,bankStatus[0,0,0]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-3,bankStatus[0,0,0]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-4,bankStatus[0,0,0]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-5,bankStatus[0,0,0]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[factory1,man1,factoryStatus[]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[factory2,Dummy,factoryStatus[]]
+24/11 12:24:00 FINEST DummyManufacturer.Dummy|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[factory3,Dummy-2,factoryStatus[]]
+24/11 12:24:00 FINEST DummyManufacturer.Dummy-2|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[factory4,Dummy-3,factoryStatus[]]
+24/11 12:24:00 FINEST DummyManufacturer.Dummy-3|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[factory5,Dummy-4,factoryStatus[]]
+24/11 12:24:00 FINEST DummyManufacturer.Dummy-4|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering Message[factory6,Dummy-5,factoryStatus[]]
+24/11 12:24:00 FINEST DummyManufacturer.Dummy-5|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to role 0: simulationStatus[0,102,false,[]]
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to man1
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-2
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-3
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-4
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivering to Dummy-5
+24/11 12:24:00 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:15 FINEST sim.Simulation|***** START OF TIME 1 REQUESTED *****
+24/11 12:24:15 INFO sim.Simulation|***** START OF TIME 1 *****
+24/11 12:24:15 FINER ProductionLine.pintel#100|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.pintel#100|No RFQs!
+24/11 12:24:15 FINER ProductionLine.pintel#101|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.pintel#101|No RFQs!
+24/11 12:24:15 FINEST ProductionLine.pintel#100|Current capacity=464 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINEST ProductionLine.pintel#101|Current capacity=595 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINER ProductionLine.imd#110|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.imd#110|No RFQs!
+24/11 12:24:15 FINER ProductionLine.imd#111|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.imd#111|No RFQs!
+24/11 12:24:15 FINEST ProductionLine.imd#110|Current capacity=422 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINEST ProductionLine.imd#111|Current capacity=557 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINER ProductionLine.basus#200|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.basus#200|No RFQs!
+24/11 12:24:15 FINER ProductionLine.basus#210|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.basus#210|No RFQs!
+24/11 12:24:15 FINEST ProductionLine.basus#200|Current capacity=589 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINEST ProductionLine.basus#210|Current capacity=652 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINER ProductionLine.macrostar#200|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.macrostar#200|No RFQs!
+24/11 12:24:15 FINER ProductionLine.macrostar#210|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.macrostar#210|No RFQs!
+24/11 12:24:15 FINEST ProductionLine.macrostar#200|Current capacity=684 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINEST ProductionLine.macrostar#210|Current capacity=349 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINER ProductionLine.mec#300|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.mec#300|No RFQs!
+24/11 12:24:15 FINER ProductionLine.mec#301|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.mec#301|No RFQs!
+24/11 12:24:15 FINEST ProductionLine.mec#300|Current capacity=679 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINEST ProductionLine.mec#301|Current capacity=706 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINER ProductionLine.queenmax#300|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.queenmax#300|No RFQs!
+24/11 12:24:15 FINER ProductionLine.queenmax#301|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.queenmax#301|No RFQs!
+24/11 12:24:15 FINEST ProductionLine.queenmax#300|Current capacity=607 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINEST ProductionLine.queenmax#301|Current capacity=636 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINER ProductionLine.watergate#400|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.watergate#400|No RFQs!
+24/11 12:24:15 FINER ProductionLine.watergate#401|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.watergate#401|No RFQs!
+24/11 12:24:15 FINEST ProductionLine.watergate#400|Current capacity=599 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINEST ProductionLine.watergate#401|Current capacity=531 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINER ProductionLine.mintor#400|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.mintor#400|No RFQs!
+24/11 12:24:15 FINER ProductionLine.mintor#401|Processing 0 RFQs for day 1
+24/11 12:24:15 FINEST SupplierATP.mintor#401|No RFQs!
+24/11 12:24:15 FINEST ProductionLine.mintor#400|Current capacity=707 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINEST ProductionLine.mintor#401|Current capacity=428 production=0 inventory=0 futureDemand=0
+24/11 12:24:15 FINEST Factory.factory1|Factory for tester	 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:15 FINEST Factory.factory2|Factory for Dummy claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:15 FINEST Factory.factory3|Factory for Dummy-2 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:15 FINEST Factory.factory4|Factory for Dummy-3 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:15 FINEST Factory.factory5|Factory for Dummy-4 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:15 FINEST Factory.factory6|Factory for Dummy-5 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:15 INFO sim.Simulation|***** START OF TIME 1 COMPLETE *****
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[coordinator,man1,bankStatus[0,0,0]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy,bankStatus[0,0,0]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-2,bankStatus[0,0,0]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-3,bankStatus[0,0,0]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-4,bankStatus[0,0,0]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-5,bankStatus[0,0,0]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to role 0: priceReport[]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to man1
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-2
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-3
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-4
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-5
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering from customer (customer) to role 0: rfqBundle[1,[0,6,4,13,793,2205][1,6,15,6,5220,2677][2,6,15,4,2882,2745][3,6,7,8,1472,1912][4,15,5,10,1242,1912][5,15,20,6,4372,1822][6,8,4,5,939,2937][7,8,11,4,2957,2068][8,16,18,9,3553,2820][9,7,14,5,2167,1935][10,8,13,10,3415,2021][11,16,16,11,1428,1786][12,6,6,5,1010,2407][13,16,4,11,631,1974][14,15,9,12,1803,1822][15,6,14,10,2469,2205][16,7,2,11,453,1890][17,6,20,8,6276,2092][18,6,14,4,4586,2340][19,7,14,8,2182,1732][20,7,20,4,7560,2520][21,16,18,9,4072,2514][22,16,19,10,4759,1927][23,7,16,5,1961,2452][24,15,18,13,4228,2610][25,16,6,8,1342,2796][26,8,18,13,4224,2608][27,8,8,9,1695,1927][28,8,6,7,2072,2303][29,8,8,7,1099,2749][30,6,8,10,1376,1912][31,6,7,5,2457,2340][32,15,16,6,2544,2272][33,15,10,12,2457,1890][34,16,11,13,3437,2232][35,16,2,10,625,2608][36,16,9,6,1560,1927][37,12,16,6,2636,1498][38,12,6,6,979,1813][39,4,17,11,3082,1813][40,13,7,8,2107,2150][41,5,9,9,975,1806][42,3,3,5,261,1452][43,13,11,6,2781,2107][44,12,19,9,2533,1905][45,4,17,7,2483,1461][46,5,14,6,2191,2236][47,3,2,12,271,1942][48,13,8,5,2064,1720][49,3,10,4,2047,2047][50,3,16,5,2855,1487][51,5,15,11,2176,1612][52,3,16,9,1926,1505][53,5,3,8,731,1741][54,12,2,6,259,1850][55,12,18,11,4675,1998][56,13,18,10,6906,2558][57,12,15,7,3562,1979][58,4,17,13,4075,1998][59,13,12,5,2022,2107][60,12,17,4,2487,2090][61,12,16,13,3256,1850][62,14,11,13,2376,2700][63,12,10,4,943,1572][64,4,19,5,4083,1535][65,12,16,7,1391,1739][66,5,12,6,1787,1655][67,13,2,12,381,2386][68,4,2,13,334,2090][69,12,10,11,2469,1646][70,3,1,9,218,1680][71,3,4,9,1228,2047][72,14,1,7,86,1732][73,12,17,5,4974,2090][74,4,13,8,2438,1443][75,13,10,6,1721,1913][76,13,6,11,866,1806][77,13,15,7,2234,2128][78,5,3,7,402,1677][79,13,10,10,2760,2300][80,13,13,4,3286,1806][81,13,7,7,2444,2494][82,4,13,5,3219,1905][83,12,15,9,5118,2275][84,5,2,7,313,2236][85,3,2,5,252,2100][86,13,14,13,2335,2085][87,4,11,13,1637,2127][88,13,2,7,496,2257][89,13,5,4,802,1784][90,5,8,10,1455,2021][91,3,12,6,2125,1610][92,13,2,6,288,1806][93,4,4,8,990,1905][94,4,2,6,416,2312][95,13,14,4,2709,2150][96,4,1,11,341,2275][97,1,12,8,1330,1386][98,11,17,4,3034,1785][99,11,3,8,466,1942][100,11,11,4,885,1610][101,10,11,13,1125,2047][102,1,10,13,1410,1567][103,2,19,5,2526,1662][104,9,10,13,1669,1518][105,9,1,5,127,1815][106,11,16,6,1540,1925][107,2,11,13,1894,1435][108,10,17,13,1516,1487][109,1,2,10,162,1353][110,10,7,4,1465,1610][111,1,15,4,2475,1650][112,9,2,5,240,1716][113,10,4,4,940,1680][114,1,8,8,973,2029][115,9,15,5,1509,2013][116,10,20,10,4671,1557][117,10,15,10,1522,2030][118,1,18,9,2037,1617][119,10,8,7,1170,1330][120,9,4,8,320,1336][121,11,19,6,3549,1557][122,10,14,6,2513,1995][123,11,2,12,331,1382][124,11,3,5,598,1662][125,1,4,6,388,1617]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to man1
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-2
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-3
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-4
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-5
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[factory1,man1,factoryStatus[]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[factory2,Dummy,factoryStatus[]]
+24/11 12:24:15 FINEST DummyManufacturer.Dummy|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[factory3,Dummy-2,factoryStatus[]]
+24/11 12:24:15 FINEST DummyManufacturer.Dummy-2|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[factory4,Dummy-3,factoryStatus[]]
+24/11 12:24:15 FINEST DummyManufacturer.Dummy-3|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[factory5,Dummy-4,factoryStatus[]]
+24/11 12:24:15 FINEST DummyManufacturer.Dummy-4|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[factory6,Dummy-5,factoryStatus[]]
+24/11 12:24:15 FINEST DummyManufacturer.Dummy-5|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to role 0: simulationStatus[1,10,false,[]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to man1
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-2
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-3
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-4
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering to Dummy-5
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[Dummy,customer,offerBundle[0,[0,0,4,2166,13][1,8,18,2685,9][2,15,14,2155,10][3,17,20,2072,8][4,21,18,2451,9][5,24,18,2547,13][6,25,6,2758,8][7,26,18,2590,13][8,28,6,2263,7][9,29,8,2726,7][10,34,11,2222,13][11,35,2,2520,10][12,39,17,1799,11][13,40,7,2103,8][14,44,19,1848,9][15,47,2,1921,12][16,55,18,1996,11][17,56,18,2418,10][18,57,15,1917,7][19,58,17,1929,13][20,61,16,1849,13][21,62,11,2661,13][22,65,16,1718,7][23,67,2,2298,12][24,68,2,2053,13][25,70,1,1659,9][26,71,4,1928,9][27,77,15,2120,7][28,79,10,2214,10][29,81,7,2431,7][30,83,15,2204,9][31,84,2,2179,7][32,86,14,2068,13][33,87,11,2065,13][34,88,2,2255,7][35,90,8,2003,10][36,93,4,1869,8][37,96,1,2128,11][38,99,3,1845,8][39,101,11,1911,13][40,102,10,1562,13][41,104,10,1509,13][42,114,8,1905,8][43,117,15,1915,10][44,118,18,1602,9]]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[Dummy-2,customer,offerBundle[0,[0,0,4,2179,13][1,8,18,2683,9][2,15,14,2159,10][3,17,20,2075,8][4,21,18,2449,9][5,24,18,2518,13][6,25,6,2627,8][7,26,18,2531,13][8,28,6,2296,7][9,29,8,2727,7][10,34,11,2209,13][11,35,2,2505,10][12,39,17,1784,11][13,40,7,2116,8][14,44,19,1864,9][15,47,2,1839,12][16,55,18,1971,11][17,56,18,2372,10][18,57,15,1955,7][19,58,17,1970,13][20,61,16,1801,13][21,62,11,2650,13][22,65,16,1720,7][23,67,2,2305,12][24,68,2,2004,13][25,70,1,1659,9][26,71,4,1986,9][27,77,15,2079,7][28,79,10,2292,10][29,81,7,2471,7][30,83,15,2220,9][31,84,2,2206,7][32,86,14,2047,13][33,87,11,2004,13][34,88,2,2195,7][35,90,8,2015,10][36,93,4,1846,8][37,96,1,2249,11][38,99,3,1899,8][39,101,11,1979,13][40,102,10,1548,13][41,104,10,1511,13][42,114,8,1920,8][43,117,15,1988,10][44,118,18,1583,9]]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[Dummy-3,customer,offerBundle[0,[0,0,4,2171,13][1,8,18,2657,9][2,15,14,2181,10][3,17,20,2078,8][4,21,18,2416,9][5,24,18,2444,13][6,25,6,2770,8][7,26,18,2591,13][8,28,6,2289,7][9,29,8,2583,7][10,34,11,2214,13][11,35,2,2495,10][12,39,17,1790,11][13,40,7,2118,8][14,44,19,1834,9][15,47,2,1884,12][16,55,18,1941,11][17,56,18,2468,10][18,57,15,1978,7][19,58,17,1900,13][20,61,16,1818,13][21,62,11,2553,13][22,65,16,1734,7][23,67,2,2350,12][24,68,2,2050,13][25,70,1,1650,9][26,71,4,1930,9][27,77,15,2081,7][28,79,10,2290,10][29,81,7,2395,7][30,83,15,2214,9][31,84,2,2202,7][32,86,14,2058,13][33,87,11,2099,13][34,88,2,2243,7][35,90,8,2003,10][36,93,4,1872,8][37,96,1,2125,11][38,99,3,1847,8][39,101,11,2016,13][40,102,10,1553,13][41,104,10,1516,13][42,114,8,1906,8][43,117,15,1990,10][44,118,18,1615,9]]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[Dummy-4,customer,offerBundle[0,[0,0,4,2190,13][1,8,18,2611,9][2,15,14,2169,10][3,17,20,2087,8][4,21,18,2449,9][5,24,18,2435,13][6,25,6,2694,8][7,26,18,2462,13][8,28,6,2257,7][9,29,8,2642,7][10,34,11,2216,13][11,35,2,2519,10][12,39,17,1777,11][13,40,7,2097,8][14,44,19,1872,9][15,47,2,1915,12][16,55,18,1902,11][17,56,18,2492,10][18,57,15,1937,7][19,58,17,1935,13][20,61,16,1814,13][21,62,11,2649,13][22,65,16,1738,7][23,67,2,2258,12][24,68,2,2044,13][25,70,1,1660,9][26,71,4,1917,9][27,77,15,2102,7][28,79,10,2275,10][29,81,7,2459,7][30,83,15,2258,9][31,84,2,2231,7][32,86,14,2057,13][33,87,11,2001,13][34,88,2,2185,7][35,90,8,2015,10][36,93,4,1853,8][37,96,1,2269,11][38,99,3,1937,8][39,101,11,1949,13][40,102,10,1560,13][41,104,10,1510,13][42,114,8,2018,8][43,117,15,2006,10][44,118,18,1613,9]]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[Dummy-5,customer,offerBundle[0,[0,0,4,2157,13][1,8,18,2774,9][2,15,14,2172,10][3,17,20,2073,8][4,21,18,2470,9][5,24,18,2528,13][6,25,6,2767,8][7,26,18,2562,13][8,28,6,2268,7][9,29,8,2667,7][10,34,11,2216,13][11,35,2,2589,10][12,39,17,1785,11][13,40,7,2089,8][14,44,19,1902,9][15,47,2,1851,12][16,55,18,1979,11][17,56,18,2504,10][18,57,15,1938,7][19,58,17,1928,13][20,61,16,1799,13][21,62,11,2613,13][22,65,16,1737,7][23,67,2,2340,12][24,68,2,2038,13][25,70,1,1667,9][26,71,4,1930,9][27,77,15,2112,7][28,79,10,2232,10][29,81,7,2465,7][30,83,15,2209,9][31,84,2,2230,7][32,86,14,2063,13][33,87,11,1990,13][34,88,2,2228,7][35,90,8,2014,10][36,93,4,1888,8][37,96,1,2113,11][38,99,3,1832,8][39,101,11,1952,13][40,102,10,1559,13][41,104,10,1509,13][42,114,8,1892,8][43,117,15,2022,10][44,118,18,1601,9]]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivering Message[man1,customer,offerBundle[0,[0,8,18,2444,9][1,25,6,2543,8][2,26,18,2484,13][3,29,8,2396,7][4,47,2,1851,12][5,56,18,2523,10][6,57,15,1955,7][7,62,11,2473,13][8,71,4,1987,9][9,81,7,2254,7][10,83,15,1878,9][11,87,11,1871,13][12,96,1,1865,11][13,101,11,2012,13][14,114,8,1949,8][15,117,15,2016,10]]]
+24/11 12:24:15 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:30 FINEST sim.Simulation|***** START OF TIME 2 REQUESTED *****
+24/11 12:24:30 INFO sim.Simulation|***** START OF TIME 2 *****
+24/11 12:24:30 FINER ProductionLine.pintel#100|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.pintel#100|No RFQs!
+24/11 12:24:30 FINER ProductionLine.pintel#101|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.pintel#101|No RFQs!
+24/11 12:24:30 FINEST ProductionLine.pintel#100|Current capacity=466 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINEST ProductionLine.pintel#101|Current capacity=590 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINER ProductionLine.imd#110|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.imd#110|No RFQs!
+24/11 12:24:30 FINER ProductionLine.imd#111|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.imd#111|No RFQs!
+24/11 12:24:30 FINEST ProductionLine.imd#110|Current capacity=443 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINEST ProductionLine.imd#111|Current capacity=534 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINER ProductionLine.basus#200|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.basus#200|No RFQs!
+24/11 12:24:30 FINER ProductionLine.basus#210|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.basus#210|No RFQs!
+24/11 12:24:30 FINEST ProductionLine.basus#200|Current capacity=590 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINEST ProductionLine.basus#210|Current capacity=662 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINER ProductionLine.macrostar#200|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.macrostar#200|No RFQs!
+24/11 12:24:30 FINER ProductionLine.macrostar#210|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.macrostar#210|No RFQs!
+24/11 12:24:30 FINEST ProductionLine.macrostar#200|Current capacity=675 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINEST ProductionLine.macrostar#210|Current capacity=363 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINER ProductionLine.mec#300|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.mec#300|No RFQs!
+24/11 12:24:30 FINER ProductionLine.mec#301|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.mec#301|No RFQs!
+24/11 12:24:30 FINEST ProductionLine.mec#300|Current capacity=676 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINEST ProductionLine.mec#301|Current capacity=688 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINER ProductionLine.queenmax#300|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.queenmax#300|No RFQs!
+24/11 12:24:30 FINER ProductionLine.queenmax#301|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.queenmax#301|No RFQs!
+24/11 12:24:30 FINEST ProductionLine.queenmax#300|Current capacity=622 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINEST ProductionLine.queenmax#301|Current capacity=654 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINER ProductionLine.watergate#400|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.watergate#400|No RFQs!
+24/11 12:24:30 FINER ProductionLine.watergate#401|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.watergate#401|No RFQs!
+24/11 12:24:30 FINEST ProductionLine.watergate#400|Current capacity=609 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINEST ProductionLine.watergate#401|Current capacity=547 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINER ProductionLine.mintor#400|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.mintor#400|No RFQs!
+24/11 12:24:30 FINER ProductionLine.mintor#401|Processing 0 RFQs for day 2
+24/11 12:24:30 FINEST SupplierATP.mintor#401|No RFQs!
+24/11 12:24:30 FINEST ProductionLine.mintor#400|Current capacity=682 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINEST ProductionLine.mintor#401|Current capacity=450 production=0 inventory=0 futureDemand=0
+24/11 12:24:30 FINEST Factory.factory1|Factory for tester	 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:30 FINEST Factory.factory2|Factory for Dummy claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:30 FINEST Factory.factory3|Factory for Dummy-2 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:30 FINEST Factory.factory4|Factory for Dummy-3 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:30 FINEST Factory.factory5|Factory for Dummy-4 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:30 FINEST Factory.factory6|Factory for Dummy-5 claimed 0 in storage cost with inventory value of $0.0
+24/11 12:24:30 INFO sim.Simulation|***** START OF TIME 2 COMPLETE *****
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[coordinator,man1,bankStatus[0,0,0]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy,bankStatus[0,0,0]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-2,bankStatus[0,0,0]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-3,bankStatus[0,0,0]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-4,bankStatus[0,0,0]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[coordinator,Dummy-5,bankStatus[0,0,0]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[customer,Dummy-5,orderBundle[[126,0],[139,13],[146,20],[164,38],[168,42]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[customer,Dummy-4,orderBundle[[131,5],[133,7],[134,8],[138,12],[142,16],[149,23],[152,26],[160,34]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[customer,Dummy-3,orderBundle[[130,4],[137,11],[140,14],[145,19],[151,25],[161,35]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[customer,Dummy-2,orderBundle[[136,10],[141,15],[143,17],[150,24],[153,27],[158,32],[162,36],[166,40],[170,44]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[customer,Dummy,orderBundle[[128,2],[129,3],[144,18],[148,22],[154,28],[157,31],[165,39],[167,41],[169,43]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[customer,man1,orderBundle[[127,0],[132,1],[135,3],[147,7],[155,9],[156,10],[159,11],[163,12]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to role 0: priceReport[[6,2072,2157][16,2209,2543][15,2435,2435][8,2257,2462][4,1777,2004][13,2047,2372][12,1718,1917][3,1650,1917][14,2473,2473][5,2003,2179][11,1832,1832][10,1911,1915][1,1548,1892][9,1509,1509]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to man1
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-2
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-3
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-4
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-5
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering from customer (customer) to role 0: rfqBundle[2,[171,7,12,7,2405,1822][172,7,9,11,2024,2812][173,8,9,6,2914,2491][174,6,13,8,3276,2520][175,6,19,5,2230,1957][176,15,11,5,1905,1732][177,8,17,12,3523,2303][178,7,1,12,162,2025][179,7,2,5,267,1912][180,7,13,5,3307,1957][181,16,5,5,1779,2373][182,8,1,6,192,1927][183,7,10,10,2754,2295][184,6,7,8,1398,2497][185,8,16,11,1940,2021][186,16,2,9,598,2138][187,16,12,8,1494,2491][188,6,3,5,698,2587][189,16,4,11,546,1950][190,6,4,11,539,1687][191,6,13,5,3643,2002][192,6,19,12,3718,1957][193,6,19,8,3000,2632][194,6,19,13,4557,1845][195,15,20,14,4320,1800][196,7,10,12,2655,2655][197,15,1,10,196,2452][198,6,5,9,653,1867][199,7,11,12,3506,2452][200,15,3,5,1000,2565][201,15,14,12,4762,2430][202,12,10,7,2123,1517][203,14,6,9,810,2250][204,3,11,5,2602,1820][205,4,1,8,261,2183][206,14,3,7,623,1890][207,4,10,8,3133,2238][208,14,14,10,3843,2745][209,3,9,14,2952,2187][210,12,16,11,1464,1831][211,5,2,9,344,2150][212,14,8,8,1062,2655][213,4,16,14,2770,1443][214,5,13,5,2327,2558][215,4,19,10,3936,1480][216,14,8,9,2343,2092][217,12,4,9,799,2220][218,13,3,13,546,2279][219,4,17,13,1962,1443][220,14,13,9,2862,2002][221,4,19,7,3711,1628][222,3,16,11,2331,2082][223,4,5,14,699,1998][224,14,13,13,2749,2115][225,13,4,8,1263,2429][226,14,13,6,1593,2452][227,12,14,10,1553,1387][228,13,3,7,683,2279][229,3,17,8,3992,2135][230,5,14,12,1339,1913][231,4,19,7,3543,1554][232,4,2,10,604,2016][233,14,5,14,1447,2227][234,4,3,12,488,2035][235,14,6,14,988,2745][236,3,7,10,1212,1732][237,5,3,5,500,2085][238,5,6,6,1044,1741][239,13,18,10,3060,2429][240,13,9,9,1873,1892][241,12,5,14,710,1776][242,12,2,13,557,2146][243,12,17,12,4906,1924][244,3,12,5,2835,1575][245,13,17,8,2149,2107][246,5,1,13,185,2064][247,4,18,6,4102,1628][248,12,20,14,1535,1535][249,14,13,11,1608,2475][250,3,13,11,3685,1890][251,12,3,12,525,1461][252,13,10,10,3400,2429][253,12,10,10,1098,1831][254,4,17,7,3008,1609][255,3,18,14,5054,1872][256,4,6,10,1431,1591][257,9,17,12,2760,1353][258,1,19,13,2623,1534][259,11,9,6,2479,1837][260,2,20,14,5248,2187][261,2,12,8,2973,2065][262,9,14,13,1409,2013][263,1,18,5,3099,1435][264,10,2,9,362,2012][265,9,6,10,902,1254][266,2,4,14,1008,2100][267,9,4,6,397,1419][268,9,8,10,739,1848][269,9,1,14,176,1468][270,11,17,13,3141,1680][271,1,14,12,1663,1320][272,9,17,5,3640,1947][273,11,16,5,2883,1802][274,1,6,12,410,1369][275,11,17,12,1219,1435][276,10,14,13,1491,1522][277,10,9,8,952,2117][278,10,12,7,2343,2170][279,1,13,7,2444,1567][280,2,4,7,600,1365][281,2,16,14,3292,1470][282,1,11,8,1285,1947][283,2,16,7,4403,2117][284,9,8,7,1458,1402][285,9,17,13,3025,1369][286,11,15,7,1396,1330][287,1,1,6,196,1782][288,1,17,8,1766,1732][289,9,8,13,1884,1963][290,9,13,5,3024,1551][291,2,2,5,260,1627][292,9,8,5,1544,1485][293,11,16,9,1360,1417][294,1,13,8,1741,1914][295,10,14,11,2535,2012][296,1,14,9,1341,1369][297,10,18,7,2835,1575][298,10,17,5,2427,1785][299,10,14,5,3175,1890][300,1,19,13,3619,1732][301,1,18,13,1407,1303][302,1,12,5,1710,1584][303,9,6,12,633,1320][304,9,8,13,1385,1237][305,11,18,5,1858,2065][306,2,19,12,2839,2135]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to man1
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-2
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-3
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-4
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-5
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[factory1,man1,factoryStatus[]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[factory2,Dummy,factoryStatus[]]
+24/11 12:24:30 FINEST DummyManufacturer.Dummy|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[factory3,Dummy-2,factoryStatus[]]
+24/11 12:24:30 FINEST DummyManufacturer.Dummy-2|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[factory4,Dummy-3,factoryStatus[]]
+24/11 12:24:30 FINEST DummyManufacturer.Dummy-3|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[factory5,Dummy-4,factoryStatus[]]
+24/11 12:24:30 FINEST DummyManufacturer.Dummy-4|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[factory6,Dummy-5,factoryStatus[]]
+24/11 12:24:30 FINEST DummyManufacturer.Dummy-5|Factory Utilization: 0 Bid probability: 100
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to role 0: simulationStatus[2,10,false,[]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to man1
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to man1
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-2
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-2
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-3
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-3
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-4
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-4
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering to Dummy-5
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to Dummy-5
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-5,mintor,rfqBundle[[7,400,18,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to mintor
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-5,queenmax,rfqBundle[[9,301,19,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to queenmax
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-5,macrostar,rfqBundle[[2,200,12,4,0,0][6,210,26,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to macrostar
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-5,imd,rfqBundle[[5,111,7,4,0,0][8,110,19,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to imd
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-5,pintel,rfqBundle[[1,101,4,4,0,0][10,100,8,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to pintel
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-5,watergate,rfqBundle[[4,401,20,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to watergate
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-5,mec,rfqBundle[[3,300,19,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to mec
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-4,queenmax,rfqBundle[[3,301,81,4,0,0][10,300,4,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to queenmax
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-4,macrostar,rfqBundle[[2,210,40,4,0,0][6,200,45,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to macrostar
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-4,imd,rfqBundle[[1,111,22,4,0,0][9,110,18,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to imd
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-4,pintel,rfqBundle[[5,101,24,4,0,0][8,100,21,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to pintel
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-4,watergate,rfqBundle[[4,400,26,4,0,0][7,401,59,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to watergate
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-3,mintor,rfqBundle[[8,400,9,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to mintor
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-3,queenmax,rfqBundle[[10,300,8,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to queenmax
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-3,macrostar,rfqBundle[[2,210,39,4,0,0][7,200,26,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to macrostar
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-3,imd,rfqBundle[[1,111,20,4,0,0][5,110,19,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to imd
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-3,pintel,rfqBundle[[6,100,18,4,0,0][9,101,8,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to pintel
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-3,watergate,rfqBundle[[4,401,56,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to watergate
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-3,mec,rfqBundle[[3,301,57,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to mec
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-2,mintor,rfqBundle[[4,401,17,4,0,0][7,400,77,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to mintor
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-2,queenmax,rfqBundle[[3,301,19,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to queenmax
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-2,macrostar,rfqBundle[[2,210,58,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to macrostar
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-2,imd,rfqBundle[[1,111,58,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to imd
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-2,pintel,rfqBundle[[5,100,36,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to pintel
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-2,mec,rfqBundle[[8,300,75,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to mec
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-2,basus,rfqBundle[[6,200,36,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to basus
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy,mintor,rfqBundle[[4,401,91,4,0,0][9,400,22,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to mintor
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy,queenmax,rfqBundle[[7,301,31,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to queenmax
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy,macrostar,rfqBundle[[6,210,77,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to macrostar
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy,imd,rfqBundle[[5,110,67,4,0,0][8,111,10,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to imd
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy,pintel,rfqBundle[[1,101,36,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to pintel
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy,mec,rfqBundle[[3,300,82,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to mec
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy,basus,rfqBundle[[2,200,36,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to basus
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[man1,mintor,rfqBundle[[4,401,70,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to mintor
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy,customer,offerBundle[0,[45,172,9,2803,11][46,174,13,2389,8][47,177,17,2265,12][48,183,10,2225,10][49,184,7,2471,8][50,186,2,2133,9][51,187,12,2429,8][52,193,19,2608,8][53,196,10,2554,12][54,197,1,2403,10][55,199,11,2415,12][56,201,14,2366,12][57,203,6,2183,9][58,205,1,2168,8][59,207,10,2154,8][60,208,14,2653,10][61,209,9,2093,14][62,210,16,1784,11][63,211,2,2102,9][64,212,8,2565,8][65,216,8,2074,9][66,217,4,2199,9][67,218,3,2267,13][68,222,16,2011,11][69,223,5,1971,14][70,224,13,2102,13][71,225,4,2331,8][72,229,17,2055,8][73,232,2,1955,10][74,233,5,2182,14][75,234,3,2016,12][76,235,6,2738,14][77,236,7,1706,10][78,239,18,2325,10][79,241,5,1769,14][80,242,2,2069,13][81,243,17,1909,12][82,245,17,2095,8][83,246,1,2056,13][84,249,13,2448,11][85,250,13,1868,11][86,252,10,2319,10][87,253,10,1814,10][88,255,18,1853,14][89,258,19,1528,13][90,260,20,2181,14][91,261,12,2030,8][92,262,14,1876,13][93,264,2,1896,9][94,266,4,2094,14][95,268,8,1763,10][96,270,17,1651,13][97,277,9,2094,8][98,282,11,1906,8][99,288,17,1688,8][100,289,8,1908,13][101,294,13,1907,8][102,295,14,2001,11][103,300,19,1728,13][104,306,19,2036,12]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-2,customer,offerBundle[0,[45,172,9,2671,11][46,174,13,2480,8][47,177,17,2247,12][48,183,10,2293,10][49,184,7,2357,8][50,186,2,2134,9][51,187,12,2455,8][52,193,19,2617,8][53,196,10,2526,12][54,197,1,2342,10][55,199,11,2331,12][56,201,14,2338,12][57,203,6,2190,9][58,205,1,2172,8][59,207,10,2174,8][60,208,14,2596,10][61,209,9,2064,14][62,210,16,1787,11][63,211,2,2118,9][64,212,8,2638,8][65,216,8,2079,9][66,217,4,2067,9][67,218,3,2219,13][68,222,16,2031,11][69,223,5,1948,14][70,224,13,2108,13][71,225,4,2360,8][72,229,17,2066,8][73,232,2,1922,10][74,233,5,2186,14][75,234,3,1962,12][76,235,6,2575,14][77,236,7,1711,10][78,239,18,2315,10][79,241,5,1753,14][80,242,2,2132,13][81,243,17,1915,12][82,245,17,2095,8][83,246,1,2040,13][84,249,13,2365,11][85,250,13,1801,11][86,252,10,2339,10][87,253,10,1789,10][88,255,18,1810,14][89,258,19,1523,13][90,260,20,2073,14][91,261,12,2024,8][92,262,14,1895,13][93,264,2,1905,9][94,266,4,1998,14][95,268,8,1764,10][96,270,17,1650,13][97,277,9,2091,8][98,282,11,1817,8][99,288,17,1707,8][100,289,8,1950,13][101,294,13,1795,8][102,295,14,1888,11][103,300,19,1702,13][104,306,19,2100,12]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-3,customer,offerBundle[0,[45,172,9,2769,11][46,174,13,2414,8][47,177,17,2283,12][48,183,10,2276,10][49,184,7,2404,8][50,186,2,2134,9][51,187,12,2485,8][52,193,19,2470,8][53,196,10,2476,12][54,197,1,2369,10][55,199,11,2434,12][56,201,14,2418,12][57,203,6,2234,9][58,205,1,2155,8][59,207,10,2181,8][60,208,14,2589,10][61,209,9,2116,14][62,210,16,1794,11][63,211,2,2149,9][64,212,8,2502,8][65,216,8,2091,9][66,217,4,2218,9][67,218,3,2256,13][68,222,16,1960,11][69,223,5,1982,14][70,224,13,2099,13][71,225,4,2307,8][72,229,17,2079,8][73,232,2,1918,10][74,233,5,2189,14][75,234,3,1935,12][76,235,6,2663,14][77,236,7,1688,10][78,239,18,2311,10][79,241,5,1756,14][80,242,2,2141,13][81,243,17,1908,12][82,245,17,2087,8][83,246,1,2061,13][84,249,13,2466,11][85,250,13,1875,11][86,252,10,2383,10][87,253,10,1817,10][88,255,18,1864,14][89,258,19,1527,13][90,260,20,2081,14][91,261,12,1970,8][92,262,14,1859,13][93,264,2,1999,9][94,266,4,2053,14][95,268,8,1841,10][96,270,17,1652,13][97,277,9,2110,8][98,282,11,1891,8][99,288,17,1697,8][100,289,8,1826,13][101,294,13,1900,8][102,295,14,1919,11][103,300,19,1724,13][104,306,19,2009,12]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-4,customer,offerBundle[0,[45,172,9,2799,11][46,174,13,2400,8][47,177,17,2286,12][48,183,10,2222,10][49,184,7,2434,8][50,186,2,2131,9][51,187,12,2479,8][52,193,19,2525,8][53,196,10,2572,12][54,197,1,2393,10][55,199,11,2395,12][56,201,14,2386,12][57,203,6,2215,9][58,205,1,2131,8][59,207,10,2162,8][60,208,14,2739,10][61,209,9,2053,14][62,210,16,1824,11][63,211,2,2112,9][64,212,8,2611,8][65,216,8,2090,9][66,217,4,2144,9][67,218,3,2188,13][68,222,16,2059,11][69,223,5,1989,14][70,224,13,2110,13][71,225,4,2343,8][72,229,17,1978,8][73,232,2,1968,10][74,233,5,2216,14][75,234,3,1989,12][76,235,6,2643,14][77,236,7,1702,10][78,239,18,2395,10][79,241,5,1761,14][80,242,2,2141,13][81,243,17,1866,12][82,245,17,2066,8][83,246,1,2027,13][84,249,13,2346,11][85,250,13,1841,11][86,252,10,2313,10][87,253,10,1824,10][88,255,18,1833,14][89,258,19,1525,13][90,260,20,2046,14][91,261,12,2017,8][92,262,14,1856,13][93,264,2,1927,9][94,266,4,2074,14][95,268,8,1842,10][96,270,17,1670,13][97,277,9,2014,8][98,282,11,1923,8][99,288,17,1709,8][100,289,8,1915,13][101,294,13,1890,8][102,295,14,1918,11][103,300,19,1688,13][104,306,19,2113,12]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[Dummy-5,customer,offerBundle[0,[45,172,9,2786,11][46,174,13,2462,8][47,177,17,2267,12][48,183,10,2221,10][49,184,7,2442,8][50,186,2,2136,9][51,187,12,2403,8][52,193,19,2518,8][53,196,10,2475,12][54,197,1,2445,10][55,199,11,2419,12][56,201,14,2419,12][57,203,6,2233,9][58,205,1,2040,8][59,207,10,2186,8][60,208,14,2531,10][61,209,9,2088,14][62,210,16,1786,11][63,211,2,2149,9][64,212,8,2613,8][65,216,8,2083,9][66,217,4,2208,9][67,218,3,2192,13][68,222,16,2002,11][69,223,5,1997,14][70,224,13,2112,13][71,225,4,2393,8][72,229,17,2060,8][73,232,2,1955,10][74,233,5,2190,14][75,234,3,2018,12][76,235,6,2741,14][77,236,7,1690,10][78,239,18,2382,10][79,241,5,1750,14][80,242,2,2008,13][81,243,17,1914,12][82,245,17,2077,8][83,246,1,2034,13][84,249,13,2441,11][85,250,13,1849,11][86,252,10,2379,10][87,253,10,1790,10][88,255,18,1830,14][89,258,19,1528,13][90,260,20,2161,14][91,261,12,2028,8][92,262,14,1981,13][93,264,2,1933,9][94,266,4,2031,14][95,268,8,1755,10][96,270,17,1669,13][97,277,9,2079,8][98,282,11,1899,8][99,288,17,1691,8][100,289,8,1923,13][101,294,13,1809,8][102,295,14,1913,11][103,300,19,1709,13][104,306,19,1968,12]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[man1,macrostar,rfqBundle[[2,210,57,4,0,0][6,200,20,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to macrostar
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[man1,imd,rfqBundle[[1,111,42,4,0,0][9,110,15,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to imd
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[man1,pintel,rfqBundle[[5,101,8,4,0,0][10,100,12,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to pintel
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[man1,watergate,rfqBundle[[8,400,7,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to watergate
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[man1,mec,rfqBundle[[3,301,59,4,0,0][7,300,18,4,0,0]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to mec
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivering Message[man1,customer,offerBundle[0,[16,172,9,2418,11][17,174,13,2448,8][18,187,12,2480,8][19,193,19,2434,8][20,197,1,2369,10][21,201,14,2352,12][22,205,1,1975,8][23,207,10,2038,8][24,208,14,2648,10][25,209,9,2079,14][26,217,4,1947,9][27,222,16,2046,11][28,225,4,2243,8][29,229,17,1989,8][30,234,3,2014,12][31,235,6,2585,14][32,239,18,2407,10][33,242,2,1885,13][34,243,17,1902,12][35,250,13,1816,11][36,252,10,2269,10][37,260,20,2025,14][38,261,12,1787,8][39,262,14,1815,13][40,264,2,1966,9][41,266,4,1943,14][42,268,8,1684,10][43,277,9,2067,8][44,282,11,1804,8][45,289,8,1794,13][46,294,13,1756,8][47,295,14,1936,11][48,300,19,1656,13][49,306,19,1847,12]]]
+24/11 12:24:30 FINEST sim.MessageDispatcher|delivered to customer
+24/11 12:24:36 SEVERE tact.TACTConnection|tester	@tact-2: reading error 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at se.sics.isl.tact.TACTConnection$TACTReader.run(Unknown Source)
+24/11 12:24:36 FINEST tact.TACTConnection|tester	@tact-2: connection closed from 127.0.0.1

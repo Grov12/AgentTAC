@@ -1,0 +1,1264 @@
+24/11 18:03:00 FINE client.SimClient|Log for simulation 32 at 127.0.0.1:6502 started
+************************************************************
+* Log for simulation 32 at 127.0.0.1:6502 started
+************************************************************
+
+
+24/11 18:03:00 FINER client.SimClient|creating agent service based on startInfo[32,1574618580000,3300000,15,[customer.daysBeforeVoid=5,factory.address=factory1,factory.capacity=2000,factory.storageCost=27,bank.interestRate=9,bank.depositInterestRate=4,manufacturer.count=6,manufacturer.1=tester	,manufacturer.2=Dummy,manufacturer.3=Dummy-2,manufacturer.4=Dummy-3,manufacturer.5=Dummy-4,manufacturer.6=Dummy-5]]
+24/11 18:03:00 FINEST client.SimClient|(1) received Message[coordinator,man1,bomBundle[Pintel 2GHz 1/300GB(1)={100,200,300,400},Pintel 2GHz 1/500GB(2)={100,200,300,401},Pintel 2GHz 2/300GB(3)={100,200,301,400},Pintel 2GHz 2/500GB(4)={100,200,301,401},Pintel 5GHz 1/300GB(5)={101,200,300,400},Pintel 5GHz 1/500GB(6)={101,200,300,401},Pintel 5GHz 2/300GB(7)={101,200,301,400},Pintel 5GHz 2/500GB(8)={101,200,301,401},IMD 2GHz 1/300GB(9)={110,210,300,400},IMD 2GHz 1/500GB(10)={110,210,300,401},IMD 2GHz 2/300GB(11)={110,210,301,400},IMD 2GHz 2/500GB(12)={110,210,301,401},IMD 5GHz 1/300GB(13)={111,210,300,400},IMD 5GHz 1/500GB(14)={111,210,300,401},IMD 5GHz 2/300GB(15)={111,210,301,400},IMD 5GHz 2/500GB(16)={111,210,301,401}][high=[6,7,8,15,16],mid=[3,4,5,12,13,14],low=[1,2,9,10,11]]]
+24/11 18:03:00 FINEST client.SimClient|(1) received Message[coordinator,man1,componentCatalog[[100=Pintel CPU 2.0 GHz,1000,pintel],[101=Pintel CPU 5.0 GHz,1500,pintel],[110=IMD CPU 2.0 GHz,1000,imd],[111=IMD CPU 5.0 GHz,1500,imd],[200=Pintel motherboard,250,basus,macrostar],[210=IMD motherboard,250,basus,macrostar],[300=Memory 1 GB,100,mec,queenmax],[301=Memory 2 GB,200,mec,queenmax],[400=Hard disk 300 GB,300,watergate,mintor],[401=Hard disk 500 GB,400,watergate,mintor]]]
+24/11 18:03:00 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[0,0,0]]
+24/11 18:03:00 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[]]
+24/11 18:03:00 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[0,119,false,[]]]
+24/11 18:03:00 SEVERE client.AgentServiceImpl|agent could not handle message Message[coordinator,man1,simulationStatus[0,119,false,[]]]
+java.lang.NullPointerException
+	at ExampleAgent.handleSimulationStatus(ExampleAgent.java:346)
+	at se.sics.tasim.tac03.aw.SCMAgent.messageReceived(SCMAgent.java:329)
+	at se.sics.tasim.aw.AgentService.deliverToAgent(AgentService.java:135)
+	at se.sics.tasim.aw.client.AgentServiceImpl.deliverToAgent(AgentServiceImpl.java:125)
+	at se.sics.tasim.aw.client.SimClient.run(SimClient.java:494)
+	at java.lang.Thread.run(Unknown Source)
+24/11 18:03:15 FINE client.AgentServiceImpl|*** TIME UNIT 1
+24/11 18:03:15 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[0,0,0]]
+24/11 18:03:15 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[]]
+24/11 18:03:15 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[1,[0,16,13,4,4325,2773][1,15,15,8,4342,2227][2,7,3,9,594,1980][3,6,18,13,2805,1732][4,7,3,13,668,2475][5,7,4,7,531,2655][6,15,4,12,567,2025][7,16,20,8,8178,2726][8,6,17,6,4168,2452][9,16,17,11,2732,2679][10,8,1,9,144,1809][11,8,3,11,523,2491][12,6,12,9,3969,2205][13,7,7,4,2579,2632][14,16,2,13,317,1762][15,15,1,6,143,2047][16,6,13,11,3316,1822][17,8,1,10,315,2867][18,6,17,5,4475,1755][19,15,17,12,2524,2475][20,15,20,5,8235,2745][21,6,15,11,2268,1890][22,8,8,8,3000,2679][23,15,8,4,1702,1935][24,8,13,12,3124,2185][25,16,13,7,2199,2820][26,7,5,7,1083,2407][27,6,18,7,2550,2362][28,16,18,6,6762,2890][29,15,7,12,888,2115][30,6,13,11,2574,1980][31,8,1,13,164,1833][32,8,6,7,1579,2632][33,8,7,13,2463,2514][34,16,8,4,2947,2632][35,15,19,8,3950,1890][36,7,3,9,367,2452][37,6,1,4,110,1845][38,16,5,5,446,1786][39,16,16,12,3026,2702][40,6,8,9,1008,2520][41,6,9,12,921,2047][42,16,7,8,1273,2021][43,6,13,11,1807,2317][44,6,18,8,2490,2767][45,6,19,11,2769,1822][46,6,5,13,1732,2475][47,8,17,6,7310,2867][48,16,13,11,5268,2702][49,16,1,4,117,2350][50,16,16,12,4985,2397][51,6,14,7,3152,1732][52,6,16,12,4320,1800][53,6,10,8,4083,2722][54,6,16,5,4536,2025][55,8,11,10,2643,2185][56,6,8,9,2167,1935][57,15,12,4,2526,2632][58,8,19,12,3714,2444][59,7,11,6,4009,2430][60,16,20,13,5865,2444][61,6,14,5,2050,2092][62,8,15,4,4018,2679][63,8,4,7,1032,2867][64,7,6,9,1639,1822][65,8,18,4,2334,2162][66,16,11,5,2192,2491][67,6,16,8,4480,1867][68,15,14,11,2314,2362][69,16,7,4,1289,2303][70,6,13,8,3088,1980][71,8,2,10,475,2162][72,6,9,4,1134,2520][73,7,19,12,6942,2610][74,8,16,10,4014,2091][75,15,17,13,4822,2182][76,7,19,10,6163,2317][77,6,17,12,5783,2430][78,7,6,7,843,2812][79,6,10,8,2427,1867][80,7,9,7,1494,2767][81,8,19,9,4700,1903][82,8,2,11,304,1903][83,16,5,13,1809,2585][84,8,14,6,5572,2843][85,16,12,8,3384,2350][86,16,7,10,1791,2843][87,16,4,12,896,2491][88,8,5,10,1351,2702][89,7,2,4,480,2002][90,16,15,11,2294,2185][91,7,2,6,276,2767][92,7,7,13,1757,2092][93,15,4,8,782,1957][94,7,7,12,1940,2520][95,5,12,10,1661,1978][96,14,4,9,1498,2497][97,5,3,5,624,1892][98,13,19,9,2875,1892][99,3,17,4,2998,1960][100,12,20,9,2035,2035][101,3,15,12,1634,1557][102,14,17,13,2111,2070][103,5,16,6,1874,2343][104,14,18,9,5879,2722][105,3,17,11,1713,1680][106,13,1,9,203,1849][107,5,17,8,4181,1892][108,13,6,7,634,1763][109,12,12,12,4095,2275][110,5,7,13,915,1634][111,4,5,11,654,2183][112,3,11,8,1962,1487][113,3,17,7,1392,1365][114,4,8,13,562,1406][115,13,11,5,2440,1849][116,5,10,8,1496,1870][117,14,8,9,3048,2722][118,12,4,12,628,1572][119,4,18,12,2637,1628][120,3,19,4,5056,2047][121,4,19,7,1581,1387][122,13,15,5,3418,2279][123,5,12,12,2156,1634][124,13,4,10,708,2214][125,4,20,6,4842,2201][126,14,10,8,2152,1957][127,3,12,11,1915,1995][128,4,18,12,4995,1850][129,13,2,12,444,2472][130,13,10,4,2317,1655][131,4,20,5,1628,1628][132,12,6,10,1196,1813][133,4,19,7,4021,1628][134,4,7,7,1631,1942][135,13,19,6,2229,1956][136,4,17,12,1383,1628][137,4,19,11,3093,1628][138,5,2,12,383,2128][139,3,3,7,373,1557][140,5,5,5,877,2193][141,9,3,11,481,1782][142,10,6,13,573,1592][143,9,7,5,479,1369][144,11,5,11,1080,1662][145,11,13,13,2170,1855][146,1,9,12,2494,1848][147,11,2,7,434,2170][148,10,1,9,233,1557][149,2,10,5,1621,1802][150,1,13,9,1636,1798][151,11,3,13,542,1645][152,10,5,11,765,2187][153,9,12,10,2898,2013][154,11,8,13,1478,1680][155,9,2,8,463,1930][156,2,2,10,427,1942][157,10,18,4,3326,1540][158,1,9,13,2560,1897][159,2,5,8,875,1592][160,9,11,8,1486,1930][161,9,14,12,1325,1353][162,9,2,7,428,1947][163,9,3,4,579,1287][164,1,11,4,744,1353]]]
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2595
+24/11 18:03:15 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[]]
+24/11 18:03:15 INFO ExampleAgent|Längden ->0
+24/11 18:03:15 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[1,5,false,[]]]
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2613
+24/11 18:03:15 INFO ExampleAgent|Längden ->1
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2363
+24/11 18:03:15 INFO ExampleAgent|Längden ->2
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2533
+24/11 18:03:15 INFO ExampleAgent|Längden ->3
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2320
+24/11 18:03:15 INFO ExampleAgent|Längden ->4
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2759
+24/11 18:03:15 INFO ExampleAgent|Längden ->5
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2252
+24/11 18:03:15 INFO ExampleAgent|Längden ->6
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2681
+24/11 18:03:15 INFO ExampleAgent|Längden ->7
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2323
+24/11 18:03:15 INFO ExampleAgent|Längden ->8
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2292
+24/11 18:03:15 INFO ExampleAgent|Längden ->9
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2316
+24/11 18:03:15 INFO ExampleAgent|Längden ->10
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2258
+24/11 18:03:15 INFO ExampleAgent|Längden ->11
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2664
+24/11 18:03:15 INFO ExampleAgent|Längden ->12
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2498
+24/11 18:03:15 INFO ExampleAgent|Längden ->13
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2812
+24/11 18:03:15 INFO ExampleAgent|Längden ->14
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2334
+24/11 18:03:15 INFO ExampleAgent|Längden ->15
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2471
+24/11 18:03:15 INFO ExampleAgent|Längden ->16
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2303
+24/11 18:03:15 INFO ExampleAgent|Längden ->17
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2429
+24/11 18:03:15 INFO ExampleAgent|Längden ->18
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2399
+24/11 18:03:15 INFO ExampleAgent|Längden ->19
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2741
+24/11 18:03:15 INFO ExampleAgent|Längden ->20
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2464
+24/11 18:03:15 INFO ExampleAgent|Längden ->21
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2420
+24/11 18:03:15 INFO ExampleAgent|Längden ->22
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2518
+24/11 18:03:15 INFO ExampleAgent|Längden ->23
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->1920
+24/11 18:03:15 INFO ExampleAgent|Längden ->24
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2441
+24/11 18:03:15 INFO ExampleAgent|Längden ->25
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->1998
+24/11 18:03:15 INFO ExampleAgent|Längden ->26
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2045
+24/11 18:03:15 INFO ExampleAgent|Längden ->27
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2711
+24/11 18:03:15 INFO ExampleAgent|Längden ->28
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->1895
+24/11 18:03:15 INFO ExampleAgent|Längden ->29
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2187
+24/11 18:03:15 INFO ExampleAgent|Längden ->30
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->1699
+24/11 18:03:15 INFO ExampleAgent|Längden ->31
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->2034
+24/11 18:03:15 INFO ExampleAgent|Längden ->32
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->1717
+24/11 18:03:15 INFO ExampleAgent|Längden ->33
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->1904
+24/11 18:03:15 INFO ExampleAgent|Längden ->34
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->1686
+24/11 18:03:15 INFO ExampleAgent|Längden ->35
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->1807
+24/11 18:03:15 INFO ExampleAgent|Längden ->36
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->1727
+24/11 18:03:15 INFO ExampleAgent|Längden ->37
+24/11 18:03:15 INFO ExampleAgent|Mellanskillnaded ->1722
+24/11 18:03:15 INFO ExampleAgent|Längden ->38
+24/11 18:03:15 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[0,5,4,2595,7][1,9,17,2613,11][2,11,3,2363,11][3,17,1,2533,10][4,19,17,2320,12][5,25,13,2759,7][6,26,5,2252,7][7,39,16,2681,12][8,40,8,2323,9][9,43,13,2292,11][10,44,18,2316,8][11,46,5,2258,13][12,48,13,2664,11][13,53,10,2498,8][14,63,4,2812,7][15,68,14,2334,11][16,73,19,2471,12][17,78,6,2303,7][18,80,9,2429,7][19,83,5,2399,13][20,86,7,2741,10][21,87,4,2464,12][22,88,5,2420,10][23,94,7,2518,12][24,100,20,1920,9][25,104,18,2441,9][26,109,12,1998,12][27,111,5,2045,11][28,117,8,2711,9][29,127,12,1895,11][30,129,2,2187,12][31,146,9,1699,12][32,147,2,2034,7][33,150,13,1717,9][34,152,5,1904,11][35,153,12,1686,10][36,158,9,1807,13][37,160,11,1727,8][38,162,2,1722,7]]]
+24/11 18:03:15 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:03:30 FINE client.AgentServiceImpl|*** TIME UNIT 2
+24/11 18:03:30 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[0,0,0]]
+24/11 18:03:30 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[170,2],[172,3],[173,4],[177,6],[184,8],[187,10],[188,11],[191,13],[202,17],[203,18],[204,19],[208,22],[214,24],[216,25],[218,26],[219,27],[224,30],[232,31],[233,32],[236,34],[237,35],[243,37],[244,38]]]
+24/11 18:03:30 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[15,2089,2320][7,2072,2474][16,2173,2634][8,2150,2648][6,2040,2498][5,1970,2076][14,2056,2530][12,1769,1998][3,1650,1881][4,1799,2045][13,2139,2187][9,1686,1808][10,1587,1904][11,1640,2034][1,1699,1776][2,1587,1847]]]
+24/11 18:03:30 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,rfqBundle[[3,301,90,4,0,0][8,300,100,4,0,0]]]
+24/11 18:03:30 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[2,[245,16,4,13,1344,2585][246,8,13,13,3543,2726][247,15,20,11,4904,2452][248,7,4,5,1574,2812][249,8,2,7,258,2585][250,7,11,10,2361,2385][251,8,16,13,4241,2209][252,8,11,11,4225,2561][253,16,14,8,5435,2773][254,16,5,9,1792,2561][255,6,16,7,3761,2137][256,7,11,13,2450,2475][257,8,19,12,2906,2185][258,15,10,7,1449,2070][259,15,18,6,4854,2452][260,6,18,7,3240,2250][261,6,2,6,417,2317][262,15,10,9,1539,1710][263,15,8,13,842,1755][264,15,3,13,464,1935][265,6,15,6,2835,2700][266,7,14,9,1243,1777][267,8,8,12,2552,2279][268,16,1,7,310,2820][269,15,8,13,2224,2317][270,7,20,9,5088,1957][271,8,6,9,1827,2538][272,7,13,14,2457,2700][273,6,12,9,3193,2047][274,8,14,13,2131,1903][275,15,16,9,2764,2160][276,15,14,9,1984,2362][277,16,16,8,4361,2726][278,6,6,6,762,2542][279,15,7,5,954,2272][280,6,20,5,3213,2295][281,8,20,7,2467,2467][282,7,3,5,1048,2497][283,15,16,10,3556,1710][284,16,16,11,5717,2749][285,16,2,8,432,2702][286,16,20,11,2927,2091][287,15,20,13,2996,2497][288,7,4,8,842,2632][289,6,20,9,2182,2182][290,8,19,6,4179,2444][291,16,1,10,200,2867][292,8,12,13,5076,2820][293,8,5,13,748,2138][294,7,11,8,1435,2610][295,8,3,10,1075,2561][296,16,2,9,216,2162][297,8,16,7,4850,2021][298,16,13,7,2159,2373][299,15,3,7,656,2430][300,8,17,6,4173,2232][301,16,2,7,406,2256][302,6,2,14,406,2542][303,6,1,10,277,2520][304,15,14,8,3074,2745][305,16,8,13,1945,2702][306,15,10,6,1401,2002][307,16,10,5,2347,2608][308,16,4,10,1677,2796][309,15,10,11,2808,2340][310,8,5,5,1468,2937][311,15,2,7,267,1912][312,8,2,11,635,2444][313,6,3,10,878,2092][314,7,17,11,5049,1980][315,16,6,13,1319,2749][316,15,11,12,1422,2587][317,16,7,5,1006,2397][318,15,1,10,162,1800][319,15,10,8,1066,1777][320,16,12,10,1325,2209][321,6,19,10,2483,1867][322,7,3,13,710,2632][323,6,7,7,2095,2722][324,6,13,9,2457,1890][325,6,14,13,2583,1845][326,6,13,12,3802,2250][327,6,16,10,4804,2002][328,7,16,12,5241,2340][329,7,11,5,1544,1755][330,7,15,11,3024,2520][331,7,13,13,2632,2025][332,7,15,7,3823,2317][333,7,3,10,340,2272][334,16,6,9,1500,1786][335,6,14,5,4441,2115][336,16,9,7,2055,2538][337,6,2,11,531,2655][338,15,9,11,1968,2430][339,8,7,8,996,2373][340,7,8,5,1709,2137][341,8,2,7,439,2749][342,8,19,5,3438,2585][343,7,3,5,388,2160][344,16,7,14,1342,2397][345,8,2,10,782,2608][346,16,10,12,928,1856][347,16,15,13,4704,2091][348,8,13,9,2290,2937][349,7,19,8,2718,2385][350,16,5,13,852,2843][351,7,14,5,3767,2070][352,6,3,14,727,2205][353,12,11,12,1483,1498][354,14,6,7,615,1710][355,4,10,5,2530,2109][356,3,2,13,308,1925][357,13,10,6,2012,1677][358,12,17,12,3631,1424][359,14,4,5,1116,2790][360,12,14,6,1100,1572][361,4,6,13,586,1628][362,3,7,14,994,2030][363,13,18,7,5232,2236][364,12,3,6,691,1646][365,4,18,6,4890,2090][366,12,13,6,1502,2312][367,4,16,6,2823,1961][368,3,4,8,871,1557][369,12,8,6,1770,1702][370,4,6,12,1498,1665][371,14,19,13,3967,2610][372,12,3,8,299,1998][373,5,16,9,5052,2429][374,5,17,9,3815,2494][375,14,10,13,2739,1957][376,4,3,8,379,1406][377,12,11,7,1766,2294][378,12,11,11,1953,1480][379,13,12,10,4836,2687][380,13,18,10,5745,2128][381,5,19,10,4493,2365][382,13,9,5,2554,2580][383,5,19,11,3908,1870][384,12,15,14,2347,1739][385,14,12,10,1946,2317][386,5,7,5,2184,2601][387,3,2,8,215,1347][388,13,4,11,412,1720][389,5,1,7,236,2623][390,14,9,14,2247,2497][391,12,7,7,1398,2220][392,4,4,14,901,1609][393,4,6,6,943,1572][394,3,17,14,1409,1382][395,5,5,10,1049,2623][396,5,9,9,2167,1720][397,5,3,6,801,2429][398,3,17,6,1832,1540][399,3,5,8,637,1417][400,5,11,6,3251,2687][401,14,19,13,6027,2115][402,5,12,10,1470,2042][403,13,16,5,4919,2365][404,3,2,8,467,1557][405,13,4,10,749,2343][406,14,5,7,627,2092][407,5,10,13,3242,2494][408,4,2,14,427,1424][409,5,4,11,961,1849][410,2,4,9,720,1802][411,9,15,8,1425,1584][412,2,9,9,1086,2012][413,10,16,10,3024,1575][414,1,7,7,2009,1914][415,11,20,14,2016,1680][416,11,11,11,2095,2117][417,10,16,14,1596,1995][418,9,2,13,250,1567][419,11,2,12,431,1960][420,11,19,14,4131,1977][421,9,15,6,1113,1485][422,2,15,10,2684,1627][423,1,6,13,504,1402][424,10,16,13,1704,1522][425,1,18,11,4656,1848][426,10,5,9,759,2170][427,10,11,10,3180,2065][428,11,15,10,4483,2135][429,11,5,5,747,2135][430,10,7,12,840,1715]]]
+24/11 18:03:30 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,rfqBundle[[6,210,106,4,0,0]]]
+24/11 18:03:30 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[]]
+24/11 18:03:30 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[5,111,42,4,0,0][9,110,64,4,0,0]]]
+24/11 18:03:30 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[2,14,false,[]]]
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2652
+24/11 18:03:30 INFO ExampleAgent|Längden ->39
+24/11 18:03:30 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[1,101,70,4,0,0][10,100,14,4,0,0]]]
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2629
+24/11 18:03:30 INFO ExampleAgent|Längden ->40
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2420
+24/11 18:03:30 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[4,401,115,4,0,0][7,400,75,4,0,0]]]
+24/11 18:03:30 INFO ExampleAgent|Längden ->41
+24/11 18:03:30 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[2,200,84,4,0,0]]]
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2665
+24/11 18:03:30 INFO ExampleAgent|Längden ->42
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2320
+24/11 18:03:30 INFO ExampleAgent|Längden ->43
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2526
+24/11 18:03:30 INFO ExampleAgent|Längden ->44
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2810
+24/11 18:03:30 INFO ExampleAgent|Längden ->45
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2597
+24/11 18:03:30 INFO ExampleAgent|Längden ->46
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2407
+24/11 18:03:30 INFO ExampleAgent|Längden ->47
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2323
+24/11 18:03:30 INFO ExampleAgent|Längden ->48
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2494
+24/11 18:03:30 INFO ExampleAgent|Längden ->49
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2403
+24/11 18:03:30 INFO ExampleAgent|Längden ->50
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2355
+24/11 18:03:30 INFO ExampleAgent|Längden ->51
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2426
+24/11 18:03:30 INFO ExampleAgent|Längden ->52
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2629
+24/11 18:03:30 INFO ExampleAgent|Längden ->53
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2631
+24/11 18:03:30 INFO ExampleAgent|Längden ->54
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2606
+24/11 18:03:30 INFO ExampleAgent|Längden ->55
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->1811
+24/11 18:03:30 INFO ExampleAgent|Längden ->56
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2257
+24/11 18:03:30 INFO ExampleAgent|Längden ->57
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2495
+24/11 18:03:30 INFO ExampleAgent|Längden ->58
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2228
+24/11 18:03:30 INFO ExampleAgent|Längden ->59
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->2171
+24/11 18:03:30 INFO ExampleAgent|Längden ->60
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->1791
+24/11 18:03:30 INFO ExampleAgent|Längden ->61
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->1817
+24/11 18:03:30 INFO ExampleAgent|Längden ->62
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->1945
+24/11 18:03:30 INFO ExampleAgent|Längden ->63
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->1730
+24/11 18:03:30 INFO ExampleAgent|Längden ->64
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->1994
+24/11 18:03:30 INFO ExampleAgent|Längden ->65
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->1832
+24/11 18:03:30 INFO ExampleAgent|Längden ->66
+24/11 18:03:30 INFO ExampleAgent|Mellanskillnaded ->1808
+24/11 18:03:30 INFO ExampleAgent|Längden ->67
+24/11 18:03:30 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:03:30 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[39,246,13,2652,13][40,253,14,2629,8][41,254,5,2420,9][42,284,16,2665,11][43,287,20,2320,13][44,288,4,2526,8][45,291,1,2810,10][46,292,12,2597,13][47,303,1,2407,10][48,304,14,2323,8][49,308,4,2494,10][50,315,6,2403,13][51,322,3,2355,13][52,330,15,2426,11][53,337,2,2629,11][54,348,13,2631,9][55,350,5,2606,13][56,362,7,1811,14][57,374,17,2257,9][58,379,12,2495,10][59,405,4,2228,10][60,407,10,2171,13][61,410,4,1791,9][62,416,11,1817,11][63,420,19,1945,14][64,425,18,1730,11][65,426,5,1994,9][66,427,11,1832,10][67,428,15,1808,10]]]
+24/11 18:03:45 FINE client.AgentServiceImpl|*** TIME UNIT 3
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[0,0,0]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[3,[521,10,14,588,4][527,1,70,1177,4]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[1,527],[2,521]]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[3,[532,9,64,591,4][537,5,42,1198,4]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[3,537],[4,532]]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[3,[542,2,84,229,4]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[5,542]]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[macrostar,man1,offerBundle[3,[549,6,106,201,4]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,orderBundle[[6,549]]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[queenmax,man1,offerBundle[3,[558,8,100,78,4][561,3,90,149,4]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,orderBundle[[7,561],[8,558]]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[3,[563,7,75,176,4][569,4,115,330,4]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[9,569],[10,563]]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[438,41],[451,43],[455,46],[462,48],[464,49],[468,50],[471,51],[481,54],[483,55],[486,56],[490,57],[491,58],[501,60],[506,62],[512,64],[513,65],[514,66],[515,67]]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[16,2149,2668][8,2132,2631][15,2122,2487][7,2211,2511][6,2041,2519][3,1811,1826][14,2103,2455][12,1719,1924][5,2011,2474][13,2086,2495][2,1612,1945][9,1556,1561][11,1651,1892][10,1680,1994][1,1730,1730]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,mintor,rfqBundle[[17,400,127,5,0,0]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,rfqBundle[[13,301,115,5,0,0]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,rfqBundle[[16,210,108,5,0,0]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[15,111,66,5,0,0][19,110,42,5,0,0]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[11,101,55,5,0,0][20,100,25,5,0,0]]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[3,[574,16,13,13,3562,2491][575,7,13,8,1798,2767][576,6,3,7,947,2430][577,6,5,8,517,2070][578,16,2,14,397,2209][579,15,11,7,1848,1867][580,15,8,10,1473,2047][581,16,20,14,3102,2585][582,16,8,15,1633,1856][583,6,15,11,6124,2722][584,8,9,10,2838,2867][585,16,20,12,5925,2279][586,16,7,10,1370,2796][587,8,17,9,4170,2726][588,7,6,14,776,2587][589,8,19,12,2343,2467][590,7,7,9,1506,1957][591,8,3,8,424,2021][592,16,7,12,879,2514][593,16,7,14,1845,2397][594,7,1,13,336,2587][595,16,20,13,5264,2632][596,15,2,13,634,2115][597,8,7,12,750,1786][598,6,10,9,3810,2722][599,8,6,6,1996,2773][600,8,18,11,4782,2044][601,8,1,10,223,2796][602,15,10,15,1745,2182][603,8,3,13,434,2068][604,16,9,14,2395,2420][605,16,4,15,1075,2444][606,7,1,8,359,2565][607,15,14,12,2595,2317][608,6,14,14,2749,2182][609,6,14,15,2608,2070][610,8,20,13,3933,2185][611,8,14,6,1513,2162][612,15,15,7,1467,1957][613,8,15,14,4281,1903][614,15,20,10,3960,2475][615,15,18,14,5329,2115][616,15,11,9,1593,2070][617,8,11,10,2395,2420][618,8,8,12,1504,1880][619,16,2,7,491,2232][620,7,20,10,2484,2070][621,6,3,13,898,2497][622,16,11,9,3147,2044][623,6,7,15,1069,2182][624,8,13,10,3146,2420][625,15,8,14,2834,2362][626,16,19,14,4000,2632][627,6,19,6,4658,2452][628,7,12,8,2842,1822][629,16,5,8,930,2068][630,7,18,8,5896,2340][631,6,11,7,2910,1890][632,15,4,14,1251,2407][633,8,4,11,605,2162][634,6,7,15,1576,1732][635,8,16,14,2346,1833][636,6,7,15,1738,2070][637,7,8,6,1335,2385][638,7,4,8,1310,2520][639,8,18,15,2690,2491][640,6,15,10,4099,1822][641,6,15,7,2398,1777][642,8,9,12,1152,2561][643,15,13,9,1798,2767][644,8,8,12,1674,1903][645,16,16,10,1823,2279][646,16,19,9,3593,2702][647,8,7,14,2533,2585][648,16,12,6,2594,2162][649,7,17,15,2650,2227][650,15,9,13,1895,2340][651,8,6,13,924,1927][652,8,13,7,2749,2115][653,16,10,14,1562,2232][654,8,9,11,2163,2185][655,7,6,6,1105,2047][656,8,9,10,2632,1950][657,15,3,9,824,2115][658,6,3,11,473,2632][659,16,16,10,1940,2021][660,15,16,6,3801,1980][661,8,13,12,3051,2608][662,15,19,9,5278,2137][663,7,16,8,2746,2452][664,5,10,8,1934,1612][665,5,16,15,5875,2623][666,14,6,7,1396,2587][667,3,14,12,3969,1890][668,14,14,14,2976,2362][669,5,2,8,473,2365][670,12,3,13,582,1942][671,3,5,6,987,1645][672,14,10,13,2548,2317][673,5,20,10,5882,2451][674,3,20,6,2870,1435][675,4,14,15,2434,1739][676,12,15,15,1498,1665][677,5,1,8,161,2021][678,13,1,13,282,2021][679,12,17,11,2075,2035][680,12,1,14,229,2294][681,4,9,6,2661,2275][682,3,2,8,315,1575][683,4,3,12,591,1517][684,4,15,7,1953,1628][685,12,18,11,2817,1739][686,14,8,13,2276,2587][687,14,1,7,408,2722][688,3,5,14,1338,1785][689,12,11,14,1237,1406][690,14,8,9,1742,1980][691,13,3,8,993,2365][692,14,5,12,1291,1845][693,13,5,6,714,2042][694,12,16,7,3403,2127][695,5,8,10,1431,2236][696,14,4,15,404,1687][697,3,2,15,245,1750][698,12,4,11,341,1424][699,12,3,15,394,1461][700,5,18,7,3560,1978][701,12,4,10,634,1443][702,4,9,7,1158,2146][703,13,11,9,3902,2365][704,3,13,11,1183,1820][705,14,13,9,3544,2272][706,4,3,6,417,1739][707,13,2,8,638,2279][708,14,7,12,2621,2497][709,12,5,12,915,1665][710,1,15,13,1489,1419][711,9,20,6,4107,1369][712,9,17,7,3743,1468][713,11,9,13,1179,1872][714,10,18,9,2667,2117][715,1,17,13,4628,1815][716,10,14,7,1219,1452][717,9,17,12,3635,1782][718,11,16,8,3444,1435][719,2,13,11,3279,1802][720,11,16,11,2340,1330][721,10,18,12,3591,1330][722,1,6,6,485,1617][723,10,1,13,159,1995][724,2,17,8,3010,1610][725,11,14,13,1836,1312][726,2,8,14,1743,1557][727,9,14,8,1524,1815][728,2,12,15,3684,2047][729,9,1,8,210,1402][730,1,15,10,1861,1551][731,1,11,9,1524,1980][732,2,10,15,2615,2012][733,1,2,6,480,1716][734,11,8,15,705,1470][735,2,14,7,1383,1977][736,10,12,8,1478,1540][737,9,12,8,1807,1369][738,2,18,13,2772,1540][739,10,11,14,1578,1435][740,10,18,7,5904,2187][741,10,14,9,2352,1680][742,9,11,15,2439,1584][743,9,11,15,1796,1485][744,1,1,10,153,1914][745,2,8,6,720,1802][746,1,2,11,399,1666]]]
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,mec,rfqBundle[[18,300,73,5,0,0]]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[]]
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2444
+24/11 18:03:45 INFO ExampleAgent|Längden ->68
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[14,401,61,5,0,0]]]
+24/11 18:03:45 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[3,29,false,[]]]
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2361
+24/11 18:03:45 INFO ExampleAgent|Längden ->69
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[12,200,80,5,0,0]]]
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2496
+24/11 18:03:45 INFO ExampleAgent|Längden ->70
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2569
+24/11 18:03:45 INFO ExampleAgent|Längden ->71
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2620
+24/11 18:03:45 INFO ExampleAgent|Längden ->72
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2645
+24/11 18:03:45 INFO ExampleAgent|Längden ->73
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2369
+24/11 18:03:45 INFO ExampleAgent|Längden ->74
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2401
+24/11 18:03:45 INFO ExampleAgent|Längden ->75
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2551
+24/11 18:03:45 INFO ExampleAgent|Längden ->76
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2297
+24/11 18:03:45 INFO ExampleAgent|Längden ->77
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->1892
+24/11 18:03:45 INFO ExampleAgent|Längden ->78
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2312
+24/11 18:03:45 INFO ExampleAgent|Längden ->79
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2188
+24/11 18:03:45 INFO ExampleAgent|Längden ->80
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->1998
+24/11 18:03:45 INFO ExampleAgent|Längden ->81
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2166
+24/11 18:03:45 INFO ExampleAgent|Längden ->82
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2445
+24/11 18:03:45 INFO ExampleAgent|Längden ->83
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2176
+24/11 18:03:45 INFO ExampleAgent|Längden ->84
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2189
+24/11 18:03:45 INFO ExampleAgent|Längden ->85
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2256
+24/11 18:03:45 INFO ExampleAgent|Längden ->86
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2408
+24/11 18:03:45 INFO ExampleAgent|Längden ->87
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->2065
+24/11 18:03:45 INFO ExampleAgent|Längden ->88
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->1946
+24/11 18:03:45 INFO ExampleAgent|Längden ->89
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->1924
+24/11 18:03:45 INFO ExampleAgent|Längden ->90
+24/11 18:03:45 INFO ExampleAgent|Mellanskillnaded ->1982
+24/11 18:03:45 INFO ExampleAgent|Längden ->91
+24/11 18:03:45 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[68,574,13,2444,13][69,584,9,2361,10][70,587,17,2496,9][71,595,20,2569,13][72,598,10,2620,9][73,601,1,2645,10][74,617,11,2369,10][75,643,13,2401,9][76,665,16,2551,15][77,668,14,2297,14][78,670,3,1892,13][79,672,10,2312,13][80,673,20,2188,10][81,679,17,1998,11][82,680,1,2166,14][83,686,8,2445,13][84,695,8,2176,10][85,703,11,2189,9][86,705,13,2256,9][87,708,7,2408,12][88,714,18,2065,9][89,723,1,1946,13][90,731,11,1924,9][91,732,10,1982,15]]]
+24/11 18:03:45 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:04:00 FINE client.AgentServiceImpl|*** TIME UNIT 4
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[-29176,0,0]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[4,[882,20,25,635,5][888,11,55,1744,5]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[11,888],[12,882]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[4,[894,19,42,704,5][900,15,66,1740,5]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[13,900],[14,894]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[4,[901,12,80,270,5]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[15,901]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[macrostar,man1,offerBundle[4,[910,16,108,356,5]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,orderBundle[[16,910]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[mec,man1,offerBundle[4,[916,18,73,83,5]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,mec,orderBundle[[17,916]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[queenmax,man1,offerBundle[4,[922,13,115,287,5]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,orderBundle[[18,922]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[4,[928,14,61,347,5]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[19,928]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[mintor,man1,offerBundle[4,[931,17,127,334,5]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,mintor,orderBundle[[20,931]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[799,69],[802,70],[834,75],[851,80],[855,82],[859,84],[861,85]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[16,2189,2632][15,2040,2401][6,2058,2560][8,2149,2596][7,2061,2449][5,2176,2454][3,1697,1824][14,2203,2435][12,1717,2166][4,1720,1720][13,2001,2189][11,1786,1786][10,1648,1956][1,1532,1879][9,1556,1699][2,1753,1929]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,mintor,rfqBundle[[27,400,52,6,0,0]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,rfqBundle[[23,301,40,6,0,0][28,300,39,6,0,0]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,rfqBundle[[26,210,25,6,0,0]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[25,111,24,6,0,0][29,110,1,6,0,0]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[21,101,54,6,0,0]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[4,[937,6,8,12,810,2025][938,6,13,11,1821,2002][939,8,2,9,493,1762][940,7,7,11,984,2812][941,6,14,13,2544,2272][942,8,14,9,4233,2326][943,8,6,9,951,1762][944,7,16,7,3722,2115][945,7,19,14,6103,2677][946,16,10,10,1186,2373][947,16,20,15,5681,2185][948,7,1,16,216,2700][949,15,4,11,1404,2340][950,6,4,7,1207,2745][951,15,8,9,3099,2767][952,8,10,7,3666,2444][953,7,11,14,2640,2182][954,7,14,13,3704,1890][955,6,11,13,1692,2565][956,8,5,13,1266,2303][957,6,12,11,2780,2317][958,15,11,7,2694,2227][959,16,14,14,3553,2538][960,8,15,16,2847,2373][961,8,16,14,4692,2444][962,15,14,11,3479,1912][963,15,9,10,1713,2115][964,7,8,11,982,2047][965,16,15,9,3271,2726][966,7,4,12,1146,2205][967,6,8,7,2196,2745][968,8,3,9,577,2749][969,6,6,14,1134,1890][970,6,1,10,188,2362][971,8,20,10,2847,2373][972,6,12,12,2376,1800][973,8,5,16,982,1786][974,16,18,15,2008,2232][975,6,9,16,2342,2002][976,16,20,7,3440,2867][977,6,1,9,378,2700][978,8,7,12,1381,2467][979,16,14,7,5625,2679][980,16,17,10,2732,1786][981,15,18,10,5385,2137][982,8,14,8,2737,2444][983,16,3,13,477,2655][984,7,8,8,1247,2227][985,15,17,14,1625,1912][986,15,1,8,176,1957][987,8,1,8,115,2303][988,16,18,15,2812,2232][989,6,10,9,2812,2812][990,8,3,15,424,2021][991,8,9,7,3700,2937][992,6,3,8,580,1935][993,6,14,15,4347,2070][994,8,6,9,1988,2209][995,16,14,11,2785,1809][996,6,11,13,3935,2385][997,8,4,8,1565,2796][998,15,13,11,4486,2655][999,16,2,7,618,2209][1000,6,4,14,1485,2475][1001,16,11,14,3908,2538][1002,15,3,12,982,2520][1003,15,17,9,6426,2520][1004,8,8,16,1729,2702][1005,15,18,12,3790,1755][1006,8,5,9,599,1997][1007,8,4,9,512,2561][1008,6,3,9,756,2520][1009,6,6,12,1539,2565][1010,8,3,11,815,2091][1011,16,2,16,378,2702][1012,8,3,9,1095,2608][1013,8,10,15,2601,2890][1014,8,14,12,1266,1809][1015,8,5,15,1266,1809][1016,8,9,10,1861,1880][1017,8,1,13,211,1762][1018,7,10,8,2746,2497][1019,7,9,16,3067,2272][1020,7,5,14,1771,2362][1021,8,18,15,3552,2467][1022,6,5,8,1204,2677][1023,16,2,11,555,2138][1024,6,13,11,2082,2002][1025,8,18,13,3857,2679][1026,15,5,9,1422,2587][1027,6,5,10,635,2542][1028,8,4,16,723,1809][1029,5,20,16,4256,2128][1030,4,10,9,2789,2146][1031,3,4,12,470,1680][1032,13,9,16,2582,1913][1033,12,2,16,474,1979][1034,13,6,15,1114,2064][1035,14,5,15,1755,2700][1036,5,4,13,889,2472][1037,14,4,14,577,2407][1038,5,17,8,1688,1655][1039,13,13,16,1355,2085][1040,5,5,8,791,1978][1041,13,12,12,2894,2193][1042,3,8,13,1444,1505][1043,5,2,10,282,1763][1044,12,3,12,529,1961][1045,12,12,8,1926,2294][1046,5,7,12,1519,2171][1047,14,16,9,3757,1957][1048,4,3,9,412,1720][1049,3,20,9,3604,1802][1050,3,11,14,2156,1400][1051,3,4,15,423,2117][1052,3,16,14,2065,2152][1053,14,6,15,1348,2497][1054,14,20,11,2862,2385][1055,5,9,8,1795,2494][1056,5,12,12,2476,2580][1057,5,16,10,2720,2429][1058,14,8,11,2635,2745][1059,4,2,16,627,2090][1060,5,7,12,624,1784][1061,14,1,15,195,2790][1062,5,14,8,3906,2537][1063,3,1,7,118,1977][1064,13,7,7,1721,2236][1065,3,4,8,428,1785][1066,13,11,15,3225,2666][1067,14,8,13,1349,2812][1068,12,2,8,275,1720][1069,3,6,11,1121,1557][1070,12,15,13,4544,2164][1071,13,18,11,3447,2128][1072,14,10,12,2865,2047][1073,10,14,14,1029,1470][1074,9,13,15,815,1254][1075,11,8,8,2195,1960][1076,10,10,12,1568,1960][1077,1,8,12,745,1864][1078,2,2,11,301,2152][1079,2,18,12,3288,2030][1080,11,1,8,187,1872][1081,10,10,11,2367,2152][1082,10,18,16,3363,1557][1083,2,14,7,2397,1557][1084,10,8,14,1974,1645][1085,9,5,13,851,1419][1086,11,4,7,882,1470][1087,10,12,11,987,1645][1088,9,4,12,1020,1963][1089,10,8,12,1478,1680][1090,10,13,8,3385,2170][1091,2,14,12,1955,1995][1092,1,6,11,693,1650][1093,10,9,14,795,1767][1094,9,18,7,2138,1980][1095,1,4,14,552,1534][1096,11,1,13,183,1837][1097,2,17,11,2261,1330][1098,2,7,12,1190,1417][1099,1,10,13,1029,1716][1100,10,19,14,3021,1767][1101,10,18,14,3438,1592][1102,11,13,13,1958,2152][1103,9,20,8,3504,1947][1104,9,12,14,2328,1617][1105,9,11,15,1656,1369]]]
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[24,401,27,6,0,0]]]
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[]]
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2437
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[22,200,54,6,0,0]]]
+24/11 18:04:00 INFO ExampleAgent|Längden ->92
+24/11 18:04:00 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[4,33,false,[]]]
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2340
+24/11 18:04:00 INFO ExampleAgent|Längden ->93
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2422
+24/11 18:04:00 INFO ExampleAgent|Längden ->94
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2285
+24/11 18:04:00 INFO ExampleAgent|Längden ->95
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2592
+24/11 18:04:00 INFO ExampleAgent|Längden ->96
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2369
+24/11 18:04:00 INFO ExampleAgent|Längden ->97
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2366
+24/11 18:04:00 INFO ExampleAgent|Längden ->98
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2674
+24/11 18:04:00 INFO ExampleAgent|Längden ->99
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2337
+24/11 18:04:00 INFO ExampleAgent|Längden ->100
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2442
+24/11 18:04:00 INFO ExampleAgent|Längden ->101
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2557
+24/11 18:04:00 INFO ExampleAgent|Längden ->102
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2258
+24/11 18:04:00 INFO ExampleAgent|Längden ->103
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2299
+24/11 18:04:00 INFO ExampleAgent|Längden ->104
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2351
+24/11 18:04:00 INFO ExampleAgent|Längden ->105
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2427
+24/11 18:04:00 INFO ExampleAgent|Längden ->106
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2342
+24/11 18:04:00 INFO ExampleAgent|Längden ->107
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2658
+24/11 18:04:00 INFO ExampleAgent|Längden ->108
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2396
+24/11 18:04:00 INFO ExampleAgent|Längden ->109
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2257
+24/11 18:04:00 INFO ExampleAgent|Längden ->110
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->1802
+24/11 18:04:00 INFO ExampleAgent|Längden ->111
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->1768
+24/11 18:04:00 INFO ExampleAgent|Längden ->112
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2326
+24/11 18:04:00 INFO ExampleAgent|Längden ->113
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2227
+24/11 18:04:00 INFO ExampleAgent|Längden ->114
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2343
+24/11 18:04:00 INFO ExampleAgent|Längden ->115
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->1950
+24/11 18:04:00 INFO ExampleAgent|Längden ->116
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2788
+24/11 18:04:00 INFO ExampleAgent|Längden ->117
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2198
+24/11 18:04:00 INFO ExampleAgent|Längden ->118
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2592
+24/11 18:04:00 INFO ExampleAgent|Längden ->119
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2133
+24/11 18:04:00 INFO ExampleAgent|Längden ->120
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->1754
+24/11 18:04:00 INFO ExampleAgent|Längden ->121
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->1752
+24/11 18:04:00 INFO ExampleAgent|Längden ->122
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2090
+24/11 18:04:00 INFO ExampleAgent|Längden ->123
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->1972
+24/11 18:04:00 INFO ExampleAgent|Längden ->124
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->2001
+24/11 18:04:00 INFO ExampleAgent|Längden ->125
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->1939
+24/11 18:04:00 INFO ExampleAgent|Längden ->126
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->1686
+24/11 18:04:00 INFO ExampleAgent|Längden ->127
+24/11 18:04:00 INFO ExampleAgent|Mellanskillnaded ->1779
+24/11 18:04:00 INFO ExampleAgent|Längden ->128
+24/11 18:04:00 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[92,940,7,2437,11][93,945,19,2340,14][94,948,1,2422,16][95,996,11,2285,13][96,998,13,2592,11][97,1001,11,2369,14][98,1002,3,2366,12][99,1004,8,2674,16][100,1009,6,2337,12][101,1011,2,2442,16][102,1013,10,2557,15][103,1019,9,2258,16][104,1020,5,2299,14][105,1021,18,2351,15][106,1025,18,2427,13][107,1027,5,2342,10][108,1035,5,2658,15][109,1036,4,2396,13][110,1037,4,2257,14][111,1051,4,1802,15][112,1052,16,1768,14][113,1056,12,2326,12][114,1057,16,2227,10][115,1058,8,2343,11][116,1059,2,1950,16][117,1061,1,2788,15][118,1066,11,2198,15][119,1067,8,2592,13][120,1070,15,2133,13][121,1076,10,1754,12][122,1077,8,1752,12][123,1078,2,2090,11][124,1079,18,1972,12][125,1081,10,2001,11][126,1091,14,1939,12][127,1099,10,1686,13][128,1102,13,1779,13]]]
+24/11 18:04:00 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:04:15 FINE client.AgentServiceImpl|*** TIME UNIT 5
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[-71090,0,0]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[pintel,man1,deliveryNotice[pintel,man1,[2,100,14],[1,101,70]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[5,[1248,21,54,1793,6]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[21,1248]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[imd,man1,deliveryNotice[imd,man1,[4,110,64],[3,111,42]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[5,[1254,29,1,695,6][1260,25,24,1950,6]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[basus,man1,deliveryNotice[basus,man1,[5,200,84]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[22,1260],[23,1254]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[5,[1264,22,54,279,6]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[macrostar,man1,deliveryNotice[macrostar,man1,[6,210,106]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[24,1264]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[macrostar,man1,offerBundle[5,[1271,26,25,373,6]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,orderBundle[[25,1271]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[queenmax,man1,deliveryNotice[queenmax,man1,[8,300,100],[7,301,90]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[queenmax,man1,offerBundle[5,[1281,28,39,82,6][1286,23,0,275,6][1287,23,40,275,8]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,orderBundle[[26,1287],[27,1281]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[watergate,man1,deliveryNotice[watergate,man1,[10,400,75],[9,401,115]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[5,[1293,24,27,281,6]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[28,1293]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[mintor,man1,offerBundle[5,[1296,27,52,355,6]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,mintor,orderBundle[[29,1296]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[1154,92],[1156,93],[1159,94],[1179,95],[1182,97],[1183,98],[1185,100],[1186,101],[1187,102],[1190,105],[1192,106],[1193,107],[1200,110],[1205,111],[1206,112],[1209,113],[1210,114],[1211,115],[1212,116],[1214,118],[1219,121],[1220,122],[1236,128]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[7,2040,2437][6,2056,2436][16,2131,2496][15,2088,2469][8,2258,2557][5,2074,2331][3,1651,1802][12,1905,2026][13,2042,2198][14,2041,2591][4,1950,1950][10,1586,1982][1,1521,1752][2,1876,2005][9,1577,1833][11,1772,1779]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,mintor,rfqBundle[[36,400,110,7,0,0]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[34,111,39,7,0,0][38,110,23,7,0,0]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[30,101,123,7,0,0][39,100,30,7,0,0]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[5,[1300,6,8,12,2564,2137][1301,6,13,16,2316,2227][1302,15,4,13,782,1957][1303,6,20,9,5544,2520][1304,16,19,14,2303,2021][1305,16,20,11,2538,2538][1306,16,12,16,2989,2491][1307,6,19,11,5898,2587][1308,7,17,9,5564,2182][1309,8,11,15,2170,2467][1310,7,9,10,1417,2250][1311,6,9,12,1299,2407][1312,15,13,9,3270,1935][1313,16,13,14,2621,1833][1314,7,8,12,2078,2362][1315,15,7,15,1975,2565][1316,16,9,8,1693,2091][1317,8,18,17,1861,2068][1318,15,2,9,240,2407][1319,15,12,8,4572,2722][1320,16,20,15,3717,2655][1321,15,6,14,1209,2520][1322,15,3,15,712,1980][1323,15,11,10,2450,2025][1324,15,13,12,2123,2722][1325,7,14,16,4805,2452][1326,6,7,10,1905,2722][1327,7,6,11,1010,2407][1328,16,12,14,2989,2491][1329,7,7,13,732,2092][1330,8,11,12,4380,2655][1331,15,3,15,991,2542][1332,16,14,12,3798,1809][1333,15,16,13,2620,2340][1334,6,15,14,4158,1980][1335,7,18,11,3206,2227][1336,6,17,9,5005,2677][1337,15,11,14,2673,2700][1338,8,17,9,3702,2420][1339,16,20,12,8178,2726][1340,15,19,8,3847,2025][1341,15,19,14,5445,2047][1342,7,8,16,2038,2317][1343,7,1,14,212,2655][1344,8,7,14,878,2091][1345,6,18,12,5421,2317][1346,15,2,16,648,2700][1347,7,18,13,4212,2340][1348,15,15,16,4518,2317][1349,8,3,17,860,2867][1350,7,9,14,2472,2497][1351,8,6,17,2199,2444][1352,16,6,9,1494,2491][1353,6,9,11,2381,2205][1354,15,16,14,5400,2250][1355,8,15,11,6450,2867][1356,15,14,14,3032,2407][1357,6,17,12,2295,2700][1358,15,1,10,273,1822][1359,16,5,8,1705,2843][1360,15,17,11,2937,2160][1361,7,11,8,1999,2272][1362,7,4,8,478,1710][1363,6,9,13,840,1867][1364,6,7,8,1036,2115][1365,7,13,13,1780,1957][1366,6,14,12,2948,2340][1367,6,19,10,7885,2767][1368,8,14,9,2861,2044][1369,8,20,13,4228,1762][1370,6,18,14,6292,2497][1371,16,8,15,1319,2749][1372,16,12,16,2946,2232][1373,16,1,10,190,1903][1374,15,10,15,1858,2655][1375,16,3,17,1233,2937][1376,8,15,17,3457,2561][1377,16,9,14,2264,2796][1378,6,9,14,2465,1957][1379,8,11,9,3360,2350][1380,8,15,14,3841,2561][1381,16,7,14,2855,2914][1382,8,10,16,3153,2867][1383,6,10,10,2310,1777][1384,15,2,15,762,2722][1385,8,10,11,2368,1974][1386,15,3,14,903,2317][1387,8,10,16,1989,1809][1388,8,17,15,1997,2350][1389,16,7,16,715,2044][1390,15,18,11,5346,2475][1391,6,15,8,4347,2070][1392,15,13,8,4708,2587][1393,7,6,10,1143,2722][1394,8,15,11,1815,2420][1395,15,6,11,1855,2812][1396,7,3,9,332,1845][1397,7,8,11,3132,2610][1398,16,18,8,7867,2914][1399,15,2,15,504,2520][1400,8,17,12,2372,2326][1401,7,9,15,1044,1935][1402,15,20,14,7243,2587][1403,7,10,15,3138,2092][1404,6,15,14,3105,2070][1405,6,6,13,1201,2002][1406,15,6,14,1976,2745][1407,6,16,12,3650,1755][1408,16,18,12,4757,1762][1409,8,7,17,1486,2655][1410,5,2,14,463,1655][1411,4,8,8,1962,1887][1412,5,10,13,956,1913][1413,3,15,14,3122,1487][1414,4,11,10,1367,1554][1415,5,20,11,3268,1634][1416,5,2,12,481,2408][1417,13,18,15,2681,1655][1418,4,8,15,2202,2294][1419,4,18,15,2903,2016][1420,13,17,14,3595,2644][1421,4,6,13,898,1498][1422,13,14,11,3210,2085][1423,5,12,15,3224,2687][1424,13,12,10,1857,1720][1425,5,10,10,2322,2322][1426,5,16,8,5231,2515][1427,14,5,17,1282,2565][1428,4,11,13,2157,1961][1429,4,20,17,2109,2109][1430,5,2,9,629,2623][1431,12,16,14,3694,1776][1432,14,1,16,255,1822][1433,14,3,12,1017,2610][1434,3,12,9,2604,2170][1435,13,3,13,1006,2580][1436,12,14,10,1336,1591][1437,14,5,14,540,2160][1438,4,14,12,3185,1517][1439,4,16,16,2692,1683][1440,14,19,9,2924,1710][1441,5,13,14,5071,2601][1442,14,15,14,2916,2430][1443,14,10,13,2004,2227][1444,5,9,11,2623,2429][1445,4,9,14,932,2072][1446,4,17,10,1399,1646][1447,13,19,12,3757,2472][1448,13,7,16,1476,2343][1449,13,20,10,3646,2279][1450,3,1,13,71,1435][1451,5,19,16,3638,1741][1452,12,12,10,1309,2183][1453,13,7,10,1685,2408][1454,2,8,16,1276,1995][1455,9,8,10,1484,2062][1456,9,16,8,1056,1320][1457,11,15,12,1506,1435][1458,1,16,14,2177,1237][1459,10,18,16,3706,1872][1460,11,4,11,610,1907][1461,10,19,8,3769,1417][1462,2,7,8,1544,1697][1463,1,14,16,1482,1765][1464,11,8,15,1540,1925][1465,11,20,11,2424,1732][1466,1,4,15,841,1402][1467,9,8,9,692,1237][1468,9,18,9,5113,2029][1469,11,10,14,1050,1750][1470,9,1,12,148,1353][1471,11,18,12,1764,1400][1472,2,8,17,1161,1452][1473,2,5,14,630,1400][1474,1,1,11,210,1402][1475,11,8,14,1310,1820][1476,9,17,15,2952,1336][1477,2,14,12,1320,1347][1478,11,9,8,1719,1365][1479,2,6,17,686,1907][1480,10,16,16,4828,2012][1481,11,14,15,3773,1925][1482,1,10,16,2796,1864][1483,10,8,15,1277,1452][1484,1,2,10,247,1237][1485,2,9,10,1852,1715][1486,1,4,12,696,1584]]]
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[33,401,105,7,0,0]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[]]
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2430
+24/11 18:04:15 INFO ExampleAgent|Längden ->129
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2351
+24/11 18:04:15 INFO ExampleAgent|Längden ->130
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,mec,rfqBundle[[32,301,124,7,0,0][37,300,91,7,0,0]]]
+24/11 18:04:15 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[5,19,false,[]]]
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2364
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[31,200,153,7,0,0][35,210,62,7,0,0]]]
+24/11 18:04:15 INFO ExampleAgent|Längden ->131
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2451
+24/11 18:04:15 INFO ExampleAgent|Längden ->132
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2474
+24/11 18:04:15 INFO ExampleAgent|Längden ->133
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2285
+24/11 18:04:15 INFO ExampleAgent|Längden ->134
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2438
+24/11 18:04:15 INFO ExampleAgent|Längden ->135
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2277
+24/11 18:04:15 INFO ExampleAgent|Längden ->136
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2537
+24/11 18:04:15 INFO ExampleAgent|Längden ->137
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2560
+24/11 18:04:15 INFO ExampleAgent|Längden ->138
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2456
+24/11 18:04:15 INFO ExampleAgent|Längden ->139
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2641
+24/11 18:04:15 INFO ExampleAgent|Längden ->140
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2312
+24/11 18:04:15 INFO ExampleAgent|Längden ->141
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2607
+24/11 18:04:15 INFO ExampleAgent|Längden ->142
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2400
+24/11 18:04:15 INFO ExampleAgent|Längden ->143
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2470
+24/11 18:04:15 INFO ExampleAgent|Längden ->144
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2742
+24/11 18:04:15 INFO ExampleAgent|Längden ->145
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2325
+24/11 18:04:15 INFO ExampleAgent|Längden ->146
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2856
+24/11 18:04:15 INFO ExampleAgent|Längden ->147
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2722
+24/11 18:04:15 INFO ExampleAgent|Längden ->148
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2764
+24/11 18:04:15 INFO ExampleAgent|Längden ->149
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2675
+24/11 18:04:15 INFO ExampleAgent|Längden ->150
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2409
+24/11 18:04:15 INFO ExampleAgent|Längden ->151
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2608
+24/11 18:04:15 INFO ExampleAgent|Längden ->152
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2272
+24/11 18:04:15 INFO ExampleAgent|Längden ->153
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2449
+24/11 18:04:15 INFO ExampleAgent|Längden ->154
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2486
+24/11 18:04:15 INFO ExampleAgent|Längden ->155
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2621
+24/11 18:04:15 INFO ExampleAgent|Längden ->156
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2386
+24/11 18:04:15 INFO ExampleAgent|Längden ->157
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2038
+24/11 18:04:15 INFO ExampleAgent|Längden ->158
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->1938
+24/11 18:04:15 INFO ExampleAgent|Längden ->159
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2529
+24/11 18:04:15 INFO ExampleAgent|Längden ->160
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2661
+24/11 18:04:15 INFO ExampleAgent|Längden ->161
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2408
+24/11 18:04:15 INFO ExampleAgent|Längden ->162
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->1893
+24/11 18:04:15 INFO ExampleAgent|Längden ->163
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2424
+24/11 18:04:15 INFO ExampleAgent|Längden ->164
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2282
+24/11 18:04:15 INFO ExampleAgent|Längden ->165
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2156
+24/11 18:04:15 INFO ExampleAgent|Längden ->166
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2069
+24/11 18:04:15 INFO ExampleAgent|Längden ->167
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->2252
+24/11 18:04:15 INFO ExampleAgent|Längden ->168
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->1920
+24/11 18:04:15 INFO ExampleAgent|Längden ->169
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->1828
+24/11 18:04:15 INFO ExampleAgent|Längden ->170
+24/11 18:04:15 INFO ExampleAgent|Mellanskillnaded ->1652
+24/11 18:04:15 INFO ExampleAgent|Längden ->171
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[129,1305,20,2430,11][130,1314,8,2351,12][131,1315,7,2364,15][132,1320,20,2451,15][133,1321,6,2474,14][134,1327,6,2285,11][135,1330,11,2438,12][136,1331,3,2277,15][137,1337,11,2537,14][138,1339,20,2560,12][139,1343,1,2456,14][140,1349,3,2641,17][141,1350,9,2312,14][142,1355,15,2607,11][143,1357,17,2400,12][144,1370,18,2470,14][145,1371,8,2742,15][146,1374,10,2325,15][147,1375,3,2856,17][148,1377,9,2722,14][149,1381,7,2764,14][150,1384,2,2675,15][151,1394,15,2409,11][152,1395,6,2608,11][153,1397,8,2272,11][154,1399,2,2449,15][155,1402,20,2486,14][156,1406,6,2621,14][157,1416,2,2386,12][158,1418,8,2038,15][159,1419,18,1938,15][160,1420,17,2529,14][161,1423,12,2661,15][162,1427,5,2408,17][163,1429,20,1893,17][164,1433,3,2424,12][165,1435,3,2282,13][166,1441,13,2156,14][167,1445,9,2069,14][168,1448,7,2252,16][169,1464,8,1920,15][170,1481,14,1828,15][171,1482,10,1652,16]]]
+24/11 18:04:15 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:04:15 FINEST client.ServerConnection|(1) sending Message[man1,factory1,productionSchedule[[7,5][7,6][7,9][11,2][9,2][6,18][6,10][9,11][15,14][6,8][12,20][14,18][16,5][8,13][10,5][8,1][9,12][16,4][10,11][3,7][12,1]]]
+24/11 18:04:30 FINE client.AgentServiceImpl|*** TIME UNIT 6
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[-354627,0,0]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[pintel,man1,deliveryNotice[pintel,man1,[12,100,25],[11,101,55]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[6,[1639,39,30,694,7][1645,30,123,1735,7]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[30,1645],[31,1639]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[imd,man1,deliveryNotice[imd,man1,[14,110,42],[13,111,66]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[6,[1650,38,23,706,7][1656,34,39,1874,7]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[32,1656],[33,1650]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[basus,man1,deliveryNotice[basus,man1,[15,200,80]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[6,[1658,31,153,293,7][1663,35,62,236,7]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[34,1663],[35,1658]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[mec,man1,deliveryNotice[mec,man1,[17,300,73]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[mec,man1,offerBundle[6,[1672,37,91,123,7][1676,32,124,216,7]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,mec,orderBundle[[36,1676],[37,1672]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[watergate,man1,deliveryNotice[watergate,man1,[19,401,61]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[6,[1686,33,105,341,7]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[mintor,man1,deliveryNotice[mintor,man1,[20,400,127]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[38,1686]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[mintor,man1,offerBundle[6,[1689,36,110,305,7]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,mintor,orderBundle[[39,1689]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[1545,131],[1546,132],[1550,134],[1553,135],[1554,136],[1558,138],[1561,139],[1566,140],[1567,141],[1571,142],[1573,143],[1579,146],[1591,152],[1592,153],[1601,158],[1606,162],[1608,163],[1610,164],[1611,165],[1614,166],[1632,171]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[6,2057,2447][16,2217,2752][8,2276,2742][7,2077,2456][15,2042,2608][5,2156,2510][4,1678,2038][13,2049,2435][14,2119,2424][12,1746,1746][2,1813,1888][10,1811,1882][11,1698,1837][1,1561,1736]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[44,111,77,8,0,0]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[40,101,83,8,0,0][48,100,38,8,0,0]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[43,401,122,8,0,0][46,400,76,8,0,0]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[6,[1693,16,7,10,970,2773][1694,6,3,13,734,2227][1695,7,2,16,332,1845][1696,8,14,17,3158,1880][1697,16,2,11,543,2091][1698,6,4,18,1118,2542][1699,7,8,12,1782,2025][1700,16,13,14,3763,2632][1701,15,5,16,846,2115][1702,8,11,13,1861,2820][1703,7,16,18,5344,2227][1704,8,3,12,705,1809][1705,8,10,11,1409,1762][1706,6,15,15,3645,2700][1707,6,7,9,795,2272][1708,7,15,17,2527,2407][1709,6,8,15,1260,2250][1710,6,1,9,153,2565][1711,15,16,9,2520,2250][1712,7,10,13,2409,2677][1713,7,10,15,967,1935][1714,6,20,9,5534,2767][1715,15,7,15,1714,2722][1716,8,19,13,2611,2749][1717,7,1,9,287,2610][1718,8,19,14,5164,2091][1719,7,20,17,4274,2137][1720,6,14,17,3005,2385][1721,8,9,15,1628,1809][1722,6,3,17,496,2362][1723,16,11,17,1318,2397][1724,8,12,12,1781,1856][1725,16,8,17,1092,1950][1726,7,1,11,365,2812][1727,8,19,12,4072,2679][1728,16,11,17,1922,2185][1729,16,13,12,3733,2209][1730,16,1,16,125,2514][1731,6,17,16,3827,1732][1732,8,19,17,1786,1880][1733,15,17,11,2662,2610][1734,8,19,16,6482,2843][1735,7,16,11,3239,1687][1736,8,2,13,647,2491][1737,6,8,9,2548,2655][1738,6,10,18,933,1867][1739,16,15,13,2876,2397][1740,7,14,18,2835,2250][1741,8,16,12,4052,1809][1742,8,14,9,4540,2162][1743,7,9,15,2235,2070][1744,15,6,10,1752,2655][1745,8,11,16,4161,2702][1746,15,4,9,1108,1980][1747,16,19,11,7081,2867][1748,8,9,12,1163,2585][1749,8,5,16,1269,2115][1750,6,10,18,1728,2160][1751,8,8,10,1460,2608][1752,7,20,16,5022,2790][1753,6,11,9,1529,2317][1754,15,9,11,2988,2767][1755,8,7,10,1006,2397][1756,15,18,12,6925,2565][1757,15,19,17,6156,2700][1758,15,2,10,524,2385][1759,8,2,18,651,2326][1760,16,7,12,886,1809][1761,15,6,12,1860,2385][1762,8,5,12,1280,2561][1763,16,8,11,1699,2655][1764,16,12,12,2684,2796][1765,16,20,16,6880,2867][1766,8,2,14,444,2021][1767,6,20,14,6087,2767][1768,8,3,12,1006,2796][1769,8,13,10,1619,2491][1770,6,15,14,1539,1710][1771,15,6,15,1984,2362][1772,8,20,9,6254,2843][1773,8,10,12,1743,2491][1774,8,18,9,3493,2773][1775,15,16,13,2527,1755][1776,15,5,11,1350,2250][1777,15,4,18,858,2385][1778,16,11,18,2907,1762][1779,8,5,15,622,2491][1780,6,16,15,2998,2677][1781,16,3,11,1075,2561][1782,7,7,16,1890,1800][1783,15,15,13,3826,1822][1784,6,20,14,7896,2632][1785,15,6,18,831,1732][1786,6,18,18,2502,2317][1787,15,5,13,961,2137][1788,7,16,12,2656,2767][1789,6,1,9,275,2295][1790,8,5,13,1292,2350][1791,6,16,14,5508,2295][1792,8,17,13,6487,2726][1793,7,9,13,1421,1755][1794,5,20,14,4300,2150][1795,4,2,18,362,1813][1796,5,14,10,4063,1935][1797,13,11,18,1146,2085][1798,3,19,15,4315,2065][1799,13,9,11,957,2128][1800,14,7,10,1663,1980][1801,3,12,16,1494,1557][1802,5,8,16,2841,2537][1803,5,1,11,178,1784][1804,14,7,17,1644,2610][1805,5,6,14,1702,2365][1806,13,3,10,415,1978][1807,14,17,9,2034,1710][1808,3,11,9,2165,2187][1809,13,12,10,3213,1913][1810,13,6,15,1242,2300][1811,12,15,13,3102,1591][1812,5,10,10,2012,2515][1813,14,7,10,1058,2160][1814,3,19,13,3739,1312][1815,3,11,15,971,1767][1816,3,2,13,217,2170][1817,5,2,17,348,1935][1818,14,20,17,4994,2497][1819,12,9,16,1198,1665][1820,3,15,12,2772,1680][1821,13,12,10,3085,1978][1822,5,17,10,2663,1741][1823,5,2,12,208,2085][1824,3,6,18,903,1505][1825,4,15,14,2080,1387][1826,5,16,10,1692,1763][1827,13,3,10,425,2365][1828,14,14,13,2948,1755][1829,5,13,17,3305,1956][1830,4,15,13,1631,1813][1831,5,15,14,2685,2558][1832,5,10,13,2914,2429][1833,12,6,10,2064,2294][1834,4,9,17,2547,1887][1835,5,16,12,2029,2537][1836,12,3,18,544,2016][1837,13,8,18,2064,1720][1838,2,16,10,3292,1470][1839,1,19,17,2056,1353][1840,9,3,11,504,1683][1841,9,11,15,1502,1518][1842,1,14,12,1178,1683][1843,9,20,9,5636,2013][1844,10,1,14,144,1610][1845,1,17,17,2400,1765][1846,1,6,15,1019,1699][1847,11,6,14,632,1505][1848,9,12,12,1923,1336][1849,10,6,14,798,1330][1850,10,13,9,1378,1767][1851,10,8,12,2165,2082][1852,9,12,9,1662,1732][1853,2,5,11,897,1995][1854,1,15,15,2895,1287][1855,1,20,18,5311,1897][1856,9,9,13,1330,1848][1857,9,12,15,2024,1534][1858,1,8,14,665,1386][1859,1,13,11,2170,1518][1860,2,4,18,616,1925][1861,11,7,16,637,1820][1862,2,14,14,3498,1785][1863,11,9,13,1601,1977][1864,9,2,13,281,2013][1865,1,15,16,3360,1600][1866,1,5,11,560,1600][1867,10,16,16,4156,1732]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,mec,rfqBundle[[42,301,147,8,0,0][47,300,51,8,0,0]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[100=7,111=1,200=7,210=1,300=5,301=3,400=7,401=1]]
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2397
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[41,200,121,8,0,0][45,210,77,8,0,0]]]
+24/11 18:04:30 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[6,33,false,[]]]
+24/11 18:04:30 INFO ExampleAgent|Längden ->172
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2392
+24/11 18:04:30 INFO ExampleAgent|Längden ->173
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2559
+24/11 18:04:30 INFO ExampleAgent|Längden ->174
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2552
+24/11 18:04:30 INFO ExampleAgent|Längden ->175
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2533
+24/11 18:04:30 INFO ExampleAgent|Längden ->176
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2746
+24/11 18:04:30 INFO ExampleAgent|Längden ->177
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2562
+24/11 18:04:30 INFO ExampleAgent|Längden ->178
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2490
+24/11 18:04:30 INFO ExampleAgent|Längden ->179
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2589
+24/11 18:04:30 INFO ExampleAgent|Längden ->180
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2519
+24/11 18:04:30 INFO ExampleAgent|Längden ->181
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2286
+24/11 18:04:30 INFO ExampleAgent|Längden ->182
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2350
+24/11 18:04:30 INFO ExampleAgent|Längden ->183
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2640
+24/11 18:04:30 INFO ExampleAgent|Längden ->184
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2255
+24/11 18:04:30 INFO ExampleAgent|Längden ->185
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2574
+24/11 18:04:30 INFO ExampleAgent|Längden ->186
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2737
+24/11 18:04:30 INFO ExampleAgent|Längden ->187
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2362
+24/11 18:04:30 INFO ExampleAgent|Längden ->188
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2314
+24/11 18:04:30 INFO ExampleAgent|Längden ->189
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2400
+24/11 18:04:30 INFO ExampleAgent|Längden ->190
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2523
+24/11 18:04:30 INFO ExampleAgent|Längden ->191
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->1943
+24/11 18:04:30 INFO ExampleAgent|Längden ->192
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2370
+24/11 18:04:30 INFO ExampleAgent|Längden ->193
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2287
+24/11 18:04:30 INFO ExampleAgent|Längden ->194
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->2152
+24/11 18:04:30 INFO ExampleAgent|Längden ->195
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->1848
+24/11 18:04:30 INFO ExampleAgent|Längden ->196
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->1951
+24/11 18:04:30 INFO ExampleAgent|Längden ->197
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->1674
+24/11 18:04:30 INFO ExampleAgent|Längden ->198
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->1811
+24/11 18:04:30 INFO ExampleAgent|Längden ->199
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->1827
+24/11 18:04:30 INFO ExampleAgent|Längden ->200
+24/11 18:04:30 INFO ExampleAgent|Mellanskillnaded ->1754
+24/11 18:04:30 INFO ExampleAgent|Längden ->201
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[172,1698,4,2397,18][173,1700,13,2392,14][174,1702,11,2559,13][175,1712,10,2552,13][176,1715,7,2533,15][177,1716,19,2746,13][178,1727,19,2562,12][179,1734,19,2490,16][180,1745,11,2589,16][181,1748,9,2519,12][182,1752,20,2286,16][183,1756,18,2350,12][184,1757,19,2640,17][185,1761,6,2255,12][186,1765,20,2574,16][187,1767,20,2737,14][188,1768,3,2362,12][189,1780,16,2314,15][190,1788,16,2400,12][191,1792,17,2523,13][192,1798,19,1943,15][193,1802,8,2370,16][194,1804,7,2287,17][195,1805,6,2152,14][196,1816,2,1848,13][197,1851,8,1951,12][198,1855,20,1674,18][199,1856,9,1811,13][200,1863,9,1827,13][201,1864,2,1754,13]]]
+24/11 18:04:30 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,factory1,productionSchedule[[5,17][5,20][5,8][6,5][8,3][1,18][1,9]]]
+24/11 18:04:30 FINEST client.ServerConnection|(1) sending Message[man1,factory1,deliverySchedule[[7,177,5,customer][7,202,6,customer][7,203,9,customer][11,233,2,customer][9,244,2,customer]]]
+24/11 18:04:45 FINE client.AgentServiceImpl|*** TIME UNIT 7
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[-717080,0,0]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[pintel,man1,deliveryNotice[pintel,man1,[21,101,54]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[7,[2008,48,38,682,8][2014,40,83,1906,8]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[imd,man1,deliveryNotice[imd,man1,[23,110,1],[22,111,24]]]
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[40,2014],[41,2008]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[7,[2024,44,77,1909,8]]]
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[42,2024]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[basus,man1,deliveryNotice[basus,man1,[24,200,54]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[7,[2027,41,121,290,8][2031,45,77,285,8]]]
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[43,2031],[44,2027]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[macrostar,man1,deliveryNotice[macrostar,man1,[16,210,108],[25,210,25]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[mec,man1,offerBundle[7,[2039,47,51,118,8][2043,42,147,241,8]]]
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,mec,orderBundle[[45,2043],[46,2039]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[queenmax,man1,deliveryNotice[queenmax,man1,[27,300,39],[18,301,115]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[watergate,man1,deliveryNotice[watergate,man1,[28,401,27]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[7,[2051,46,76,236,8][2053,43,122,336,8]]]
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[47,2053],[48,2051]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[mintor,man1,deliveryNotice[mintor,man1,[29,400,52]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[1918,172],[1919,173],[1921,174],[1926,175],[1927,176],[1933,178],[1937,179],[1945,182],[1946,183],[1949,185],[1952,186],[1954,188],[1959,189],[1963,190],[1966,191],[1970,192],[1971,193],[1972,194],[1973,195],[1976,196],[1992,197],[1993,198],[1999,200],[2000,201]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[6,2137,2619][16,2171,2661][15,2097,2591][8,2294,2674][7,2062,2552][5,1952,2470][4,1785,1842][13,2055,2238][3,1663,1943][14,2287,2429][12,1976,1976][9,1514,1776][1,1582,1711][10,1605,1951][2,1749,1874][11,1776,1827]]]
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,mintor,rfqBundle[[55,400,143,9,0,0]]]
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,rfqBundle[[51,301,209,9,0,0]]]
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[53,111,71,9,0,0][57,110,19,9,0,0]]]
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[49,101,149,9,0,0][58,100,41,9,0,0]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[7,[2061,8,7,12,2131,2538][2062,7,18,14,3483,1935][2063,16,3,12,564,2091][2064,7,13,10,3561,1957][2065,8,19,19,7233,2538][2066,6,5,19,1287,2340][2067,15,19,14,3111,2047][2068,7,20,10,6375,2452][2069,8,18,19,3417,2373][2070,8,20,14,7576,2914][2071,7,5,14,972,2160][2072,7,11,14,3506,2452][2073,16,9,18,3463,2749][2074,6,1,19,240,2002][2075,15,15,11,4441,2115][2076,7,6,11,1660,2767][2077,16,4,18,785,1786][2078,15,11,14,3971,2407][2079,15,3,10,571,1732][2080,6,15,13,4487,2137][2081,6,15,10,2970,1800][2082,6,8,16,2196,2745][2083,6,3,17,891,2475][2084,6,5,14,998,2497][2085,15,5,12,635,2542][2086,6,14,13,4771,2272][2087,16,4,14,1128,2820][2088,7,13,13,3422,2025][2089,16,7,18,2587,2843][2090,7,17,10,5461,2677][2091,6,10,15,1471,2452][2092,6,15,15,1383,1845][2093,8,7,15,2509,2561][2094,8,7,19,2131,2538][2095,8,4,12,718,1997][2096,6,1,14,227,2272][2097,7,14,11,2973,2655][2098,15,9,13,935,1732][2099,6,17,10,3511,2295][2100,8,9,19,1522,1880][2101,16,13,15,3851,2279][2102,15,4,11,1255,2092][2103,15,4,10,391,1957][2104,8,15,11,1727,2303][2105,8,14,11,4302,2561][2106,6,17,19,4501,2407][2107,16,10,17,2678,2232][2108,15,16,18,3513,2745][2109,8,20,10,3271,2726][2110,15,14,15,2991,2137][2111,8,19,10,3879,1856][2112,15,18,16,5405,2002][2113,16,14,16,3039,1974][2114,6,11,13,1563,1777][2115,15,5,10,1354,1935][2116,16,10,12,1428,1786][2117,16,10,16,3348,2232][2118,7,5,15,1197,1710][2119,8,10,14,2937,2937][2120,7,12,10,3414,2587][2121,15,15,10,3024,2520][2122,16,12,14,3504,2655][2123,15,5,11,1674,2790][2124,16,12,10,2650,2209][2125,6,15,15,5292,2520][2126,6,10,12,2808,2160][2127,15,8,15,1814,2520][2128,8,11,14,4768,2890][2129,8,4,19,1295,2491][2130,15,12,12,3148,2385][2131,6,6,16,1485,2475][2132,8,9,15,1624,2256][2133,8,13,10,3931,2749][2134,16,11,14,1827,2373][2135,16,18,11,6212,2655][2136,8,9,10,3647,2702][2137,6,1,15,93,1867][2138,7,19,12,3249,1710][2139,15,1,11,190,2115][2140,8,11,19,2150,2444][2141,16,19,12,3188,2397][2142,16,16,14,1823,2279][2143,15,11,19,3217,2250][2144,15,12,14,1201,2002][2145,15,3,15,441,2452][2146,16,9,16,1125,1786][2147,16,9,18,2106,1950][2148,6,5,12,911,1822][2149,7,6,13,1380,2092][2150,7,11,16,2476,1732][2151,16,3,12,1269,2820][2152,16,5,14,1786,2749][2153,16,14,19,1726,1762][2154,7,2,16,522,1867][2155,7,7,14,1221,2182][2156,6,3,19,789,2025][2157,7,8,11,1900,1980][2158,8,11,18,1175,2138][2159,6,7,10,2149,2362][2160,6,20,15,5265,1755][2161,8,4,16,484,2420][2162,15,5,17,1242,2070][2163,6,9,13,2382,2407][2164,15,16,18,5895,2632][2165,12,16,15,2444,2183][2166,14,14,15,2239,1777][2167,13,18,13,3872,1956][2168,3,4,17,756,1575][2169,3,11,10,958,1452][2170,12,5,11,578,2312][2171,14,3,16,392,2182][2172,13,15,13,2147,2386][2173,13,9,17,2106,2601][2174,13,14,14,2408,2150][2175,5,14,17,4369,2601][2176,13,5,19,1565,2236][2177,13,11,17,2435,2214][2178,13,18,11,2941,1634][2179,3,13,12,2538,1627][2180,3,10,19,1842,2047][2181,14,16,12,4838,2160][2182,14,4,17,560,2002][2183,12,2,12,497,2072][2184,13,1,10,242,2429][2185,13,7,14,1169,2386][2186,13,18,16,7082,2623][2187,4,17,17,3648,2146][2188,4,15,14,3607,1850][2189,5,11,11,1300,2365][2190,3,11,15,3260,2117][2191,5,7,14,1179,2408][2192,4,15,12,1221,1628][2193,5,9,14,1042,1655][2194,13,10,18,2605,2171][2195,3,11,15,1901,1330][2196,14,4,11,496,2070][2197,5,4,16,1504,2687][2198,4,1,17,206,1720][2199,12,15,13,2463,2053][2200,13,12,18,1859,2214][2201,3,16,15,1881,1680][2202,3,2,12,509,1820][2203,3,19,10,1862,1400][2204,4,5,19,774,1720][2205,12,13,14,1447,1591][2206,13,20,16,3250,2322][2207,5,16,11,2146,1677][2208,4,11,14,1701,1406][2209,10,19,18,3458,1400][2210,10,20,11,3148,1312][2211,9,17,12,3085,1650][2212,10,10,19,1638,1820][2213,9,15,16,2138,1782][2214,9,7,10,1178,1683][2215,2,19,10,2303,1732][2216,11,5,11,817,1487][2217,9,16,10,1488,1551][2218,11,4,18,474,1977][2219,2,7,19,832,1487][2220,9,15,14,3267,1452][2221,2,16,14,1133,1417][2222,1,19,13,3469,2029][2223,1,6,16,430,1435][2224,9,6,11,925,1402][2225,1,10,19,684,1369][2226,9,18,10,2922,1353][2227,11,4,17,891,1715][2228,11,15,11,1781,1697][2229,2,6,10,1201,1540][2230,10,4,16,636,1592][2231,1,17,10,3079,2013][2232,1,6,15,1113,2062][2233,10,7,12,1560,1715][2234,9,10,17,734,1468][2235,9,16,13,1029,1287][2236,10,7,14,1719,2047][2237,11,7,15,1168,1855][2238,11,1,15,154,1540]]]
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2481
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,mec,rfqBundle[[56,300,71,9,0,0]]]
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[100=5,101=2,110=42,111=67,200=7,210=1,300=1,400=62,401=54,9=23,6=36,15=14,12=21,14=18,16=9,8=14,10=16,3=7]]
+24/11 18:04:45 INFO ExampleAgent|Längden ->202
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2291
+24/11 18:04:45 INFO ExampleAgent|Längden ->203
+24/11 18:04:45 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[7,27,false,[]]]
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2529
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[52,401,137,9,0,0]]]
+24/11 18:04:45 INFO ExampleAgent|Längden ->204
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2507
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[50,200,190,9,0,0][54,210,90,9,0,0]]]
+24/11 18:04:45 INFO ExampleAgent|Längden ->205
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2357
+24/11 18:04:45 INFO ExampleAgent|Längden ->206
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2506
+24/11 18:04:45 INFO ExampleAgent|Längden ->207
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2416
+24/11 18:04:45 INFO ExampleAgent|Längden ->208
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2656
+24/11 18:04:45 INFO ExampleAgent|Längden ->209
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2496
+24/11 18:04:45 INFO ExampleAgent|Längden ->210
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2383
+24/11 18:04:45 INFO ExampleAgent|Längden ->211
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2832
+24/11 18:04:45 INFO ExampleAgent|Längden ->212
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2560
+24/11 18:04:45 INFO ExampleAgent|Längden ->213
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->1852
+24/11 18:04:45 INFO ExampleAgent|Längden ->214
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2374
+24/11 18:04:45 INFO ExampleAgent|Längden ->215
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2570
+24/11 18:04:45 INFO ExampleAgent|Längden ->216
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2526
+24/11 18:04:45 INFO ExampleAgent|Längden ->217
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->1845
+24/11 18:04:45 INFO ExampleAgent|Längden ->218
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2278
+24/11 18:04:45 INFO ExampleAgent|Längden ->219
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2402
+24/11 18:04:45 INFO ExampleAgent|Längden ->220
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2067
+24/11 18:04:45 INFO ExampleAgent|Längden ->221
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2091
+24/11 18:04:45 INFO ExampleAgent|Längden ->222
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2324
+24/11 18:04:45 INFO ExampleAgent|Längden ->223
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->2613
+24/11 18:04:45 INFO ExampleAgent|Längden ->224
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->1910
+24/11 18:04:45 INFO ExampleAgent|Längden ->225
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->1752
+24/11 18:04:45 INFO ExampleAgent|Längden ->226
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->1763
+24/11 18:04:45 INFO ExampleAgent|Längden ->227
+24/11 18:04:45 INFO ExampleAgent|Mellanskillnaded ->1844
+24/11 18:04:45 INFO ExampleAgent|Längden ->228
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[202,2065,19,2481,19][203,2066,5,2291,19][204,2070,20,2529,14][205,2073,9,2507,18][206,2078,11,2357,14][207,2082,8,2506,16][208,2087,4,2416,14][209,2089,7,2656,18][210,2108,16,2496,18][211,2119,10,2383,14][212,2128,11,2832,14][213,2152,5,2560,14][214,2165,16,1852,15][215,2172,15,2374,13][216,2173,9,2570,17][217,2175,14,2526,17][218,2180,10,1845,19][219,2185,7,2278,14][220,2186,18,2402,16][221,2187,17,2067,17][222,2190,11,2091,15][223,2191,7,2324,14][224,2197,4,2613,16][225,2199,15,1910,13][226,2212,10,1752,19][227,2222,19,1763,13][228,2232,6,1844,15]]]
+24/11 18:04:45 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,factory1,productionSchedule[[8,13][15,13][13,11][8,1][8,5][13,12][11,15][8,9][5,16][8,3][4,5][11,11][7,7][15,6][15,17][15,3][16,5][7,1][7,1]]]
+24/11 18:04:45 FINEST client.ServerConnection|(1) sending Message[man1,factory1,deliverySchedule[[6,187,18,customer][6,191,10,customer][9,243,11,customer][15,462,14,customer]]]
+24/11 18:05:00 FINE client.AgentServiceImpl|*** TIME UNIT 8
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[-955129,0,0]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[pintel,man1,deliveryNotice[pintel,man1,[31,100,30],[30,101,123]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[8,[2373,58,41,747,9][2379,49,149,2107,9]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[49,2379],[50,2373]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[imd,man1,deliveryNotice[imd,man1,[33,110,23],[32,111,39]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[8,[2384,57,19,661,9][2389,53,71,1773,9]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[basus,man1,deliveryNotice[basus,man1,[35,200,153],[34,210,62]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[51,2389],[52,2384]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[8,[2391,50,190,335,9][2395,54,90,259,9]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[53,2395],[54,2391]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[mec,man1,deliveryNotice[mec,man1,[37,300,91],[36,301,124]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[mec,man1,offerBundle[8,[2404,56,71,103,9]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,mec,orderBundle[[55,2404]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[queenmax,man1,deliveryNotice[queenmax,man1,[26,301,40]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[queenmax,man1,offerBundle[8,[2410,51,209,303,9]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,orderBundle[[56,2410]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[watergate,man1,deliveryNotice[watergate,man1,[38,401,105]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[8,[2417,52,137,313,9]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[57,2417]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[mintor,man1,deliveryNotice[mintor,man1,[39,400,110]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[mintor,man1,offerBundle[8,[2421,55,143,420,9]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,mintor,orderBundle[[58,2421]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[2292,204],[2295,205],[2298,207],[2302,208],[2303,209],[2311,210],[2314,211],[2328,213],[2335,214],[2344,218],[2345,219],[2346,220],[2354,225],[2359,226],[2362,227],[2365,228]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[8,2133,2793][6,2104,2506][15,2042,2538][7,2078,2342][16,2205,2656][12,1852,1910][13,1950,2431][14,2154,2154][5,2314,2537][3,1663,1998][4,1705,2042][10,1588,1926][9,1713,1713][11,1693,1880][1,1763,1844]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,mintor,rfqBundle[[62,401,104,10,0,0]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,rfqBundle[[66,300,68,10,0,0]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,rfqBundle[[64,210,107,10,0,0]]]
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[8,[2426,7,9,17,1670,1687][2427,15,8,11,1540,2407][2428,6,14,13,2457,1755][2429,15,13,15,1667,2565][2430,16,3,14,946,2867][2431,15,20,14,2564,2137][2432,7,6,19,2008,2790][2433,6,10,17,1091,2182][2434,7,3,15,458,2182][2435,8,13,17,4050,2397][2436,6,4,15,337,1687][2437,6,20,12,3168,1980][2438,16,15,17,4169,2138][2439,6,9,16,2470,2745][2440,15,4,11,432,2160][2441,15,15,20,1620,2160][2442,16,9,20,1960,2420][2443,16,20,19,2350,2350][2444,6,2,17,627,2092][2445,16,17,19,4789,2561][2446,6,15,11,3240,2700][2447,15,6,15,1058,2205][2448,7,11,12,4120,2497][2449,6,16,16,2181,2272][2450,16,16,15,3101,1762][2451,7,11,19,2061,2677][2452,15,16,19,4514,2565][2453,16,15,14,2495,2773][2454,15,11,12,3637,2362][2455,6,13,16,2158,2767][2456,8,3,14,577,2749][2457,16,17,18,4613,2467][2458,8,2,15,456,1903][2459,7,19,15,2243,1687][2460,6,4,15,1450,2790][2461,6,12,16,1733,2407][2462,16,4,13,774,2420][2463,8,7,18,1233,2937][2464,6,17,12,5569,2520][2465,7,18,11,4228,2610][2466,8,7,18,2467,2350][2467,8,16,17,2435,1903][2468,15,16,15,4867,2340][2469,6,10,14,1134,1890][2470,15,17,17,2034,1710][2471,15,12,12,1992,2767][2472,8,17,15,3947,1786][2473,8,15,15,4018,1786][2474,15,1,20,324,2160][2475,7,10,13,2430,2025][2476,6,20,14,4980,2767][2477,6,11,18,2227,2025][2478,6,3,13,991,2542][2479,6,16,11,5992,2497][2480,16,5,16,1607,2679][2481,16,16,12,3044,1903][2482,8,7,17,1980,2021][2483,6,17,15,3281,1755][2484,6,19,15,7757,2722][2485,15,9,16,1296,1800][2486,16,5,14,1551,2820][2487,8,19,12,3125,2350][2488,15,12,17,3266,2722][2489,7,17,17,4225,1912][2490,15,6,17,1772,2272][2491,15,9,18,3132,2677][2492,7,1,11,138,2767][2493,16,9,17,2322,2867][2494,8,7,18,847,2420][2495,16,1,18,152,2538][2496,15,11,14,2079,1890][2497,6,13,20,1877,2407][2498,6,20,16,5265,2025][2499,15,10,12,1984,2205][2500,7,7,12,1464,2092][2501,16,16,16,6108,2937][2502,16,2,11,568,2585][2503,16,10,17,1071,1786][2504,16,16,20,3195,1997][2505,15,14,18,4914,2700][2506,7,17,15,5133,2745][2507,6,20,11,5346,2430][2508,15,20,20,3266,2722][2509,16,12,15,1895,1974][2510,15,9,17,2106,1800][2511,16,1,18,176,2937][2512,6,19,18,4726,1777][2513,16,7,15,2052,2256][2514,15,12,14,1263,1755][2515,16,2,14,546,1950][2516,6,5,14,968,2767][2517,7,6,12,1701,1890][2518,16,4,15,651,2326][2519,7,20,18,6048,2520][2520,8,18,12,4568,2538][2521,13,20,11,7095,2365][2522,4,17,12,5502,2312][2523,12,13,13,3030,1554][2524,12,4,18,546,1517][2525,3,17,14,4089,2187][2526,5,4,11,1324,2365][2527,4,9,11,3121,2312][2528,5,9,18,1625,2257][2529,3,1,20,70,1400][2530,4,16,11,3269,1572][2531,14,10,14,1732,1732][2532,13,11,15,3433,2601][2533,5,16,15,3274,2558][2534,3,2,19,354,1610][2535,14,18,19,4082,2520][2536,13,10,13,1616,2021][2537,14,3,13,746,1777][2538,12,2,11,303,1517][2539,5,20,20,3985,2214][2540,5,6,16,1029,2451][2541,13,19,17,3259,2451][2542,14,10,11,2349,2610][2543,5,15,16,2064,1720][2544,5,5,17,980,1634][2545,13,14,18,2769,1978][2546,4,1,13,111,1850][2547,5,9,19,1238,1720][2548,3,6,17,705,1960][2549,3,8,12,1355,1540][2550,3,12,14,1249,2082][2551,3,9,16,1448,2012][2552,12,8,17,1294,2312][2553,3,19,17,4191,1697][2554,5,10,19,1505,2150][2555,2,18,16,3402,1890][2556,2,3,20,882,1960][2557,10,6,19,585,1627][2558,10,13,19,1069,1645][2559,11,18,15,2734,2170][2560,1,6,20,469,1303][2561,11,4,20,1087,1942][2562,2,7,20,735,2100][2563,11,8,11,2147,2065][2564,1,2,19,320,1336][2565,11,10,18,1270,2117][2566,2,19,12,2793,2100][2567,10,20,16,2205,1575][2568,11,13,18,1214,1557][2569,11,5,16,955,1592][2570,10,9,19,1530,1890][2571,11,7,11,1530,2187][2572,2,14,11,2777,1417][2573,2,5,17,756,1890][2574,2,15,17,3660,1627][2575,9,5,15,836,1287][2576,2,3,15,244,1627][2577,10,3,15,244,1627][2578,10,8,17,588,1470][2579,10,7,17,1543,1470][2580,2,3,16,349,1942][2581,11,6,14,1064,1365]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[63,111,66,10,0,0][67,110,41,10,0,0]]]
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2389
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[110=17,111=24,210=41,300=1,400=1,401=40,9=12,6=13,12=21,14=18,16=9,8=17,10=16,3=7,5=45,1=27]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[59,101,38,10,0,0][68,100,35,10,0,0]]]
+24/11 18:05:00 INFO ExampleAgent|Längden ->229
+24/11 18:05:00 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[8,30,false,[]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[65,400,76,10,0,0]]]
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2635
+24/11 18:05:00 INFO ExampleAgent|Längden ->230
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,mec,rfqBundle[[61,301,112,10,0,0]]]
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2473
+24/11 18:05:00 INFO ExampleAgent|Längden ->231
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[60,200,73,10,0,0]]]
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2516
+24/11 18:05:00 INFO ExampleAgent|Längden ->232
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2372
+24/11 18:05:00 INFO ExampleAgent|Längden ->233
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2477
+24/11 18:05:00 INFO ExampleAgent|Längden ->234
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2394
+24/11 18:05:00 INFO ExampleAgent|Längden ->235
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2736
+24/11 18:05:00 INFO ExampleAgent|Längden ->236
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2303
+24/11 18:05:00 INFO ExampleAgent|Längden ->237
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2294
+24/11 18:05:00 INFO ExampleAgent|Längden ->238
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2330
+24/11 18:05:00 INFO ExampleAgent|Längden ->239
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2259
+24/11 18:05:00 INFO ExampleAgent|Längden ->240
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2537
+24/11 18:05:00 INFO ExampleAgent|Längden ->241
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2689
+24/11 18:05:00 INFO ExampleAgent|Längden ->242
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2440
+24/11 18:05:00 INFO ExampleAgent|Längden ->243
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2442
+24/11 18:05:00 INFO ExampleAgent|Längden ->244
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2322
+24/11 18:05:00 INFO ExampleAgent|Längden ->245
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2379
+24/11 18:05:00 INFO ExampleAgent|Längden ->246
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2892
+24/11 18:05:00 INFO ExampleAgent|Längden ->247
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2459
+24/11 18:05:00 INFO ExampleAgent|Längden ->248
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2493
+24/11 18:05:00 INFO ExampleAgent|Längden ->249
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->1970
+24/11 18:05:00 INFO ExampleAgent|Längden ->250
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2372
+24/11 18:05:00 INFO ExampleAgent|Längden ->251
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2348
+24/11 18:05:00 INFO ExampleAgent|Längden ->252
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2180
+24/11 18:05:00 INFO ExampleAgent|Längden ->253
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2156
+24/11 18:05:00 INFO ExampleAgent|Längden ->254
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->1861
+24/11 18:05:00 INFO ExampleAgent|Längden ->255
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->1984
+24/11 18:05:00 INFO ExampleAgent|Längden ->256
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2287
+24/11 18:05:00 INFO ExampleAgent|Längden ->257
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2089
+24/11 18:05:00 INFO ExampleAgent|Längden ->258
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->2007
+24/11 18:05:00 INFO ExampleAgent|Längden ->259
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->1804
+24/11 18:05:00 INFO ExampleAgent|Längden ->260
+24/11 18:05:00 INFO ExampleAgent|Mellanskillnaded ->1768
+24/11 18:05:00 INFO ExampleAgent|Längden ->261
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[229,2430,3,2389,14][230,2432,6,2635,19][231,2439,9,2473,16][232,2445,17,2516,19][233,2451,11,2372,19][234,2456,3,2477,14][235,2460,4,2394,15][236,2463,7,2736,18][237,2468,16,2303,15][238,2476,20,2294,14][239,2484,19,2330,15][240,2490,6,2259,17][241,2491,9,2537,18][242,2493,9,2689,17][243,2501,16,2440,16][244,2505,14,2442,18][245,2506,17,2322,15][246,2508,20,2379,20][247,2511,1,2892,18][248,2516,5,2459,14][249,2519,20,2493,18][250,2525,17,1970,14][251,2532,11,2372,15][252,2533,16,2348,15][253,2540,6,2180,16][254,2541,19,2156,17][255,2548,6,1861,17][256,2550,12,1984,14][257,2552,8,2287,17][258,2559,18,2089,15][259,2562,7,2007,20][260,2570,9,1804,19][261,2580,3,1768,16]]]
+24/11 18:05:00 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,factory1,productionSchedule[[10,5][14,8][7,4][8,15][7,8][12,11][13,2][6,6][5,12][10,10][1,8][8,11][16,15][6,17][14,3][8,19][15,18][15,6][8,3][7,16][10,8][6,5][16,5][7,3][13,3][9,2][3,2][12,1][3,16][7,1][3,4][15,3][7,1]]]
+24/11 18:05:00 FINEST client.ServerConnection|(1) sending Message[man1,factory1,deliverySchedule[[6,184,8,customer][12,214,20,customer][14,216,18,customer][16,438,5,customer][8,481,13,customer][5,490,17,customer][10,513,5,customer][8,802,17,customer][15,834,13,customer][13,861,11,customer]]]
+24/11 18:05:15 FINE client.AgentServiceImpl|*** TIME UNIT 9
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[-1364036,0,0]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[pintel,man1,deliveryNotice[pintel,man1,[41,100,38],[40,101,83]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[9,[2712,68,35,732,10][2717,59,38,1870,10]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[59,2717],[60,2712]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[imd,man1,deliveryNotice[imd,man1,[42,111,77]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[9,[2720,67,41,630,10][2726,63,66,1618,10]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[61,2726],[62,2720]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[basus,man1,deliveryNotice[basus,man1,[44,200,121],[43,210,77]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[9,[2730,60,73,309,10]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[63,2730]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[macrostar,man1,offerBundle[9,[2736,64,107,345,10]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[mec,man1,deliveryNotice[mec,man1,[46,300,51],[45,301,147]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[mec,man1,offerBundle[9,[2742,61,112,160,10]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,orderBundle[[64,2736]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[queenmax,man1,offerBundle[9,[2745,66,68,105,10]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,mec,orderBundle[[65,2742]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[watergate,man1,deliveryNotice[watergate,man1,[48,400,76],[47,401,122]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,orderBundle[[66,2745]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[9,[2753,65,76,217,10]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[mintor,man1,offerBundle[9,[2760,62,104,482,10]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[67,2753]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[2631,229],[2633,230],[2638,231],[2646,233],[2650,234],[2652,235],[2654,236],[2658,238],[2660,239],[2664,241],[2665,242],[2669,243],[2670,244],[2671,245],[2672,246],[2675,248],[2678,250],[2680,251],[2681,252],[2685,253],[2686,254],[2688,255],[2689,256],[2700,259],[2703,260],[2708,261]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,mintor,orderBundle[[68,2760]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[15,2119,2602][16,2134,2802][7,2150,2635][6,2080,2637][8,2303,2736][3,1603,1984][5,2116,2348][13,1970,2372][14,2423,2423][12,2193,2193][2,1617,2007][10,1616,1804][11,1588,2061]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,rfqBundle[[71,301,150,11,0,0][76,300,128,11,0,0]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,rfqBundle[[74,210,110,11,0,0]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[9,[2761,7,7,12,2402,2452][2762,15,9,13,1403,2227][2763,16,18,14,4111,2538][2764,8,17,21,2812,2068][2765,7,9,21,2867,2655][2766,15,12,20,1776,2115][2767,7,9,15,2293,2317][2768,16,16,15,6146,2561][2769,7,7,20,842,2407][2770,16,17,19,2715,1997][2771,16,2,21,688,2867][2772,16,16,18,1654,2068][2773,16,3,18,562,2679][2774,15,1,17,336,2587][2775,7,10,18,1203,2407][2776,7,2,19,684,2632][2777,6,19,14,2770,2430][2778,8,7,13,2047,1950][2779,15,19,18,3531,2655][2780,7,7,21,1975,2565][2781,6,3,20,545,2272][2782,16,14,18,3634,1997][2783,6,17,13,3320,2790][2784,7,10,15,3442,2295][2785,16,12,19,1638,1950][2786,7,3,12,1073,2385][2787,8,10,17,1311,2185][2788,7,1,16,256,1710][2789,7,12,18,4270,2542][2790,8,15,19,2368,1974][2791,16,11,17,2990,2091][2792,6,4,19,561,1755][2793,8,4,20,864,2702][2794,7,2,21,337,2812][2795,7,13,14,4781,2452][2796,15,11,14,1680,2182][2797,15,16,21,6249,2790][2798,7,12,12,1959,2722][2799,7,16,13,4887,2182][2800,16,2,12,747,2491][2801,15,7,20,1360,2430][2802,16,12,14,3594,1997][2803,16,13,21,3024,2115][2804,7,16,15,5755,2767][2805,8,17,19,2492,1833][2806,16,2,16,394,2820][2807,7,16,12,2937,2295][2808,7,11,21,1999,2272][2809,15,11,16,2277,2070][2810,16,7,13,1526,2726][2811,16,18,15,4822,1786][2812,8,9,15,2791,2068][2813,7,12,18,3304,2295][2814,16,1,12,411,2937][2815,15,19,16,2932,2205][2816,16,12,18,1658,2303][2817,7,19,19,4104,2700][2818,8,9,17,1835,2914][2819,16,19,17,5352,2561][2820,15,12,15,1705,1777][2821,16,14,17,3691,2397][2822,7,20,16,4413,2452][2823,16,17,16,5492,2937][2824,15,15,19,2173,2070][2825,8,11,15,3474,2256][2826,16,18,21,7401,2937][2827,15,6,12,615,1710][2828,7,8,18,1409,1957][2829,15,5,12,697,2790][2830,6,3,15,615,1710][2831,8,2,12,368,2303][2832,15,8,17,2483,2587][2833,15,2,14,334,2790][2834,6,13,13,2772,1777][2835,15,10,15,1881,1710][2836,15,2,15,481,2677][2837,16,6,17,754,2514][2838,15,11,21,2259,1867][2839,6,13,20,2386,2295][2840,8,10,13,1085,1809][2841,8,10,14,1397,1997][2842,7,6,13,1188,1800][2843,7,14,15,4872,2677][2844,7,12,20,4648,2767][2845,8,13,13,3512,2702][2846,16,3,21,1142,2538][2847,16,20,17,5743,2209][2848,15,1,12,286,2385][2849,6,9,19,1119,1777][2850,15,18,14,6237,2475][2851,16,20,18,3854,1927][2852,15,10,13,1842,2632][2853,8,5,15,1348,1927][2854,16,11,12,2584,2937][2855,6,1,14,236,2362][2856,7,18,18,7349,2722][2857,16,20,21,2632,2632][2858,15,4,19,782,1957][2859,15,18,19,5490,2542][2860,15,11,16,1722,1957][2861,8,4,17,928,1786][2862,15,12,12,2186,1822][2863,16,17,13,2397,2820][2864,8,20,13,4700,2350][2865,13,20,18,3224,1612][2866,5,19,20,2965,2601][2867,14,5,15,590,2362][2868,3,19,21,2859,1505][2869,3,18,12,2721,1680][2870,3,12,17,2448,1855][2871,3,5,13,1039,1890][2872,5,16,14,4247,2042][2873,3,13,13,2952,2065][2874,4,1,21,104,1739][2875,3,9,18,1729,2135][2876,14,4,19,405,2025][2877,5,8,12,1253,1741][2878,4,4,14,692,1924][2879,4,19,20,3318,2183][2880,5,13,16,3101,2386][2881,13,1,21,108,1806][2882,3,11,18,1617,2100][2883,3,8,12,608,1522][2884,4,6,21,482,1609][2885,12,14,17,1693,2016][2886,12,14,14,2793,1535][2887,5,4,19,421,2107][2888,5,6,18,1773,2687][2889,3,6,16,1747,1942][2890,14,6,21,1471,2452][2891,12,6,21,1240,1591][2892,14,15,12,4536,2520][2893,5,20,21,3715,2322][2894,14,2,14,338,2115][2895,12,13,16,1240,1591][2896,14,18,19,2721,1890][2897,4,2,21,381,1905][2898,4,14,19,4000,1905][2899,12,19,21,2066,1554][2900,13,12,14,3018,1677][2901,3,18,13,3845,1942][2902,3,18,21,2160,1715][2903,5,3,19,505,2107][2904,2,13,21,1990,2187][2905,11,5,12,1387,2135][2906,2,1,20,123,2065][2907,1,12,14,1781,1237][2908,9,11,21,1499,1947][2909,10,4,20,885,2012][2910,2,10,21,1344,1680][2911,9,5,18,1293,1848][2912,9,11,20,916,1666][2913,10,20,16,2184,1820][2914,1,19,17,5133,1930][2915,10,13,16,2620,1680][2916,11,11,21,1316,1995][2917,9,2,19,187,1336][2918,9,7,12,1732,1650][2919,10,6,17,546,1820][2920,9,14,18,2642,1452][2921,1,14,15,3912,1996][2922,2,16,17,3107,1942][2923,1,3,20,252,1683][2924,10,20,17,1890,1890][2925,9,9,17,2427,1798][2926,1,9,20,1389,1930][2927,1,9,16,1416,1749][2928,11,1,21,123,1767][2929,11,3,14,264,1470][2930,11,8,14,2016,1680][2931,10,8,14,1092,1365][2932,2,1,13,127,1820][2933,1,1,12,132,1468][2934,1,13,17,2522,1617][2935,10,18,18,5810,2152][2936,1,13,20,2119,1254][2937,1,15,21,3567,1699]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[73,111,101,11,0,0][77,110,9,11,0,0]]]
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2309
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[69,101,123,11,0,0][78,100,45,11,0,0]]]
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[101=2,110=3,200=2,210=3,300=3,301=2,400=2,401=3,7=9,11=26,9=12,6=5,15=26,12=1,16=9,8=18,10=11,3=7,5=44,1=27,13=12,4=5]]
+24/11 18:05:15 INFO ExampleAgent|Längden ->262
+24/11 18:05:15 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[9,17,false,[]]]
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2497
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[72,401,114,11,0,0][75,400,164,11,0,0]]]
+24/11 18:05:15 INFO ExampleAgent|Längden ->263
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[70,200,168,11,0,0]]]
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2573
+24/11 18:05:15 INFO ExampleAgent|Längden ->264
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2511
+24/11 18:05:15 INFO ExampleAgent|Längden ->265
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2303
+24/11 18:05:15 INFO ExampleAgent|Längden ->266
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2326
+24/11 18:05:15 INFO ExampleAgent|Längden ->267
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2554
+24/11 18:05:15 INFO ExampleAgent|Längden ->268
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2261
+24/11 18:05:15 INFO ExampleAgent|Längden ->269
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2490
+24/11 18:05:15 INFO ExampleAgent|Längden ->270
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2409
+24/11 18:05:15 INFO ExampleAgent|Längden ->271
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2564
+24/11 18:05:15 INFO ExampleAgent|Längden ->272
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2606
+24/11 18:05:15 INFO ExampleAgent|Längden ->273
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2782
+24/11 18:05:15 INFO ExampleAgent|Längden ->274
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2686
+24/11 18:05:15 INFO ExampleAgent|Längden ->275
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2847
+24/11 18:05:15 INFO ExampleAgent|Längden ->276
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2353
+24/11 18:05:15 INFO ExampleAgent|Längden ->277
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2743
+24/11 18:05:15 INFO ExampleAgent|Längden ->278
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2333
+24/11 18:05:15 INFO ExampleAgent|Längden ->279
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2417
+24/11 18:05:15 INFO ExampleAgent|Längden ->280
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2373
+24/11 18:05:15 INFO ExampleAgent|Längden ->281
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2358
+24/11 18:05:15 INFO ExampleAgent|Längden ->282
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2666
+24/11 18:05:15 INFO ExampleAgent|Längden ->283
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2502
+24/11 18:05:15 INFO ExampleAgent|Längden ->284
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2478
+24/11 18:05:15 INFO ExampleAgent|Längden ->285
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->1796
+24/11 18:05:15 INFO ExampleAgent|Längden ->286
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->1898
+24/11 18:05:15 INFO ExampleAgent|Längden ->287
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2264
+24/11 18:05:15 INFO ExampleAgent|Längden ->288
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2304
+24/11 18:05:15 INFO ExampleAgent|Längden ->289
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2143
+24/11 18:05:15 INFO ExampleAgent|Längden ->290
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->1791
+24/11 18:05:15 INFO ExampleAgent|Längden ->291
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->1730
+24/11 18:05:15 INFO ExampleAgent|Längden ->292
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->1848
+24/11 18:05:15 INFO ExampleAgent|Längden ->293
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->1782
+24/11 18:05:15 INFO ExampleAgent|Längden ->294
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->1678
+24/11 18:05:15 INFO ExampleAgent|Längden ->295
+24/11 18:05:15 INFO ExampleAgent|Mellanskillnaded ->2030
+24/11 18:05:15 INFO ExampleAgent|Längden ->296
+24/11 18:05:15 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[262,2765,9,2309,21][263,2768,16,2497,15][264,2771,2,2573,21][265,2773,3,2511,18][266,2774,1,2303,17][267,2776,2,2326,19][268,2779,19,2554,18][269,2780,7,2261,21][270,2793,4,2490,20][271,2794,2,2409,21][272,2797,16,2564,21][273,2804,16,2606,15][274,2806,2,2782,16][275,2817,19,2686,19][276,2818,9,2847,17][277,2823,17,2353,16][278,2826,18,2743,21][279,2836,2,2333,15][280,2843,14,2417,15][281,2844,12,2373,20][282,2846,3,2358,21][283,2856,18,2666,18][284,2859,18,2502,19][285,2866,19,2478,20][286,2875,9,1796,18][287,2885,14,1898,17][288,2888,6,2264,18][289,2890,6,2304,21][290,2904,13,2143,21][291,2908,11,1791,21][292,2911,5,1730,18][293,2916,11,1848,21][294,2919,6,1782,17][295,2923,3,1678,20][296,2935,18,2030,18]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,factory1,productionSchedule[[15,17][8,12][16,6][16,5][5,10][6,11][8,18][8,11][7,8][1,19][16,11][14,4][7,1][7,9][16,13][16,4][16,5][13,7][16,3][8,3][4,8][7,1][16,2][4,2][2,3][3,6]]]
+24/11 18:05:15 FINEST client.ServerConnection|(1) sending Message[man1,factory1,deliverySchedule[[8,172,1,customer][8,208,5,customer][9,237,12,customer][16,464,4,customer][13,491,12,customer][10,514,11,customer][11,515,15,customer][8,799,9,customer][5,851,20,customer][5,859,8,customer][6,1193,5,customer][5,1210,16,customer]]]
+24/11 18:05:30 FINE client.AgentServiceImpl|*** TIME UNIT 10
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[-1550449,0,0]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[pintel,man1,deliveryNotice[pintel,man1,[50,100,41],[49,101,149]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[10,[3072,78,45,687,11][3078,69,123,1577,11]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[69,3078],[70,3072]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[imd,man1,deliveryNotice[imd,man1,[52,110,19],[51,111,71]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[10,[3084,77,9,626,11][3090,73,101,1885,11]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[71,3090],[72,3084]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[basus,man1,deliveryNotice[basus,man1,[54,200,190],[53,210,90]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[10,[3094,70,168,289,11]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[73,3094]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[macrostar,man1,offerBundle[10,[3101,74,0,395,11][3102,74,110,395,13]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,orderBundle[[74,3102]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[mec,man1,deliveryNotice[mec,man1,[55,300,71]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[queenmax,man1,offerBundle[10,[3114,76,128,106,11][3116,71,150,215,11]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[watergate,man1,deliveryNotice[watergate,man1,[57,401,137]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,orderBundle[[75,3116],[76,3114]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[10,[3119,75,164,256,11][3121,72,114,269,11]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[77,3121],[78,3119]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[2980,262],[2985,264],[2986,265],[2987,266],[2989,267],[2990,268],[2991,269],[2996,270],[2997,271],[2998,272],[3000,273],[3012,277],[3015,278],[3017,279],[3020,280],[3021,281],[3022,282],[3027,285],[3031,286],[3035,287],[3037,288],[3039,289],[3047,291],[3050,292],[3055,293],[3056,294],[3066,296]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[7,2232,2606][15,2061,2564][16,2192,2743][6,2234,2246][8,2174,2766][5,2076,2478][14,2300,2304][3,1687,2009][4,1725,2084][12,1898,1898][2,1665,2068][9,1638,1791][10,1670,2030][1,1592,1920][11,1744,1848]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,mintor,rfqBundle[[82,401,91,12,0,0]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,rfqBundle[[81,301,181,12,0,0]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,rfqBundle[[80,200,100,12,0,0]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[10,[3129,15,7,15,1332,2115][3130,8,17,19,2544,2138][3131,15,1,15,384,2745][3132,7,15,18,5771,2565][3133,15,17,16,5185,2542][3134,6,13,19,4167,2137][3135,16,1,21,190,2115][3136,16,11,13,3876,2937][3137,8,15,22,3838,2843][3138,15,12,21,1852,2205][3139,15,18,14,4519,2790][3140,7,15,19,3280,2430][3141,15,11,13,2605,2632][3142,8,19,21,5061,1903][3143,6,19,21,3043,2002][3144,7,20,21,5382,2070][3145,15,14,15,4725,2250][3146,8,1,15,218,2185][3147,6,7,22,1512,1800][3148,6,2,15,359,2565][3149,15,4,20,526,2632][3150,8,9,15,1814,1833][3151,16,16,18,2346,1833][3152,8,14,22,5174,2843][3153,8,8,22,1550,1762][3154,15,5,17,1080,2700][3155,16,17,19,2588,1903][3156,8,4,16,423,2115][3157,15,10,18,1512,2160][3158,16,15,18,3849,1833][3159,15,4,14,1209,2160][3160,6,2,21,408,2272][3161,8,15,22,4993,2561][3162,8,3,13,355,1974][3163,8,20,14,4228,1762][3164,8,2,13,307,2561][3165,7,18,22,5346,2700][3166,7,18,17,2462,1710][3167,7,3,14,461,1710][3168,7,11,14,2772,1800][3169,7,14,14,3257,2115][3170,7,16,16,5128,2137][3171,7,7,16,944,1687][3172,8,16,19,3714,1786][3173,15,4,17,342,1710][3174,16,6,21,1628,2467][3175,6,8,19,3266,2722][3176,8,10,15,1988,2209][3177,15,5,16,1012,2250][3178,15,15,19,3408,2272][3179,16,20,19,2914,2914][3180,7,20,16,5418,1935][3181,7,1,13,357,2385][3182,7,1,22,272,2475][3183,7,5,13,1242,2070][3184,8,14,16,1447,2068][3185,6,7,18,1658,2632][3186,7,16,15,2822,2205][3187,7,10,15,1102,2205][3188,7,4,13,1049,2385][3189,15,6,18,1162,2767][3190,7,1,20,126,2520][3191,7,13,14,1359,2092][3192,8,15,15,3710,1903][3193,8,13,22,2107,2702][3194,15,4,20,917,1912][3195,16,16,18,6542,2726][3196,7,20,18,5184,2160][3197,7,18,18,6255,2317][3198,15,2,18,432,1800][3199,8,3,16,454,2162][3200,15,2,18,381,2722][3201,16,16,21,3289,2937][3202,16,6,20,1184,2467][3203,16,20,19,2566,1833][3204,16,11,15,4032,2444][3205,8,20,21,6414,2138][3206,6,19,19,2632,1732][3207,8,20,18,4022,2514][3208,7,2,22,367,2295][3209,6,18,22,4032,1867][3210,15,19,18,5898,2587][3211,16,20,16,6580,2350][3212,16,5,22,756,2162][3213,16,16,19,6484,2702][3214,15,12,18,4293,2385][3215,15,9,19,1803,1822][3216,7,4,16,583,1822][3217,7,16,21,5236,2182][3218,6,18,22,5000,2137][3219,8,9,13,1945,2702][3220,8,15,21,5428,2585][3221,8,13,14,1646,1809][3222,16,10,17,1833,1833][3223,8,12,21,2538,2350][3224,7,3,19,498,1845][3225,6,18,20,4422,1755][3226,8,11,21,2359,1950][3227,7,19,14,2513,2205][3228,8,8,18,1455,2021][3229,8,13,15,3116,2397][3230,6,12,18,2564,2137][3231,15,6,13,1469,2227][3232,7,11,19,2395,1980][3233,16,20,16,3976,2209][3234,8,7,14,1761,2796][3235,8,6,19,1006,2796][3236,8,9,16,1089,2420][3237,15,18,22,2085,2317][3238,15,15,20,4575,2542][3239,15,3,19,921,2362][3240,15,17,18,2822,1845][3241,7,6,17,1020,2430][3242,7,9,19,1184,2632][3243,4,7,15,485,1387][3244,5,12,15,2354,1784][3245,14,14,18,2292,2047][3246,4,11,20,1135,1720][3247,5,12,21,2901,1612][3248,4,13,18,2683,2294][3249,13,4,19,438,1827][3250,5,11,21,1347,2042][3251,5,6,15,1290,2150][3252,4,11,19,1932,1757][3253,5,11,13,2678,2214][3254,12,7,17,1540,2201][3255,14,1,22,320,2137][3256,4,11,17,2380,2164][3257,4,20,16,4040,1443][3258,3,19,20,2419,1592][3259,3,18,18,3339,1855][3260,5,14,14,2582,1677][3261,3,4,22,964,1855][3262,13,10,19,2388,2171][3263,3,12,15,3528,1960][3264,4,2,21,319,1776][3265,3,8,22,1581,1977][3266,4,17,22,4755,1998][3267,14,9,15,3431,2542][3268,4,10,13,898,1498][3269,3,2,18,432,1662][3270,13,12,19,4117,2451][3271,12,4,13,890,1591][3272,5,16,19,4162,2365][3273,13,2,17,602,2150][3274,5,4,15,1095,1956][3275,12,8,16,1318,1498][3276,3,4,14,1009,1942][3277,4,13,16,2275,1591][3278,3,1,16,110,1837][3279,14,14,21,3477,2070][3280,3,3,19,720,1715][3281,4,14,18,3130,1720][3282,14,8,16,2888,2407][3283,14,2,18,303,1687][3284,4,9,14,2337,2164][3285,5,12,21,1328,2214][3286,5,1,14,296,1978][3287,4,6,14,1198,1998][3288,13,3,13,531,1612][3289,5,18,13,1926,1784][3290,2,16,14,4149,1995][3291,10,2,22,248,1382][3292,2,18,22,4176,1785][3293,10,2,15,423,2117][3294,2,10,17,778,1557][3295,11,17,20,1999,1470][3296,10,17,19,2825,1662][3297,2,7,14,1528,1680][3298,10,20,19,3311,1505][3299,2,11,13,1957,1977][3300,11,20,16,3810,1732][3301,9,8,18,1378,1567][3302,10,5,16,984,1312][3303,11,14,13,3645,2170][3304,11,18,15,1621,1802][3305,10,17,22,3831,1610][3306,1,11,20,3238,1963][3307,10,9,18,1001,1855][3308,10,11,20,889,1347][3309,1,4,19,1080,1930][3310,1,1,17,263,1881][3311,1,9,13,1404,1419][3312,11,11,20,1048,1907][3313,2,6,13,1587,1890][3314,9,17,19,4004,1963][3315,9,10,22,1881,1881][3316,10,14,13,4116,2100][3317,1,20,20,3564,1485]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[83,111,87,12,0,0][87,110,65,12,0,0]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[101=1,110=3,200=1,210=3,301=4,401=4,7=42,11=11,9=2,6=28,15=53,12=13,14=11,16=25,8=51,10=23,3=29,5=12,1=35,13=5,4=5]]
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2374
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[79,101,91,12,0,0][88,100,9,12,0,0]]]
+24/11 18:05:30 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[10,35,false,[]]]
+24/11 18:05:30 INFO ExampleAgent|Längden ->297
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,mec,rfqBundle[[86,300,71,12,0,0]]]
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2279
+24/11 18:05:30 INFO ExampleAgent|Längden ->298
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[85,400,161,12,0,0]]]
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2475
+24/11 18:05:30 INFO ExampleAgent|Längden ->299
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[84,210,152,12,0,0]]]
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2615
+24/11 18:05:30 INFO ExampleAgent|Längden ->300
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2430
+24/11 18:05:30 INFO ExampleAgent|Längden ->301
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2417
+24/11 18:05:30 INFO ExampleAgent|Längden ->302
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2286
+24/11 18:05:30 INFO ExampleAgent|Längden ->303
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2303
+24/11 18:05:30 INFO ExampleAgent|Längden ->304
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2565
+24/11 18:05:30 INFO ExampleAgent|Längden ->305
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2415
+24/11 18:05:30 INFO ExampleAgent|Längden ->306
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2475
+24/11 18:05:30 INFO ExampleAgent|Längden ->307
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2721
+24/11 18:05:30 INFO ExampleAgent|Längden ->308
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2335
+24/11 18:05:30 INFO ExampleAgent|Längden ->309
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2441
+24/11 18:05:30 INFO ExampleAgent|Längden ->310
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2270
+24/11 18:05:30 INFO ExampleAgent|Längden ->311
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2356
+24/11 18:05:30 INFO ExampleAgent|Längden ->312
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2310
+24/11 18:05:30 INFO ExampleAgent|Längden ->313
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2257
+24/11 18:05:30 INFO ExampleAgent|Längden ->314
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2355
+24/11 18:05:30 INFO ExampleAgent|Längden ->315
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2546
+24/11 18:05:30 INFO ExampleAgent|Längden ->316
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2273
+24/11 18:05:30 INFO ExampleAgent|Längden ->317
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2141
+24/11 18:05:30 INFO ExampleAgent|Längden ->318
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2066
+24/11 18:05:30 INFO ExampleAgent|Längden ->319
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->1910
+24/11 18:05:30 INFO ExampleAgent|Längden ->320
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->2202
+24/11 18:05:30 INFO ExampleAgent|Längden ->321
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->1795
+24/11 18:05:30 INFO ExampleAgent|Längden ->322
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->1796
+24/11 18:05:30 INFO ExampleAgent|Längden ->323
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->1662
+24/11 18:05:30 INFO ExampleAgent|Längden ->324
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->1906
+24/11 18:05:30 INFO ExampleAgent|Längden ->325
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->1862
+24/11 18:05:30 INFO ExampleAgent|Längden ->326
+24/11 18:05:30 INFO ExampleAgent|Mellanskillnaded ->1858
+24/11 18:05:30 INFO ExampleAgent|Längden ->327
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[297,3137,15,2374,22][298,3149,4,2279,20][299,3152,14,2475,22][300,3154,5,2615,17][301,3165,18,2430,22][302,3174,6,2417,21][303,3175,8,2286,19][304,3182,1,2303,22][305,3185,7,2565,18][306,3189,6,2415,18][307,3190,1,2475,20][308,3195,16,2721,18][309,3200,2,2335,18][310,3201,16,2441,21][311,3210,19,2270,18][312,3235,6,2356,19][313,3238,15,2310,20][314,3239,3,2257,19][315,3241,6,2355,17][316,3242,9,2546,19][317,3248,13,2273,18][318,3254,7,2141,17][319,3256,11,2066,17][320,3266,17,1910,22][321,3270,12,2202,19][322,3278,1,1795,16][323,3307,9,1796,18][324,3310,1,1662,17][325,3312,11,1906,20][326,3314,17,1862,19][327,3315,10,1858,22]]]
+24/11 18:05:30 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,factory1,productionSchedule[[6,20][6,5][6,16][6,4][6,19][8,3][14,5]]]
+24/11 18:05:30 FINEST client.ServerConnection|(1) sending Message[man1,factory1,deliverySchedule[[8,170,3,customer][4,219,5,customer][10,236,5,customer][11,506,11,customer][1,512,18,customer][7,1154,7,customer][14,1211,8,customer][7,1550,6,customer][8,1571,15,customer][15,1591,6,customer][7,1592,8,customer]]]
+24/11 18:05:45 FINE client.AgentServiceImpl|*** TIME UNIT 11
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[-1922238,0,0]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[pintel,man1,deliveryNotice[pintel,man1,[60,100,35],[59,101,38]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[11,[3462,88,9,773,12][3467,79,91,1625,12]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[79,3467],[80,3462]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[imd,man1,deliveryNotice[imd,man1,[62,110,41],[61,111,66]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[11,[3472,87,65,673,12][3477,83,87,1804,12]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[basus,man1,deliveryNotice[basus,man1,[63,200,73]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[81,3477],[82,3472]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[11,[3480,84,152,188,12]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[83,3480]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[macrostar,man1,deliveryNotice[macrostar,man1,[64,210,107]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[macrostar,man1,offerBundle[11,[3482,80,100,208,12]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,macrostar,orderBundle[[84,3482]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[mec,man1,deliveryNotice[mec,man1,[65,301,112]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[mec,man1,offerBundle[11,[3491,86,71,105,12]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,mec,orderBundle[[85,3491]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[queenmax,man1,deliveryNotice[queenmax,man1,[66,300,68],[56,301,209]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[queenmax,man1,offerBundle[11,[3497,81,181,281,12]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,orderBundle[[86,3497]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[watergate,man1,deliveryNotice[watergate,man1,[67,400,76]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[11,[3500,85,161,300,12]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[mintor,man1,deliveryNotice[mintor,man1,[58,400,143],[68,401,104]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[87,3500]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[mintor,man1,offerBundle[11,[3507,82,91,438,12]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[3371,297],[3375,298],[3376,299],[3381,301],[3384,303],[3388,304],[3390,306],[3397,309],[3398,310],[3403,311],[3414,312],[3417,313],[3418,314],[3419,315],[3428,319],[3435,320],[3437,321],[3452,323],[3454,324],[3456,326]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,mintor,orderBundle[[88,3507]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[8,2133,2672][7,2061,2529][15,2143,2594][6,2116,2562][16,2156,2821][14,2042,2333][4,1710,2172][5,2021,2279][12,2105,2105][3,1588,1911][13,2110,2202][2,1748,1748][10,1603,1796][11,1705,1853][9,1553,1862][1,1662,1883]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,mintor,rfqBundle[[92,401,96,13,0,0]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,rfqBundle[[91,301,153,13,0,0]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[11,[3508,8,6,15,2114,2937][3509,6,9,19,1073,2385][3510,8,14,14,2055,2937][3511,7,14,23,1558,2227][3512,15,11,22,2970,1800][3513,15,12,22,4687,2790][3514,6,4,20,1047,2182][3515,8,6,18,1924,2467][3516,8,7,23,1486,2655][3517,6,8,14,2784,2677][3518,6,15,20,5517,2452][3519,15,13,15,2710,2317][3520,6,18,15,2916,2025][3521,7,20,21,6411,2137][3522,6,13,15,3465,1777][3523,6,5,18,1272,1957][3524,7,1,14,113,1890][3525,7,7,18,850,2430][3526,16,6,18,1053,1950][3527,16,9,19,3216,2749][3528,16,4,19,1222,2350][3529,7,6,23,2268,2520][3530,7,19,15,5027,1890][3531,6,2,18,520,2002][3532,16,8,18,1394,2491][3533,6,9,19,3310,2452][3534,15,3,18,601,1822][3535,6,1,16,128,2565][3536,15,4,19,636,2272][3537,8,18,21,3079,2444][3538,16,8,16,1518,2373][3539,15,10,16,1593,2655][3540,8,19,20,6268,2538][3541,8,11,20,2233,2256][3542,7,2,14,410,1710][3543,15,17,15,5324,2610][3544,15,4,19,813,2542][3545,6,11,23,2803,2317][3546,7,18,18,6010,2385][3547,8,13,21,1802,2773][3548,7,4,14,504,2520][3549,6,4,17,1036,2160][3550,6,15,14,4475,2295][3551,16,2,18,248,2068][3552,16,10,23,2995,1997][3553,7,5,20,818,2047][3554,15,3,17,683,2070][3555,7,1,14,184,2632][3556,8,1,14,388,2773][3557,16,16,17,2346,1833][3558,15,14,23,2457,1755][3559,8,12,14,2256,2350][3560,7,19,18,7053,2475][3561,15,20,14,4804,2002][3562,16,20,17,5592,2796][3563,8,8,23,2052,1833][3564,6,19,16,2743,2407][3565,15,12,19,2405,2227][3566,15,10,16,1305,2610][3567,8,2,14,464,1786][3568,15,20,16,6186,2812][3569,6,1,22,352,2520][3570,6,17,14,2237,2632][3571,7,18,23,2624,2430][3572,6,19,20,6557,2655][3573,6,7,23,2905,2767][3574,7,9,17,1113,2475][3575,8,12,14,1940,2021][3576,6,3,20,556,2317][3577,6,20,17,6681,2227][3578,7,10,22,1980,1800][3579,7,6,14,1811,2745][3580,6,11,18,2128,1935][3581,6,6,16,1811,2745][3582,7,1,16,130,2610][3583,8,18,14,6869,2726][3584,16,13,17,2180,2796][3585,7,4,19,1274,2655][3586,7,15,22,2970,1800][3587,16,4,16,1131,2021][3588,8,4,19,924,2890][3589,16,4,20,1539,2749][3590,16,16,22,1860,2326][3591,15,1,17,152,2542][3592,6,6,15,1830,2542][3593,7,5,20,715,2385][3594,15,12,22,3533,2677][3595,15,5,21,1203,2407][3596,6,18,21,2818,1957][3597,16,5,21,1420,2185][3598,15,16,22,4077,2317][3599,6,17,14,5049,1980][3600,15,6,18,680,1890][3601,7,8,23,2550,2452][3602,8,5,14,1113,1856][3603,7,8,19,1918,1845][3604,8,17,16,4134,2702][3605,6,10,16,1464,2092][3606,16,10,18,2312,2890][3607,8,9,19,1930,1950][3608,8,1,16,384,2749][3609,16,20,19,5480,2491][3610,5,9,14,2136,1978][3611,4,12,16,2752,2294][3612,12,11,21,3051,2312][3613,3,9,23,1873,1487][3614,13,16,21,3343,2322][3615,13,3,20,837,2537][3616,4,2,14,268,2238][3617,14,12,22,3078,1710][3618,12,16,18,4012,2090][3619,4,2,17,307,1924][3620,3,16,23,1049,1312][3621,13,5,15,1335,2429][3622,12,11,17,1324,1720][3623,14,11,20,1143,1732][3624,13,13,20,2582,1806][3625,13,8,20,1501,2085][3626,3,4,15,453,1890][3627,12,7,18,1740,2072][3628,3,15,19,4592,2187][3629,5,7,19,893,2128][3630,5,8,23,2435,2537][3631,3,7,17,1387,1802][3632,14,17,14,2925,1912][3633,12,8,17,1124,1406][3634,3,20,18,2550,1417][3635,3,17,15,1606,1575][3636,5,8,19,2889,2580][3637,4,1,19,148,1646][3638,13,9,15,1594,2214][3639,5,14,15,2871,2279][3640,5,13,22,4485,2300][3641,13,1,17,248,1913][3642,3,2,14,446,1487][3643,3,5,21,551,1575][3644,13,20,15,4299,2687][3645,4,20,20,5772,1924][3646,5,5,21,1173,1806][3647,13,10,23,2588,1849][3648,5,1,14,149,2494][3649,5,2,14,619,2214][3650,3,5,21,1183,2152][3651,4,14,21,3511,2090][3652,9,15,16,4053,1930][3653,2,2,20,225,1610][3654,9,18,19,3148,1749][3655,9,2,21,168,1402][3656,2,16,21,1680,1750][3657,1,16,15,2050,1831][3658,10,2,18,491,1890][3659,1,9,17,792,1468][3660,10,15,15,1036,1382][3661,1,9,19,810,1287][3662,9,19,17,2539,1485][3663,9,13,16,2582,1419][3664,9,5,21,1348,1798][3665,10,14,14,2615,1557][3666,11,10,15,1400,1750][3667,9,15,15,1714,1633][3668,10,16,22,2889,1505][3669,9,18,21,5256,1947][3670,10,19,21,1931,1452][3671,1,8,20,950,1980][3672,2,10,18,1742,1452][3673,2,7,17,765,2187][3674,9,15,17,4380,1947][3675,9,3,14,215,1435][3676,1,6,23,1211,1683][3677,9,1,19,281,2013][3678,9,9,17,810,1287]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[93,111,77,13,0,0][97,110,26,13,0,0]]]
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2517
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[100=41,101=83,110=22,111=66,200=124,210=88,300=2,301=1,401=69,7=40,9=2,6=39,15=64,12=13,14=7,16=74,8=77,10=18,3=35,5=22,1=36,13=12,4=10,2=3]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[89,101,68,13,0,0][98,100,29,13,0,0]]]
+24/11 18:05:45 INFO ExampleAgent|Längden ->328
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2623
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,mec,rfqBundle[[96,300,47,13,0,0]]]
+24/11 18:05:45 INFO ExampleAgent|Längden ->329
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2282
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[95,400,104,13,0,0]]]
+24/11 18:05:45 INFO ExampleAgent|Längden ->330
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[90,200,97,13,0,0][94,210,103,13,0,0]]]
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2668
+24/11 18:05:45 INFO ExampleAgent|Längden ->331
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2326
+24/11 18:05:45 INFO ExampleAgent|Längden ->332
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2417
+24/11 18:05:45 INFO ExampleAgent|Längden ->333
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2392
+24/11 18:05:45 INFO ExampleAgent|Längden ->334
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2300
+24/11 18:05:45 INFO ExampleAgent|Längden ->335
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2293
+24/11 18:05:45 INFO ExampleAgent|Längden ->336
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2251
+24/11 18:05:45 INFO ExampleAgent|Längden ->337
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2788
+24/11 18:05:45 INFO ExampleAgent|Längden ->338
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2522
+24/11 18:05:45 INFO ExampleAgent|Längden ->339
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2734
+24/11 18:05:45 INFO ExampleAgent|Längden ->340
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2613
+24/11 18:05:45 INFO ExampleAgent|Längden ->341
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2327
+24/11 18:05:45 INFO ExampleAgent|Längden ->342
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2382
+24/11 18:05:45 INFO ExampleAgent|Längden ->343
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2438
+24/11 18:05:45 INFO ExampleAgent|Längden ->344
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2150
+24/11 18:05:45 INFO ExampleAgent|Längden ->345
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->1949
+24/11 18:05:45 INFO ExampleAgent|Längden ->346
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2055
+24/11 18:05:45 INFO ExampleAgent|Längden ->347
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2459
+24/11 18:05:45 INFO ExampleAgent|Längden ->348
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->2371
+24/11 18:05:45 INFO ExampleAgent|Längden ->349
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->1791
+24/11 18:05:45 INFO ExampleAgent|Längden ->350
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->1807
+24/11 18:05:45 INFO ExampleAgent|Längden ->351
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->1780
+24/11 18:05:45 INFO ExampleAgent|Längden ->352
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->1760
+24/11 18:05:45 INFO ExampleAgent|Längden ->353
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->1944
+24/11 18:05:45 INFO ExampleAgent|Längden ->354
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->1934
+24/11 18:05:45 INFO ExampleAgent|Längden ->355
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->1914
+24/11 18:05:45 INFO ExampleAgent|Längden ->356
+24/11 18:05:45 INFO ExampleAgent|Mellanskillnaded ->1724
+24/11 18:05:45 INFO ExampleAgent|Längden ->357
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[328,3513,12,2517,22][329,3516,7,2623,23][330,3525,7,2282,18][331,3527,9,2668,19][332,3529,6,2326,23][333,3533,9,2417,19][334,3540,19,2392,20][335,3545,11,2300,23][336,3573,7,2293,23][337,3576,3,2251,20][338,3584,13,2788,17][339,3588,4,2522,19][340,3589,4,2734,20][341,3594,12,2613,22][342,3595,5,2327,21][343,3601,8,2382,23][344,3606,10,2438,18][345,3612,11,2150,21][346,3627,7,1949,18][347,3628,15,2055,19][348,3630,8,2459,23][349,3636,8,2371,19][350,3650,5,1791,21][351,3658,2,1807,18][352,3664,5,1780,21][353,3669,18,1760,21][354,3671,8,1944,20][355,3673,7,1934,17][356,3674,15,1914,17][357,3677,1,1724,19]]]
+24/11 18:05:45 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[11,18,false,[]]]
+24/11 18:05:45 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,factory1,productionSchedule[[11,13][8,11][11,9][12,14][12,1][7,8][7,1][7,9][5,13][5,6][8,20][8,10][8,3][3,7][3,12][8,10][8,18][3,4][13,11][15,7][16,18][15,3][15,10][15,7][3,19][12,16][1,6][13,11][15,2][7,1][16,2][1,10][16,20][5,8][16,16]]]
+24/11 18:05:45 FINEST client.ServerConnection|(1) sending Message[man1,factory1,deliverySchedule[[15,173,17,customer][12,218,12,customer][13,224,2,customer][1,232,9,customer][15,1183,3,customer][6,1185,6,customer][5,1209,12,customer][10,1219,10,customer][1,1220,8,customer][8,1553,11,customer][16,1558,20,customer][6,1573,17,customer][14,1610,3,customer][8,1933,19,customer][15,1946,18,customer][15,1949,6,customer][8,1954,3,customer][7,1963,16,customer][10,1992,8,customer]]]
+24/11 18:06:00 FINE client.AgentServiceImpl|*** TIME UNIT 12
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[-2233171,0,0]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[pintel,man1,deliveryNotice[pintel,man1,[70,100,45],[69,101,123]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[12,[3801,98,29,802,13][3807,89,68,1799,13]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[imd,man1,deliveryNotice[imd,man1,[72,110,9],[71,111,101]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[12,[3812,97,26,698,13][3818,93,77,1812,13]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[89,3807],[90,3801]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[basus,man1,deliveryNotice[basus,man1,[73,200,168]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[12,[3823,90,97,323,13][3825,94,103,217,13]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[91,3818],[92,3812]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[93,3825],[94,3823]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[mec,man1,offerBundle[12,[3834,96,47,92,13]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[queenmax,man1,deliveryNotice[queenmax,man1,[76,300,128],[75,301,150]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,mec,orderBundle[[95,3834]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[queenmax,man1,offerBundle[12,[3844,91,0,312,13][3845,91,153,312,15]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,orderBundle[[96,3845]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[watergate,man1,deliveryNotice[watergate,man1,[78,400,164],[77,401,114]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[12,[3847,95,104,276,13]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[97,3847]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[mintor,man1,offerBundle[12,[3857,92,96,412,13]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,mintor,orderBundle[[98,3857]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[3721,328],[3727,330],[3730,332],[3735,334],[3750,336],[3752,337],[3756,339],[3762,342],[3765,343],[3766,344],[3768,345],[3775,346],[3776,347],[3780,349],[3783,350],[3788,351],[3790,353],[3792,355],[3795,357]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[6,2136,2541][7,2042,2535][15,2064,2558][8,2229,2673][16,2173,2711][12,1711,2150][13,2061,2416][4,1872,2016][3,1760,2055][5,2092,2423][2,1605,1934][9,1699,1865][10,1807,1807][1,1643,1892]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,mintor,rfqBundle[[105,400,85,14,0,0]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,rfqBundle[[101,301,109,14,0,0][106,300,46,14,0,0]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[103,111,27,14,0,0][107,110,39,14,0,0]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[12,[3858,15,18,22,2851,1980][3859,8,10,15,3666,2444][3860,8,16,24,4399,1833][3861,7,6,21,1296,2700][3862,7,6,23,1214,1687][3863,6,5,24,1418,2182][3864,15,2,19,400,2227][3865,16,5,19,1694,2420][3866,8,14,15,2158,1927][3867,15,9,15,1668,2317][3868,16,13,15,3299,2538][3869,6,18,21,2125,2362][3870,7,16,19,5803,2790][3871,6,18,24,4649,1845][3872,16,7,16,1500,1786][3873,6,8,15,2430,2025][3874,16,15,24,2135,2373][3875,15,16,18,4480,1867][3876,6,7,24,2929,2790][3877,16,9,15,2326,2585][3878,6,16,24,2419,1890][3879,15,15,16,5314,2362][3880,16,6,22,829,1974][3881,7,4,21,1450,2790][3882,6,7,15,1873,2677][3883,8,9,18,1881,2091][3884,8,9,20,2918,2162][3885,8,8,23,2842,2538][3886,6,10,15,3558,2542][3887,8,8,24,2004,1927][3888,16,17,19,4261,2279][3889,15,14,22,2796,2497][3890,15,3,15,729,2700][3891,15,4,22,1101,2295][3892,6,12,18,2888,2407][3893,15,6,15,821,1957][3894,16,6,16,1484,1903][3895,7,6,19,945,2250][3896,16,10,18,1785,2232][3897,8,13,21,2859,2444][3898,7,3,18,658,2745][3899,15,9,20,2114,2610][3900,7,9,22,2472,2497][3901,15,19,15,2961,2227][3902,8,11,15,3908,2538][3903,16,8,22,3289,2937][3904,15,14,19,4057,2070][3905,8,18,22,5329,2115][3906,16,15,20,3393,2514][3907,16,1,17,241,1856][3908,6,10,24,1201,2002][3909,6,12,19,4158,2475][3910,6,19,21,6167,2497][3911,16,15,19,4808,2914][3912,8,5,16,1280,2561][3913,7,15,23,2763,2047][3914,15,3,24,1083,2407][3915,8,4,22,565,2021][3916,8,16,17,3925,2726][3917,16,8,18,2180,2726][3918,6,16,16,2069,2587][3919,16,6,15,2304,2561][3920,8,16,24,2406,1880][3921,16,19,20,5572,2256][3922,8,11,19,2088,2373][3923,8,12,21,1928,1786][3924,6,11,16,2831,1980][3925,8,15,22,1903,2115][3926,15,7,16,2755,2812][3927,6,17,16,4498,2205][3928,6,20,22,5668,2362][3929,8,3,23,853,2585][3930,7,15,15,2044,2272][3931,15,16,18,5616,2700][3932,15,3,19,749,2497][3933,6,14,18,4541,2317][3934,6,13,24,1842,2362][3935,7,17,15,1759,2070][3936,16,8,16,2973,2655][3937,15,18,20,2430,2700][3938,8,7,24,1953,2326][3939,15,13,24,2965,1755][3940,8,20,20,8811,2937][3941,7,4,21,623,1732][3942,16,4,15,977,1880][3943,16,10,17,2509,2091][3944,8,7,22,2072,2115][3945,15,1,16,106,1777][3946,16,18,19,6660,2467][3947,16,5,22,1434,2608][3948,15,5,22,782,1957][3949,7,14,21,1323,1890][3950,6,13,17,2831,1980][3951,8,2,18,572,2044][3952,16,13,23,2614,2514][3953,8,18,19,5633,2608][3954,6,14,22,4258,2340][3955,15,20,22,6141,2047][3956,4,5,15,1178,1683][3957,14,3,19,486,1800][3958,14,12,22,3445,2610][3959,4,19,24,2582,1942][3960,14,13,15,2199,2115][3961,5,5,17,868,2171][3962,13,5,18,483,1935][3963,14,10,15,1260,2520][3964,5,17,16,5438,2666][3965,3,15,23,2243,1662][3966,3,11,24,2026,1417][3967,3,11,20,1386,2100][3968,3,17,15,1832,1540][3969,3,19,16,3320,1942][3970,14,19,15,6104,2295][3971,12,5,24,571,1905][3972,12,7,23,1806,1720][3973,3,16,21,1561,1627][3974,4,4,16,910,2275][3975,13,20,24,3483,1935][3976,3,13,15,2675,1715][3977,12,8,17,666,1665][3978,5,1,15,299,1999][3979,14,13,17,1184,1822][3980,4,7,15,1022,1461][3981,4,5,22,1221,1628][3982,12,17,16,2980,1461][3983,13,14,15,1938,1978][3984,5,10,18,2218,1849][3985,3,3,23,675,2047][3986,3,9,20,1389,1715][3987,14,12,20,1620,2700][3988,3,5,19,1286,1715][3989,14,19,24,4829,2542][3990,14,1,20,254,1957][3991,14,15,15,2277,1687][3992,13,14,24,4888,2494][3993,14,1,17,177,1777][3994,5,2,18,473,2150][3995,3,14,18,2116,1890][3996,14,5,23,1083,2407][3997,5,6,17,1319,1999][3998,13,8,18,2001,2085][3999,14,13,24,4781,2452][4000,12,7,22,1352,1757][4001,13,17,24,3596,1763][4002,3,20,24,2152,2152][4003,11,5,19,691,1382][4004,1,3,21,582,1386][4005,9,9,24,1095,2029][4006,11,20,23,2613,1452][4007,1,15,24,2059,1716][4008,10,18,17,4832,2065][4009,9,7,23,542,1551][4010,2,2,19,519,1855][4011,9,17,16,2081,1749][4012,2,3,20,472,1575][4013,11,3,17,414,1382][4014,10,2,20,206,2065][4015,2,20,21,2058,1715][4016,2,8,20,1637,2047][4017,9,18,15,3445,1914][4018,2,6,19,1119,1435][4019,1,17,17,2868,1534][4020,1,7,24,533,1270][4021,9,12,18,1520,1584][4022,1,20,15,3988,1534][4023,11,19,21,3511,1680]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[99,101,62,14,0,0][108,100,27,14,0,0]]]
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[100=18,101=3,110=10,111=25,200=21,210=35,300=5,301=51,400=42,401=14,7=24,9=2,6=80,15=20,12=1,14=9,16=54,8=47,3=35,5=10,1=19,13=10,4=10,2=3]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[102,401,70,14,0,0]]]
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2613
+24/11 18:06:00 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[12,10,false,[]]]
+24/11 18:06:00 INFO ExampleAgent|Längden ->358
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[100,200,89,14,0,0][104,210,66,14,0,0]]]
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2365
+24/11 18:06:00 INFO ExampleAgent|Längden ->359
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2356
+24/11 18:06:00 INFO ExampleAgent|Längden ->360
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2481
+24/11 18:06:00 INFO ExampleAgent|Längden ->361
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2631
+24/11 18:06:00 INFO ExampleAgent|Längden ->362
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2384
+24/11 18:06:00 INFO ExampleAgent|Längden ->363
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2385
+24/11 18:06:00 INFO ExampleAgent|Längden ->364
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2528
+24/11 18:06:00 INFO ExampleAgent|Längden ->365
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2333
+24/11 18:06:00 INFO ExampleAgent|Längden ->366
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2522
+24/11 18:06:00 INFO ExampleAgent|Längden ->367
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2310
+24/11 18:06:00 INFO ExampleAgent|Längden ->368
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2363
+24/11 18:06:00 INFO ExampleAgent|Längden ->369
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2534
+24/11 18:06:00 INFO ExampleAgent|Längden ->370
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2478
+24/11 18:06:00 INFO ExampleAgent|Längden ->371
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2392
+24/11 18:06:00 INFO ExampleAgent|Längden ->372
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2579
+24/11 18:06:00 INFO ExampleAgent|Längden ->373
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2584
+24/11 18:06:00 INFO ExampleAgent|Längden ->374
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2355
+24/11 18:06:00 INFO ExampleAgent|Längden ->375
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2405
+24/11 18:06:00 INFO ExampleAgent|Längden ->376
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->1774
+24/11 18:06:00 INFO ExampleAgent|Längden ->377
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2373
+24/11 18:06:00 INFO ExampleAgent|Längden ->378
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2419
+24/11 18:06:00 INFO ExampleAgent|Längden ->379
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2432
+24/11 18:06:00 INFO ExampleAgent|Längden ->380
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2393
+24/11 18:06:00 INFO ExampleAgent|Längden ->381
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->2151
+24/11 18:06:00 INFO ExampleAgent|Längden ->382
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->1714
+24/11 18:06:00 INFO ExampleAgent|Längden ->383
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->1761
+24/11 18:06:00 INFO ExampleAgent|Längden ->384
+24/11 18:06:00 INFO ExampleAgent|Mellanskillnaded ->1923
+24/11 18:06:00 INFO ExampleAgent|Längden ->385
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[358,3861,6,2613,21][359,3865,5,2365,19][360,3869,18,2356,21][361,3870,16,2481,19][362,3876,7,2631,24][363,3881,4,2384,21][364,3898,3,2385,18][365,3899,9,2528,20][366,3900,9,2333,22][367,3903,8,2522,22][368,3909,12,2310,19][369,3911,15,2363,19][370,3917,8,2534,18][371,3931,16,2478,18][372,3932,3,2392,19][373,3937,18,2579,20][374,3940,20,2584,20][375,3947,5,2355,22][376,3952,13,2405,23][377,3985,3,1774,23][378,3987,12,2373,20][379,3989,19,2419,24][380,3992,14,2432,24][381,3999,13,2393,24][382,4002,20,2151,24][383,4005,9,1714,24][384,4014,2,1761,20][385,4016,8,1923,20]]]
+24/11 18:06:00 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,factory1,productionSchedule[[7,16][5,8][7,16][7,14][7,1][8,19][7,20][5,8][6,8][13,18][6,9][5,6][16,17][4,20][3,6][4,11][1,1][2,7][3,9][2,7][7,1]]]
+24/11 18:06:00 FINEST client.ServerConnection|(1) sending Message[man1,factory1,deliverySchedule[[6,188,5,customer][16,204,5,customer][15,451,20,customer][8,455,12,customer][16,468,6,customer][7,471,3,customer][16,483,5,customer][5,501,10,customer][6,1179,11,customer][8,1192,18,customer][11,1236,13,customer][13,1611,3,customer][8,1921,11,customer][7,1926,10,customer][8,1966,17,customer][3,1976,2,customer][11,1999,9,customer][9,2000,2,customer][12,2354,15,customer][1,2362,19,customer]]]
+24/11 18:06:15 FINE client.AgentServiceImpl|*** TIME UNIT 13
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[coordinator,man1,bankStatus[-2357756,0,0]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[pintel,man1,deliveryNotice[pintel,man1,[80,100,9],[79,101,91]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[pintel,man1,offerBundle[13,[4155,108,27,716,14][4161,99,62,1835,14]]]
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,pintel,orderBundle[[99,4161],[100,4155]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[imd,man1,deliveryNotice[imd,man1,[82,110,65],[81,111,87]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[imd,man1,offerBundle[13,[4166,107,39,665,14][4172,103,27,1671,14]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[basus,man1,deliveryNotice[basus,man1,[83,210,152]]]
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,imd,orderBundle[[101,4172],[102,4166]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[basus,man1,offerBundle[13,[4175,100,89,359,14][4178,104,66,218,14]]]
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,basus,orderBundle[[103,4178],[104,4175]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[macrostar,man1,deliveryNotice[macrostar,man1,[84,200,100]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[mec,man1,deliveryNotice[mec,man1,[85,300,71]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[queenmax,man1,offerBundle[13,[4193,106,46,84,14][4196,101,109,235,14]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[watergate,man1,deliveryNotice[watergate,man1,[87,400,161]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[watergate,man1,offerBundle[13,[4200,102,70,331,14]]]
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,queenmax,orderBundle[[105,4196],[106,4193]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[mintor,man1,deliveryNotice[mintor,man1,[88,401,91]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[mintor,man1,offerBundle[13,[4204,105,85,432,14]]]
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,watergate,orderBundle[[107,4200]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[customer,man1,orderBundle[[4078,359],[4080,361],[4082,362],[4083,363],[4093,364],[4095,366],[4096,367],[4099,368],[4101,369],[4104,370],[4109,371],[4110,372],[4115,374],[4117,375],[4118,376],[4129,377],[4131,378],[4133,379],[4139,381],[4142,383],[4146,384],[4148,385]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[coordinator,man1,priceReport[[7,2042,2566][6,2150,2631][15,2043,2565][16,2210,2534][8,2153,2584][14,2337,2522][4,1893,1893][3,1616,2073][12,1710,1858][13,2063,2399][5,2120,2120][9,1543,1714][1,1679,1679][2,1688,1923][10,1761,1761][11,1661,1661]]]
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,mintor,orderBundle[[108,4204]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[customer,man1,rfqBundle[13,[4209,8,20,20,3327,2773][4210,15,19,24,7120,2677][4211,16,12,23,3876,2937][4212,6,15,18,4603,2790][4213,7,9,25,2187,2025][4214,7,4,17,1263,2632][4215,8,5,17,1327,2655][4216,7,8,22,2386,2295][4217,16,19,16,3143,2068][4218,16,20,24,5944,2702][4219,7,5,22,1534,2790][4220,8,5,25,982,1786][4221,6,5,16,1076,1957][4222,7,16,23,3283,2565][4223,7,17,18,4871,2047][4224,6,4,21,426,1777][4225,16,20,24,2162,2162][4226,15,16,22,1728,2160][4227,6,4,22,684,1710][4228,7,7,22,2740,2610][4229,7,7,17,1014,2070][4230,8,17,20,2084,2044][4231,6,20,18,4656,2587][4232,15,17,18,2539,1867][4233,7,17,21,5967,2340][4234,6,3,20,947,2430][4235,15,4,25,1444,2407][4236,7,13,18,2527,2160][4237,15,16,21,3883,1867][4238,6,4,18,705,2205][4239,15,19,16,6942,2610][4240,6,9,17,1324,2452][4241,15,11,23,3296,2497][4242,6,10,16,1680,1867][4243,15,19,19,5625,2115][4244,16,8,24,1197,2138][4245,7,13,20,3079,2632][4246,16,12,20,1762,2937][4247,15,2,22,540,2250][4248,6,16,17,4275,2227][4249,16,15,24,1638,2185][4250,15,12,24,2435,1845][4251,16,15,25,4948,2749][4252,16,19,16,3964,2608][4253,16,16,16,4512,1880][4254,15,1,23,256,1710][4255,15,1,19,235,2137][4256,6,1,19,216,2700][4257,6,7,22,1134,2700][4258,15,10,25,1282,2137][4259,6,6,17,1579,1755][4260,8,19,19,2946,2585][4261,15,10,22,1368,1710][4262,6,12,18,3807,2115][4263,6,20,24,3563,2227][4264,8,16,23,3474,1974][4265,7,16,22,2850,2227][4266,6,3,20,675,2250][4267,15,6,23,2123,2722][4268,15,3,16,698,2587][4269,15,7,18,1351,1755][4270,16,16,17,5169,2937][4271,6,7,17,1757,2790][4272,8,5,22,2039,2914][4273,7,1,21,398,2655][4274,15,15,20,3294,2745][4275,8,8,18,2763,2303][4276,7,7,25,2315,2205][4277,7,10,22,1188,1980][4278,16,6,18,1023,2843][4279,7,1,16,267,2227][4280,8,18,19,1903,2115][4281,15,20,23,4563,1755][4282,6,19,21,3885,2272][4283,16,8,25,1473,2303][4284,8,12,17,1522,2115][4285,7,13,22,2131,1822][4286,16,1,16,204,2561][4287,15,12,17,2631,1687][4288,7,12,24,3036,1687][4289,16,12,16,3823,2655][4290,16,10,25,2170,1809][4291,7,2,16,236,2362][4292,8,9,22,1120,2491][4293,8,19,16,5959,2091][4294,6,17,16,1759,2070][4295,6,10,23,1068,2137][4296,15,1,21,231,2317][4297,6,12,23,1311,1822][4298,7,13,23,3377,1732][4299,8,14,25,4329,2209][4300,8,2,24,232,2326][4301,8,7,18,1628,2326][4302,6,19,16,6411,2812][4303,7,5,23,779,1732][4304,5,13,23,3246,1784][4305,12,19,23,1511,1591][4306,14,13,23,2661,2047][4307,5,14,23,4039,2623][4308,12,8,20,2299,2053][4309,14,20,19,3936,2812][4310,13,1,20,139,1999][4311,5,11,20,2354,1784][4312,5,19,18,2254,1978][4313,4,8,25,1145,1591][4314,14,13,25,1111,1710][4315,13,19,21,3464,2279][4316,4,2,18,571,1905][4317,3,13,22,1057,1627][4318,14,14,21,4819,2295][4319,4,11,18,2176,1979][4320,4,16,24,2257,2016][4321,13,7,17,918,2623][4322,3,10,21,1225,1750][4323,13,11,25,2781,2107][4324,12,9,24,1666,1683][4325,4,7,18,2136,2035][4326,14,11,25,1113,2025][4327,3,5,22,924,1540][4328,13,13,22,2431,1870][4329,5,4,19,511,2558][4330,13,11,22,1437,1634][4331,14,11,24,2944,2677][4332,4,9,19,1165,1850][4333,14,16,25,4320,1800][4334,14,10,16,1863,2070][4335,4,12,18,3090,2146][4336,14,14,20,5511,2812][4337,3,3,24,438,1330][4338,14,9,21,1103,2452][4339,14,18,16,5283,1957][4340,12,11,22,1058,1924][4341,14,18,19,5734,2655][4342,3,20,17,1974,1645][4343,5,15,17,1992,2214][4344,3,15,23,1286,1715][4345,5,16,16,2201,1720][4346,5,16,21,4045,2107][4347,5,7,20,1278,1827][4348,4,11,20,1921,2183][4349,12,4,24,299,1498][4350,3,12,24,2646,1575][4351,1,11,23,1614,1468][4352,9,7,24,1245,1369][4353,11,4,18,401,1435][4354,1,7,22,1696,1864][4355,2,14,17,1697,1732][4356,9,18,23,3207,1485][4357,1,15,20,2920,1947][4358,10,10,18,2387,2170][4359,11,19,20,3912,1872][4360,2,2,20,266,1330][4361,11,17,19,2926,2152][4362,11,16,19,2195,1960][4363,10,1,17,246,1645][4364,9,12,21,1906,1765][4365,9,2,22,219,1567][4366,11,7,24,728,1487][4367,2,9,19,1311,2082][4368,2,16,23,2323,1452][4369,11,4,20,921,1645][4370,11,1,18,191,1365][4371,9,16,23,2399,1666][4372,9,14,22,1995,1584]]]
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,imd,rfqBundle[[113,111,117,15,0,0][117,110,11,15,0,0]]]
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2361
+24/11 18:06:15 INFO ExampleAgent|Längden ->386
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2642
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,pintel,rfqBundle[[109,101,71,15,0,0][118,100,11,15,0,0]]]
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[factory1,man1,factoryStatus[100=2,110=19,111=91,200=2,300=61,301=51,400=82,401=30,7=30,6=64,15=29,12=17,14=9,16=94,8=61,3=75,5=27,1=16,13=29,4=10,2=3]]
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,watergate,rfqBundle[[112,401,147,15,0,0][115,400,63,15,0,0]]]
+24/11 18:06:15 INFO ExampleAgent|Längden ->387
+24/11 18:06:15 FINEST client.SimClient|(1) received Message[coordinator,man1,simulationStatus[13,15,false,[]]]
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2569
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,mec,rfqBundle[[111,301,128,15,0,0][116,300,82,15,0,0]]]
+24/11 18:06:15 INFO ExampleAgent|Längden ->388
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2610
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,basus,rfqBundle[[110,200,82,15,0,0][114,210,128,15,0,0]]]
+24/11 18:06:15 INFO ExampleAgent|Längden ->389
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2462
+24/11 18:06:15 INFO ExampleAgent|Längden ->390
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2363
+24/11 18:06:15 INFO ExampleAgent|Längden ->391
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2532
+24/11 18:06:15 INFO ExampleAgent|Längden ->392
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2393
+24/11 18:06:15 INFO ExampleAgent|Längden ->393
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2372
+24/11 18:06:15 INFO ExampleAgent|Längden ->394
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2737
+24/11 18:06:15 INFO ExampleAgent|Längden ->395
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2394
+24/11 18:06:15 INFO ExampleAgent|Längden ->396
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2291
+24/11 18:06:15 INFO ExampleAgent|Längden ->397
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2546
+24/11 18:06:15 INFO ExampleAgent|Längden ->398
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2438
+24/11 18:06:15 INFO ExampleAgent|Längden ->399
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2432
+24/11 18:06:15 INFO ExampleAgent|Längden ->400
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2497
+24/11 18:06:15 INFO ExampleAgent|Längden ->401
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2292
+24/11 18:06:15 INFO ExampleAgent|Längden ->402
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2159
+24/11 18:06:15 INFO ExampleAgent|Längden ->403
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2652
+24/11 18:06:15 INFO ExampleAgent|Längden ->404
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2340
+24/11 18:06:15 INFO ExampleAgent|Längden ->405
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2508
+24/11 18:06:15 INFO ExampleAgent|Längden ->406
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2137
+24/11 18:06:15 INFO ExampleAgent|Längden ->407
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->1673
+24/11 18:06:15 INFO ExampleAgent|Längden ->408
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->1861
+24/11 18:06:15 INFO ExampleAgent|Längden ->409
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->1816
+24/11 18:06:15 INFO ExampleAgent|Längden ->410
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->1899
+24/11 18:06:15 INFO ExampleAgent|Längden ->411
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->1887
+24/11 18:06:15 INFO ExampleAgent|Längden ->412
+24/11 18:06:15 INFO ExampleAgent|Mellanskillnaded ->2068
+24/11 18:06:15 INFO ExampleAgent|Längden ->413
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,customer,offerBundle[0,[386,4209,20,2361,20][387,4210,19,2642,24][388,4211,12,2569,23][389,4218,20,2610,24][390,4219,5,2462,22][391,4222,16,2363,23][392,4228,7,2532,22][393,4245,13,2393,20][394,4246,12,2372,20][395,4251,15,2737,25][396,4256,1,2394,19][397,4257,7,2291,22][398,4260,19,2546,19][399,4267,6,2438,23][400,4272,5,2432,22][401,4307,14,2497,23][402,4309,20,2292,19][403,4329,4,2159,19][404,4336,14,2652,20][405,4338,9,2340,21][406,4341,18,2508,19][407,4348,11,2137,20][408,4354,7,1673,22][409,4357,15,1861,20][410,4359,19,1816,20][411,4361,17,1899,19][412,4362,16,1887,19][413,4367,9,2068,19]]]
+24/11 18:06:15 INFO ExampleAgent|CLEARED TEMPOFFERS
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,factory1,productionSchedule[[8,3][14,7][16,9][13,19][15,1][12,14][10,6][7,5][6,4][16,9][16,7][16,3][5,6][9,5][10,18][10,9][10,2][10,10][10,9][6,8][13,12][5,8][9,1][6,3]]]
+24/11 18:06:15 FINEST client.ServerConnection|(1) sending Message[man1,factory1,deliverySchedule[[3,486,7,customer][12,855,1,customer][7,1156,19,customer][16,1182,11,customer][14,1200,4,customer][3,1206,16,customer][7,1561,1,customer][7,1567,9,customer][5,1614,13,customer][16,1919,13,customer][5,1973,6,customer][8,2292,20,customer][16,2302,4,customer][8,2314,10,customer][16,2328,5,customer][13,2345,7,customer][16,2631,3,customer][8,2650,3,customer][6,2658,20,customer][6,2675,5,customer][3,2678,17,customer][3,2689,12,customer]]]
