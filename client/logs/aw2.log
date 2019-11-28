@@ -1,6 +1,6 @@
-25/11 20:04:02 FINER client.SimClient|creating agent instance of ExampleAgent
-25/11 20:04:02 FINE client.ServerConnection|(1) connecting to server 127.0.0.1 at port 6502
-25/11 20:04:04 SEVERE client.ServerConnection|(1) connection to server failed
+25/11 20:33:24 FINER client.SimClient|creating agent instance of ExampleAgent
+25/11 20:33:24 FINE client.ServerConnection|(1) connecting to server 127.0.0.1 at port 6502
+25/11 20:33:26 SEVERE client.ServerConnection|(1) connection to server failed
 java.net.ConnectException: Connection refused: connect
 	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
 	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
@@ -16,38 +16,24 @@ java.net.ConnectException: Connection refused: connect
 	at se.sics.tasim.aw.client.ServerConnection.connect(ServerConnection.java:136)
 	at se.sics.tasim.aw.client.ServerConnection.run(ServerConnection.java:196)
 	at java.lang.Thread.run(Unknown Source)
-25/11 20:04:04 SEVERE client.SimClient|************************************************************
-25/11 20:04:04 SEVERE client.SimClient|* Connection Failed
-25/11 20:04:04 SEVERE client.SimClient|* Could not connect to 127.0.0.1 (will retry in 30 seconds)
-25/11 20:04:04 SEVERE client.SimClient|************************************************************
-25/11 20:04:34 FINE client.ServerConnection|(1) connecting to server 127.0.0.1 at port 6502
-25/11 20:04:34 FINE client.ServerConnection|(1) connected to server 127.0.0.1
-25/11 20:04:34 FINEST client.ServerConnection|(1) sending Message[tester	,admin,adminContent[auth,[name=tester	,password=tester,client.version=0.9.6]]]
-25/11 20:04:34 FINEST client.SimClient|(1) received adminContent[auth,[server.version=0.8.19]]
-25/11 20:04:34 FINER client.ServerConnection|(1) successfully logged in as tester	
-25/11 20:04:34 FINEST client.ServerConnection|(1) sending Message[tester	,admin,adminContent[server time,[]]]
-25/11 20:04:34 FINEST client.ServerConnection|(1) sending Message[tester	,admin,adminContent[join simulation,[]]]
-25/11 20:04:34 FINEST client.SimClient|(1) received adminContent[server time,[time=1574708674596]]
-25/11 19:04:34 FINEST client.SimClient|(1) received adminContent[join simulation,[type=tac06scm,startTime=1574708760000,role=PCManufacturer]]
-25/11 19:04:34 INFO client.SimClient|next simulation starts in 85 seconds
-25/11 19:04:34 INFO client.SimClient|[will reconnect in 1 minutes, 10 seconds]
-25/11 19:04:34 FINEST client.ServerConnection|(1) sending Message[tester	,admin,adminContent[quit,[]]]
-25/11 19:04:34 FINEST client.ServerConnection|(1) received Message[admin,tester	,adminContent[quit,[]]]
-25/11 19:04:34 FINE client.ServerConnection|(1) disconnected from server 127.0.0.1
-25/11 19:05:45 FINE client.ServerConnection|(2) connecting to server 127.0.0.1 at port 6502
-25/11 19:05:45 FINE client.ServerConnection|(2) connected to server 127.0.0.1
-25/11 19:05:45 FINEST client.ServerConnection|(2) sending Message[tester	,admin,adminContent[auth,[name=tester	,password=tester,client.version=0.9.6]]]
-25/11 19:05:45 FINEST client.SimClient|(2) received adminContent[auth,[server.version=0.8.19]]
-25/11 19:05:45 FINER client.ServerConnection|(2) successfully logged in as tester	
-25/11 19:05:45 FINEST client.ServerConnection|(2) sending Message[tester	,admin,adminContent[server time,[]]]
-25/11 19:05:45 FINEST client.ServerConnection|(2) sending Message[tester	,admin,adminContent[join simulation,[]]]
-25/11 19:05:45 FINEST client.SimClient|(2) received adminContent[server time,[time=1574708745005]]
-25/11 19:05:45 FINEST client.SimClient|(2) received adminContent[join simulation,[type=tac06scm,simulation=59,startTime=1574708760000,role=PCManufacturer]]
-25/11 19:05:45 INFO client.SimClient|next simulation 59 starts in 14 seconds
-25/11 19:06:00 FINEST client.SimClient|(2) received Message[coordinator,man1,startInfo[59,1574708760000,3300000,15,[customer.daysBeforeVoid=5,factory.address=factory1,factory.capacity=2000,factory.storageCost=39,bank.interestRate=7,bank.depositInterestRate=3,manufacturer.count=6,manufacturer.1=tester	,manufacturer.2=Dummy,manufacturer.3=Dummy-2,manufacturer.4=Dummy-3,manufacturer.5=Dummy-4,manufacturer.6=Dummy-5]]]
-25/11 19:06:00 FINE client.SimClient|Entering log for simulation 59
+25/11 20:33:26 SEVERE client.SimClient|************************************************************
+25/11 20:33:26 SEVERE client.SimClient|* Connection Failed
+25/11 20:33:26 SEVERE client.SimClient|* Could not connect to 127.0.0.1 (will retry in 30 seconds)
+25/11 20:33:26 SEVERE client.SimClient|************************************************************
+25/11 20:33:56 FINE client.ServerConnection|(1) connecting to server 127.0.0.1 at port 6502
+25/11 20:33:56 FINE client.ServerConnection|(1) connected to server 127.0.0.1
+25/11 20:33:56 FINEST client.ServerConnection|(1) sending Message[tester	,admin,adminContent[auth,[name=tester	,password=tester,client.version=0.9.6]]]
+25/11 20:33:56 FINEST client.SimClient|(1) received adminContent[auth,[server.version=0.8.19]]
+25/11 20:33:56 FINER client.ServerConnection|(1) successfully logged in as tester	
+25/11 20:33:56 FINEST client.ServerConnection|(1) sending Message[tester	,admin,adminContent[server time,[]]]
+25/11 20:33:56 FINEST client.ServerConnection|(1) sending Message[tester	,admin,adminContent[join simulation,[]]]
+25/11 20:33:56 FINEST client.SimClient|(1) received adminContent[server time,[time=1574710436249]]
+25/11 19:33:56 FINEST client.SimClient|(1) received adminContent[join simulation,[type=tac06scm,startTime=1574710500000,role=PCManufacturer]]
+25/11 19:33:56 INFO client.SimClient|next simulation starts in 63 seconds
+25/11 19:35:00 FINEST client.SimClient|(1) received Message[coordinator,man1,startInfo[60,1574710500000,3300000,15,[customer.daysBeforeVoid=5,factory.address=factory1,factory.capacity=2000,factory.storageCost=46,bank.interestRate=6,bank.depositInterestRate=3,manufacturer.count=6,manufacturer.1=tester	,manufacturer.2=Dummy,manufacturer.3=Dummy-2,manufacturer.4=Dummy-3,manufacturer.5=Dummy-4,manufacturer.6=Dummy-5]]]
+25/11 19:35:00 FINE client.SimClient|Entering log for simulation 60
 ************************************************************
-* Entering log for simulation 59
+* Entering log for simulation 60
 ************************************************************
 
 

@@ -173,8 +173,8 @@ import se.sics.tasim.props.FactoryStatus;
               
                    
                  
-                     randomNumber = random.nextDouble();
-                     offeredPrice = (int)(resPrice * (1.0 - randomNumber * priceDiscountFactor));
+                    double randomNumber = random.nextDouble();
+                    int offeredPrice = (int)(resPrice * (1.0 - randomNumber * priceDiscountFactor));
 
          
                      //Get the actual price of the product.

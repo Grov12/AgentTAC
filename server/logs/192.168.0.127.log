@@ -1,17 +1,17 @@
-25/11 16:59:30 FINEST sql.SQLDatabase|scmdatabase: connecting to database jdbc:sqlite:scmdatabase (scmdatabase)
-25/11 16:59:31 INFO sql.SQLDatabase|scmdatabase: using database scmdatabase (SQLite 3.5.6)
-25/11 16:59:31 INFO common.BlockingViewerServer|viewer server started at *:4042
-25/11 15:59:31 INFO sim.Admin|adding manager for simulation type tac06scm
-25/11 15:59:31 INFO server.TACTGateway|TACT Server started at *:6502
-25/11 16:02:31 FINEST tact.TACTConnection|tact-1: new connection from 127.0.0.1:52854
-25/11 16:02:31 INFO server.TACTChannel|user tester	 logged in as tester	@tact-1 with version 0.9.6 from 127.0.0.1
-25/11 16:02:31 INFO sim.Admin|created simulation 55
-25/11 16:02:31 FINEST tact.TACTConnection|tester	@tact-1: connection closed from 127.0.0.1
-25/11 16:03:45 FINEST tact.TACTConnection|tact-2: new connection from 127.0.0.1:52865
-25/11 16:03:45 INFO server.TACTChannel|user tester	 logged in as tester	@tact-2 with version 0.9.6 from 127.0.0.1
-25/11 16:04:00 FINE sim.Admin|Entering log for simulation 54
+25/11 17:39:56 FINEST sql.SQLDatabase|scmdatabase: connecting to database jdbc:sqlite:scmdatabase (scmdatabase)
+25/11 17:39:57 INFO sql.SQLDatabase|scmdatabase: using database scmdatabase (SQLite 3.5.6)
+25/11 17:39:57 INFO common.BlockingViewerServer|viewer server started at *:4042
+25/11 16:39:57 INFO sim.Admin|adding manager for simulation type tac06scm
+25/11 16:39:57 INFO server.TACTGateway|TACT Server started at *:6502
+25/11 16:41:33 FINEST tact.TACTConnection|tact-1: new connection from 127.0.0.1:53126
+25/11 16:41:33 INFO server.TACTChannel|user tester	 logged in as tester	@tact-1 with version 0.9.6 from 127.0.0.1
+25/11 16:41:33 INFO sim.Admin|created simulation 56
+25/11 16:41:33 FINEST tact.TACTConnection|tester	@tact-1: connection closed from 127.0.0.1
+25/11 16:42:45 FINEST tact.TACTConnection|tact-2: new connection from 127.0.0.1:53129
+25/11 16:42:45 INFO server.TACTChannel|user tester	 logged in as tester	@tact-2 with version 0.9.6 from 127.0.0.1
+25/11 16:43:00 FINE sim.Admin|Entering log for simulation 55
 ************************************************************
-* Entering log for simulation 54
+* Entering log for simulation 55
 ************************************************************
 
 

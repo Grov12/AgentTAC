@@ -1,17 +1,14 @@
-25/11 20:04:05 FINEST sql.SQLDatabase|scmdatabase: connecting to database jdbc:sqlite:scmdatabase (scmdatabase)
-25/11 20:04:05 INFO sql.SQLDatabase|scmdatabase: using database scmdatabase (SQLite 3.5.6)
-25/11 20:04:05 INFO common.BlockingViewerServer|viewer server started at *:4042
-25/11 19:04:05 INFO sim.Admin|adding manager for simulation type tac06scm
-25/11 19:04:05 INFO server.TACTGateway|TACT Server started at *:6502
-25/11 19:04:34 FINEST tact.TACTConnection|tact-1: new connection from 127.0.0.1:53774
-25/11 19:04:34 INFO server.TACTChannel|user tester	 logged in as tester	@tact-1 with version 0.9.6 from 127.0.0.1
-25/11 19:04:34 INFO sim.Admin|created simulation 60
-25/11 19:04:34 FINEST tact.TACTConnection|tester	@tact-1: connection closed from 127.0.0.1
-25/11 19:05:45 FINEST tact.TACTConnection|tact-2: new connection from 127.0.0.1:53778
-25/11 19:05:45 INFO server.TACTChannel|user tester	 logged in as tester	@tact-2 with version 0.9.6 from 127.0.0.1
-25/11 19:06:00 FINE sim.Admin|Entering log for simulation 59
+25/11 20:33:26 FINEST sql.SQLDatabase|scmdatabase: connecting to database jdbc:sqlite:scmdatabase (scmdatabase)
+25/11 20:33:26 INFO sql.SQLDatabase|scmdatabase: using database scmdatabase (SQLite 3.5.6)
+25/11 20:33:26 INFO common.BlockingViewerServer|viewer server started at *:4042
+25/11 19:33:26 INFO sim.Admin|adding manager for simulation type tac06scm
+25/11 19:33:26 INFO server.TACTGateway|TACT Server started at *:6502
+25/11 19:33:56 FINEST tact.TACTConnection|tact-1: new connection from 127.0.0.1:53885
+25/11 19:33:56 INFO server.TACTChannel|user tester	 logged in as tester	@tact-1 with version 0.9.6 from 127.0.0.1
+25/11 19:33:56 INFO sim.Admin|created simulation 61
+25/11 19:35:00 FINE sim.Admin|Entering log for simulation 60
 ************************************************************
-* Entering log for simulation 59
+* Entering log for simulation 60
 ************************************************************
 
 
