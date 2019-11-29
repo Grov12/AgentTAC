@@ -29,7 +29,6 @@
 import java.util.HashMap;
 import java.util.Random;
 import java.util.logging.Logger;
-import java.util.ArrayList;
 
 import se.sics.tasim.props.BOMBundle;
 import se.sics.tasim.props.ComponentCatalog;
@@ -43,8 +42,6 @@ import se.sics.tasim.tac03.aw.Order;
 import se.sics.tasim.tac03.aw.OrderStore;
 import se.sics.tasim.tac03.aw.RFQStore;
 import se.sics.tasim.tac03.aw.SCMAgent;
-import se.sics.tasim.aw.AverageCalculator;
-import se.sics.tasim.props.FactoryStatus;
 
     /**
      * The <code>ExampleAgent</code> is an example of a simple
@@ -91,19 +88,11 @@ import se.sics.tasim.props.FactoryStatus;
      * </ul>
      */
     public class ExampleAgent extends SCMAgent {
-        private int breakHistory = 55;
+        private int randomCutoff = 40;
         private static final Logger log =
                 Logger.getLogger(ExampleAgent.class.getName());
 
         private Random random = new Random();
-
- 
-       
-       //private HashMap<Integer,AverageCalculator>averageCalculator = new HashMap<Integer,AverageCalculator>();
- 
-        
-
-
 
         /** Latest possible due date when bidding for customer orders */
         private int lastBidDueDate;
@@ -114,9 +103,7 @@ import se.sics.tasim.props.FactoryStatus;
         /** Bookkeeper for component demand for accepted customer orders */
         private InventoryStatus componentDemand = new InventoryStatus();
 
-        private HashMap<String, Integer> supplierHistory = new HashMap<>();
-
-
+        private HashMap<String, Integer> supplierValueHash = new HashMap<>();
 
         public ExampleAgent() {
         }
@@ -147,19 +134,8 @@ import se.sics.tasim.props.FactoryStatus;
          * @param rfqBundle a bundle of RFQs
          */
         protected void handleCustomerRFQs(RFQBundle rfqBundle) {
-
-     
-            BOMBundle products = getBOMBundle();
+            BOMBundle bomBundle = getBOMBundle();
             int currentDate = getCurrentDate();
-
-             FactoryStatus factoryStatus = new FactoryStatus(componentDemand);
-        // If the factory utilization is too high, don't accept new offers
-        if(factoryStatus.getUtilization() > 0.93){
-            // TODO: check if orders can be filled using exisiting inventory
-            // Currently checked in step 8, so for now, do nothing
-        }
-
-        else {
             for (int i = 0, n = rfqBundle.size(); i < n; i++) {
                 int dueDate = rfqBundle.getDueDate(i);
                 // Only bid for quotes to which we have time to produce PCs and
@@ -167,46 +143,26 @@ import se.sics.tasim.props.FactoryStatus;
                 // See the comments in the beginning of this file.
                 if ((dueDate - currentDate) >= 6 && (dueDate <= lastBidDueDate)) {
                     int resPrice = rfqBundle.getReservePricePerUnit(i);
-                    int productId = rfqBundle.getProductID(i);
+                    int offeredPrice = (int)(resPrice * (1.0 - random.nextDouble() * priceDiscountFactor));
                     int quantity = rfqBundle.getQuantity(i);
-                    int[] productComponents = products.getComponentsForProductID(productId);
-              
-                   
-                 
-                    double randomNumber = random.nextDouble();
-                    int offeredPrice = (int)(resPrice * (1.0 - randomNumber * priceDiscountFactor));
+                    double penalty = rfqBundle.getPenalty(i);
 
-         
-                     //Get the actual price of the product.
-                     int basePrice = products.getProductBasePrice(productId-1);
-                     //Check if there is a profit in making the offer by calculating the profit ratio.
-                     //double profit = (offeredPrice-basePrice)*quantity;
+                     int productId = rfqBundle.getProductID(i);
+                     int[] components = bomBundle.getComponentsForProductID(productId);
+                     int cost = bomBundle.getProductBasePrice(productId-1);
+                     double profit = (offeredPrice-cost)*quantity;
+                     double div = (profit/offeredPrice);
 
-                     //Check if there is a profit in making the offer by calculating the profit ratio.
-                     double profitMargin = ((offeredPrice-basePrice)*quantity)/offeredPrice;
-                     //double grossProfit = (profit/offeredPrice);
-
-
-
-
-
-                         //Only add offer if its 10% profit.
-                         if(profitMargin > 0.10) {
-   
-                      
-                         addCustomerOffer(rfqBundle, i, offeredPrice);
-                  
-                        }
+                    if(div>0.10){ 
+                            addCustomerOffer(rfqBundle, i, offeredPrice);
+                    }
                     
                 }
             }
-        }
 
             // Finished adding offers. Send all offers to the customers.
             sendCustomerOffers();
         }
-
-      
 
         /**
          * Called when a bundle of orders have been received from the
@@ -218,17 +174,11 @@ import se.sics.tasim.props.FactoryStatus;
          */
         protected void handleCustomerOrders(Order[] newOrders) {
             // Add the component demand for the new customer orders
-            
-            
             BOMBundle bomBundle = getBOMBundle();
             for (int i = 0, n = newOrders.length; i < n; i++) {
                 Order order = newOrders[i];
                 int productID = order.getProductID();
                 int quantity = order.getQuantity();
-                //Integer rfqQuantity = this.rfqHash.get(productID);
-
-            
-
                 int[] components = bomBundle.getComponentsForProductID(productID);
                 if (components != null) {
                     for (int j = 0, m = components.length; j < m; j++) {
@@ -236,7 +186,6 @@ import se.sics.tasim.props.FactoryStatus;
                     }
                 }
             }
-          
 
             // Order the components needed to fulfill the new orders from the
             // suppliers.
@@ -247,12 +196,12 @@ import se.sics.tasim.props.FactoryStatus;
                 if (quantity > 0) {
                     int productID = componentDemand.getProductID(i);
                     String[] suppliers = catalog.getSuppliersForProduct(productID);
-                     //log.info("SUPPLIER LENGTH ->" + suppliers.length);
+                     log.info("SUPPLIER LENGTH ->" + suppliers.length);
                     if (suppliers != null) {
                         // Order all components from one supplier chosen by random
                         // for simplicity.
                         int supIndex = calculateBestSupplier(suppliers);
-                         //log.info("RETURNED INDEX: -> " + supIndex);
+                         log.info("RETURNED INDEX: -> " + supIndex);
 
                         addSupplierRFQ(suppliers[supIndex], productID, quantity,
                                 0, currentDate + 2);
@@ -292,11 +241,11 @@ import se.sics.tasim.props.FactoryStatus;
                     addSupplierOrder(supplierAddress, offers, i);
 
                     try {
-                        tempValue = supplierHistory.get(supplierAddress);
-                        supplierHistory.replace(supplierAddress, tempValue +1);
+                        tempValue = supplierValueHash.get(supplierAddress);
+                        supplierValueHash.replace(supplierAddress, tempValue +1);
             
                     } catch (Exception e) {
-                        supplierHistory.put(supplierAddress, tempValue +1);
+                        supplierValueHash.put(supplierAddress, tempValue +1);
                     }
             
 
@@ -321,16 +270,16 @@ import se.sics.tasim.props.FactoryStatus;
 
 
             // Otherwise use random value to select a supplier
-            if(this.getCurrentDate() > breakHistory){
+            if(this.getCurrentDate() > randomCutoff){
                 int tempSupplierValue = 0;
                 int tempSupplier = 0;
                 int tempValue = 0;
                 for(int i=0; i<suppliers.length; i++){
                     // Lookup the value of the supplier in the hash table
 
-                    if( supplierHistory.get(suppliers[i]) != null){
-                        tempSupplierValue =supplierHistory.get(suppliers[i]);
-                          //log.info("FOUND -> " + suppliers[i] + " I BOUGHT FROM HIM " + tempSupplierValue + " TIMES" + " HE IS ON INDEX " + i);
+                    if( supplierValueHash.get(suppliers[i]) != null){
+                        tempSupplierValue =supplierValueHash.get(suppliers[i]);
+                          log.info("FOUND -> " + suppliers[i] + " I BOUGHT FROM HIM " + tempSupplierValue + " TIMES" + " HE IS ON INDEX " + i);
                     }
                     else{
                         tempSupplierValue = 0;
@@ -355,10 +304,6 @@ import se.sics.tasim.props.FactoryStatus;
             // The inventory for next day is calculated with todays deliveries
             // and production and is changed when production and delivery
             // requests are made.
-      
-         
-           
-
             InventoryStatus inventory = getInventoryForNextDay();
 
             // Generate production and delivery schedules
@@ -372,7 +317,6 @@ import se.sics.tasim.props.FactoryStatus;
                     Order order = orders[i];
                     int productID = order.getProductID();
                     int dueDate = order.getDueDate();
-
                     int orderedQuantity = order.getQuantity();
                     int inventoryQuantity = inventory.getInventoryQuantity(productID);
 
