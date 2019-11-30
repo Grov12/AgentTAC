@@ -134,7 +134,7 @@ import se.sics.tasim.tac03.aw.SCMAgent;
          * @param rfqBundle a bundle of RFQs
          */
         protected void handleCustomerRFQs(RFQBundle rfqBundle) {
-            BOMBundle bomBundle = getBOMBundle();
+            BOMBundle getProducts = getBOMBundle();
             int currentDate = getCurrentDate();
             for (int i = 0, n = rfqBundle.size(); i < n; i++) {
                 int dueDate = rfqBundle.getDueDate(i);
@@ -148,8 +148,8 @@ import se.sics.tasim.tac03.aw.SCMAgent;
                     double penalty = rfqBundle.getPenalty(i);
 
                      int productId = rfqBundle.getProductID(i);
-                     int[] components = bomBundle.getComponentsForProductID(productId);
-                     int cost = bomBundle.getProductBasePrice(productId-1);
+                     int[] components = getProducts.getComponentsForProductID(productId);
+                     int cost = getProducts.getProductBasePrice(productId-1);
                      double profit = (offeredPrice-cost)*quantity;
                      double grossProfit = (profit/offeredPrice);
 
