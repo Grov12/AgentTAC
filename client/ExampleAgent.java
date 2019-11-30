@@ -151,9 +151,9 @@ import se.sics.tasim.tac03.aw.SCMAgent;
                      int[] components = bomBundle.getComponentsForProductID(productId);
                      int cost = bomBundle.getProductBasePrice(productId-1);
                      double profit = (offeredPrice-cost)*quantity;
-                     double div = (profit/offeredPrice);
+                     double grossProfit = (profit/offeredPrice);
 
-                    if(div>0.10){ 
+                    if(grossProfit>0.10){ 
                             addCustomerOffer(rfqBundle, i, offeredPrice);
                     }
                     
