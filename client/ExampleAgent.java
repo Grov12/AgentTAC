@@ -88,7 +88,7 @@ import se.sics.tasim.tac03.aw.SCMAgent;
      * </ul>
      */
     public class ExampleAgent extends SCMAgent {
-        private int randomCutoff = 40;
+        private int randomCutoff = 55;
         private static final Logger log =
                 Logger.getLogger(ExampleAgent.class.getName());
 
