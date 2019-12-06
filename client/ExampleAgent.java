@@ -1,5 +1,4 @@
-
-    /**
+ /**
      * TAC Supply Chain Management Simulator
      * http://www.sics.se/tac/    tac-dev@sics.se
      *
@@ -145,12 +144,11 @@ import se.sics.tasim.tac03.aw.SCMAgent;
                     int resPrice = rfqBundle.getReservePricePerUnit(i);
                     int offeredPrice = (int)(resPrice * (1.0 - random.nextDouble() * priceDiscountFactor));
                     int quantity = rfqBundle.getQuantity(i);
-                    double penalty = rfqBundle.getPenalty(i);
+                 
 
                      int productId = rfqBundle.getProductID(i);
-                     int[] components = getProducts.getComponentsForProductID(productId);
-                     int cost = getProducts.getProductBasePrice(productId-1);
-                     double profit = (offeredPrice-cost)*quantity;
+                     int basePrice = getProducts.getProductBasePrice(productId-1);
+                     double profit = (offeredPrice-basePrice)*quantity;
                      double grossProfit = (profit/offeredPrice);
 
                     if(grossProfit>0.10){ 
@@ -200,7 +198,7 @@ import se.sics.tasim.tac03.aw.SCMAgent;
                     if (suppliers != null) {
                         // Order all components from one supplier chosen by random
                         // for simplicity.
-                        int supIndex = calculateBestSupplier(suppliers);
+                        int supIndex = getSupplier(suppliers);
                          log.info("RETURNED INDEX: -> " + supIndex);
 
                         addSupplierRFQ(suppliers[supIndex], productID, quantity,
@@ -264,7 +262,7 @@ import se.sics.tasim.tac03.aw.SCMAgent;
          * message will be for the next day.
          *
          */
-        protected int calculateBestSupplier(String[] suppliers){
+        protected int getSupplier(String[] suppliers){
             // If we have sufficient history, look at the hashtable of supplier
             // value to decide the best supplier to go with
 
@@ -384,6 +382,3 @@ import se.sics.tasim.tac03.aw.SCMAgent;
         }
 
     } // ExampleAgent
-
-
-
