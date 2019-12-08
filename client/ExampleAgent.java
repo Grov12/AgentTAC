@@ -148,8 +148,8 @@ import se.sics.tasim.tac03.aw.SCMAgent;
 
                      int productId = rfqBundle.getProductID(i);
                      int basePrice = getProducts.getProductBasePrice(productId-1);
-                     double profit = (offeredPrice-basePrice)*quantity;
-                     double grossProfit = (profit/offeredPrice);
+                     double grossProfit = (((offeredPrice-basePrice)*quantity))/offeredPrice;
+                   
 
                     if(grossProfit>0.10){ 
                             addCustomerOffer(rfqBundle, i, offeredPrice);
